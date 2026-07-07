@@ -66,9 +66,26 @@ python main.py --full --push
 
 ## GitHub Actions 部署
 
-1. 将项目推送到 GitHub 仓库
-2. 确认 Actions 已启用
-3. 工作流每周一自动运行，也可在 Actions 页面手动触发
+详细步骤见 [docs/GITHUB_SETUP.md](docs/GITHUB_SETUP.md)。
+
+**快速推送（需先登录 GitHub）：**
+
+```powershell
+# 1. 登录 GitHub（首次）
+gh auth login
+
+# 2. 一键创建仓库并推送
+.\scripts\setup_github.ps1
+```
+
+**或手动推送：**
+
+```powershell
+git remote add origin https://github.com/你的用户名/conference-2026-h2-tracker.git
+git push -u origin main
+```
+
+推送后请在仓库 **Settings → Actions → General** 中将 Workflow permissions 设为 **Read and write permissions**，然后在 Actions 页面手动触发一次工作流。
 
 ## 目标会议（2026 H2）
 
