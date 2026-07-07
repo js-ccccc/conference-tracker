@@ -1,0 +1,36 @@
+# 全局运行配置
+
+collector:
+  request_delay: 1.5          # 请求间隔（秒）
+  max_retries: 3
+  timeout: 30
+  dblp_max_papers: 500       # DBLP 单会议最大采集数
+  user_agent: "ConferenceTracker/1.0 (Academic Research; +https://github.com)"
+
+openreview:
+  api_base: "https://api2.openreview.net"
+  batch_size: 1000
+
+dblp:
+  api_base: "https://dblp.org/search/publ/api"
+
+semantic_scholar:
+  api_base: "https://api.semanticscholar.org/graph/v1"
+  # 可选：设置环境变量 SEMANTIC_SCHOLAR_API_KEY 提高限额
+
+university_news:
+  tsinghua:
+    url: "https://www.cs.tsinghua.edu.cn"
+    search_path: "/xwzx/xyxw.htm"
+  peking:
+    url: "https://cs.pku.edu.cn"
+    search_path: "/info/1028/"
+
+output:
+  report_dir: reports
+  cache_dir: data
+  report_filename: 2026-H2-conferences.md
+
+git:
+  reports_path: reports
+  commit_prefix: "Auto update"

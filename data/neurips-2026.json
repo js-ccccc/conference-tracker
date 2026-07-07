@@ -1,0 +1,16 @@
+{
+  "id": "neurips-2026",
+  "abbr": "NeurIPS",
+  "full_name": "Neural Information Processing Systems",
+  "domain": "机器学习",
+  "ccf_rating": "A",
+  "date_start": "2026-12-06",
+  "date_end": "2026-12-12",
+  "location_city": "Sydney",
+  "location_country": "Australia",
+  "website": "https://neurips.cc",
+  "submission_deadline": null,
+  "notification_date": null,
+  "papers": [],
+  "_cached_at": "2026-07-07T14:52:11.860877"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "kdd-2026",
+  "abbr": "KDD",
+  "full_name": "Knowledge Discovery and Data Mining",
+  "domain": "数据挖掘",
+  "ccf_rating": "A",
+  "date_start": "2026-08-09",
+  "date_end": "2026-08-09",
+  "location_city": "Jeju",
+  "location_country": "Korea",
+  "website": "https://kdd.org/kdd2026",
+  "submission_deadline": null,
+  "notification_date": null,
+  "papers": [],
+  "_cached_at": "2026-07-07T14:48:13.770794"
+}

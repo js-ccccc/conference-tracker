@@ -1,0 +1,71 @@
+# 2026年下半年计算机顶会信息报告
+
+> 自动生成时间：{{ generated_at }}
+> 数据来源：OpenReview、DBLP、高校官网
+
+---
+
+## 总览统计
+
+| 指标 | 数值 |
+|------|------|
+| 会议总数 | {{ stats.total_conferences }} |
+| 国内中稿总数 | {{ stats.total_domestic_papers }} |
+| 清华大学中稿 | {{ stats.tsinghua_total }} 篇 🔵 |
+| 北京大学中稿 | {{ stats.peking_total }} 篇 🔴 |
+
+### 清北各会议中稿统计
+
+| 会议 | 清华 🔵 | 北大 🔴 | 国内总计 |
+|------|---------|---------|----------|
+{% for row in stats.per_conference %}
+| {{ row.abbr }} | {{ row.tsinghua }} | {{ row.peking }} | {{ row.domestic }} |
+{% endfor %}
+
+---
+
+{% for conf in conferences %}
+## {{ conf.display_name }}
+
+**基本信息**
+- 时间：{{ conf.date_range }}
+- 地点：{{ conf.location }}
+- 官网：[{{ conf.website }}]({{ conf.website }})
+- 领域：{{ conf.domain }}
+- CCF 评级：{{ conf.ccf_rating }}
+{% if conf.submission_deadline %}- 投稿截止：{{ conf.submission_deadline }}{% endif %}
+{% if conf.notification_date %}- 录用通知：{{ conf.notification_date }}{% endif %}
+
+**国内中稿概览**
+- 总中稿数：{{ conf.domestic_count }} 篇
+- 清华大学：{{ conf.tsinghua_count }} 篇 🔵
+- 北京大学：{{ conf.peking_count }} 篇 🔴
+
+{% if conf.highlighted_papers %}
+**清北高亮论文列表**
+
+{% for paper in conf.highlighted_papers %}
+{{ loop.index }}. **{{ paper.title }}**{% if paper.award %} 🏆 {{ paper.award }}{% endif %}
+
+   - 作者：{{ paper.authors_display }}
+   - 机构：{{ paper.affiliations_display }}
+   {% if paper.url %}- 链接：[论文链接]({{ paper.url }}){% endif %}
+
+{% endfor %}
+{% else %}
+*暂无清北作者中稿信息*
+{% endif %}
+
+{% if conf.other_domestic_papers %}
+**其他国内中稿**
+
+{% for paper in conf.other_domestic_papers %}
+- {{ paper.title }}{% if paper.url %} — [链接]({{ paper.url }}){% endif %}
+{% endfor %}
+{% endif %}
+
+---
+
+{% endfor %}
+
+*本报告由 Conference Tracker Agent 自动生成*

@@ -1,0 +1,16 @@
+{
+  "id": "icml-2026",
+  "abbr": "ICML",
+  "full_name": "International Conference on Machine Learning",
+  "domain": "机器学习",
+  "ccf_rating": "A",
+  "date_start": "2026-07-06",
+  "date_end": "2026-07-11",
+  "location_city": "Seoul",
+  "location_country": "South Korea",
+  "website": "https://icml.cc",
+  "submission_deadline": null,
+  "notification_date": null,
+  "papers": [],
+  "_cached_at": "2026-07-07T14:46:30.958874"
+}

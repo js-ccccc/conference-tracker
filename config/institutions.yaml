@@ -1,0 +1,76 @@
+# 机构名称归一化与标注规则
+
+# 清北高亮标注
+highlight_institutions:
+  tsinghua:
+    label: "🔵清华"
+    canonical: 清华大学
+    keywords:
+      - 清华大学
+      - Tsinghua University
+      - Tsinghua Univ
+      - THU
+      - 清华
+
+  peking:
+    label: "🔴北大"
+    canonical: 北京大学
+    keywords:
+      - 北京大学
+      - Peking University
+      - Peking Univ
+      - PKU
+      - 北大
+
+# 国内机构识别（作者所属机构匹配任一关键词即视为国内中稿）
+domestic_keywords:
+  - 中国
+  - China
+  - Chinese
+  - 清华大学
+  - 北京大学
+  - 复旦大学
+  - 上海交通大学
+  - 浙江大学
+  - 南京大学
+  - 中国科学技术大学
+  - 哈尔滨工业大学
+  - 西安交通大学
+  - 中国人民大学
+  - 北京航空航天大学
+  - 同济大学
+  - 武汉大学
+  - 华中科技大学
+  - 中山大学
+  - 南开大学
+  - 天津大学
+  - 厦门大学
+  - 山东大学
+  - 四川大学
+  - 吉林大学
+  - 东南大学
+  - 北京理工大学
+  - 华东师范大学
+  - 中国科学院
+  - Chinese Academy of Sciences
+  - CAS
+  - 香港
+  - Hong Kong
+  - 澳门
+  - Macau
+  - 台湾
+  - Taiwan
+
+# 机构别名映射（归一化为标准名称）
+aliases:
+  Tsinghua University: 清华大学
+  Tsinghua Univ.: 清华大学
+  THU: 清华大学
+  清华: 清华大学
+  Peking University: 北京大学
+  Peking Univ.: 北京大学
+  PKU: 北京大学
+  北大: 北京大学
+  Chinese Academy of Sciences: 中国科学院
+  CAS: 中国科学院
+  中科院: 中国科学院

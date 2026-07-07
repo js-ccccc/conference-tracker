@@ -1,0 +1,242 @@
+# 2026年下半年 CCF A 类顶会配置
+# sources 中的 venue_id / dblp_key 可在官方公布录用名单后更新
+
+conferences:
+  - id: acl-2026
+    abbr: ACL
+    full_name: Annual Meeting of the Association for Computational Linguistics
+    domain: 自然语言处理
+    ccf_rating: A
+    date_start: "2026-07-02"
+    date_end: "2026-07-02"
+    location:
+      city: San Diego
+      country: USA
+    website: https://2026.aclweb.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview:
+        venue_id: ACL.org/2026/Conference
+      dblp:
+        key: conf/acl/2026
+
+  - id: icml-2026
+    abbr: ICML
+    full_name: International Conference on Machine Learning
+    domain: 机器学习
+    ccf_rating: A
+    date_start: "2026-07-06"
+    date_end: "2026-07-11"
+    location:
+      city: Seoul
+      country: South Korea
+    website: https://icml.cc
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview:
+        venue_id: ICML.cc/2026/Conference
+      dblp:
+        key: conf/icml/2026
+
+  - id: siggraph-2026
+    abbr: SIGGRAPH
+    full_name: Special Interest Group on Computer Graphics
+    domain: 计算机图形学
+    ccf_rating: A
+    date_start: "2026-07-19"
+    date_end: "2026-07-19"
+    location:
+      city: Los Angeles
+      country: USA
+    website: https://s2026.siggraph.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/siggraph/2026
+
+  - id: dac-2026
+    abbr: DAC
+    full_name: Design Automation Conference
+    domain: 体系结构/EDA
+    ccf_rating: A
+    date_start: "2026-07-26"
+    date_end: "2026-07-26"
+    location:
+      city: Long Beach
+      country: USA
+    website: https://www.dac.com
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/dac/2026
+
+  - id: kdd-2026
+    abbr: KDD
+    full_name: Knowledge Discovery and Data Mining
+    domain: 数据挖掘
+    ccf_rating: A
+    date_start: "2026-08-09"
+    date_end: "2026-08-09"
+    location:
+      city: Jeju
+      country: Korea
+    website: https://kdd.org/kdd2026
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/kdd/2026
+
+  - id: usenix-security-2026
+    abbr: USENIX Security
+    full_name: USENIX Security Symposium
+    domain: 网络安全
+    ccf_rating: A
+    date_start: "2026-08-12"
+    date_end: "2026-08-12"
+    location:
+      city: Baltimore
+      country: USA
+    website: https://www.usenix.org/conference/usenixsecurity26
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/uss/2026
+
+  - id: ijcai-2026
+    abbr: IJCAI
+    full_name: International Joint Conference on AI
+    domain: 人工智能综合
+    ccf_rating: A
+    date_start: "2026-08-15"
+    date_end: "2026-08-15"
+    location:
+      city: Bremen
+      country: Germany
+    website: https://www.ijcai.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview:
+        venue_id: ijcai.org/IJCAI/2026/Conference
+      dblp:
+        key: conf/ijcai/2026
+
+  - id: vldb-2026
+    abbr: VLDB
+    full_name: Very Large Data Bases
+    domain: 数据库
+    ccf_rating: A
+    date_start: "2026-08-31"
+    date_end: "2026-08-31"
+    location:
+      city: Boston
+      country: USA
+    website: https://vldb.org/2026
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/vldb/2026
+
+  - id: issta-2026
+    abbr: ISSTA
+    full_name: International Symposium on Software Testing
+    domain: 软件工程
+    ccf_rating: A
+    date_start: "2026-10-03"
+    date_end: "2026-10-09"
+    location:
+      city: Oakland
+      country: USA
+    website: https://issta.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/issta/2026
+
+  - id: ase-2026
+    abbr: ASE
+    full_name: Automated Software Engineering
+    domain: 软件工程
+    ccf_rating: A
+    date_start: "2026-10-12"
+    date_end: "2026-10-16"
+    location:
+      city: TBD
+      country: TBD
+    website: https://conf.researchr.org/home/ase-2026
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/kbse/2026
+
+  - id: emnlp-2026
+    abbr: EMNLP
+    full_name: Empirical Methods in NLP
+    domain: 自然语言处理
+    ccf_rating: A
+    date_start: "2026-10-24"
+    date_end: "2026-10-29"
+    location:
+      city: Budapest
+      country: Hungary
+    website: https://2026.emnlp.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview:
+        venue_id: EMNLP/2026/Conference
+      dblp:
+        key: conf/emnlp/2026
+
+  - id: focs-2026
+    abbr: FOCS
+    full_name: Foundations of Computer Science
+    domain: 理论计算机
+    ccf_rating: A
+    date_start: "2026-11-08"
+    date_end: "2026-11-11"
+    location:
+      city: New York
+      country: USA
+    website: https://ieee-focs.org
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview: null
+      dblp:
+        key: conf/focs/2026
+
+  - id: neurips-2026
+    abbr: NeurIPS
+    full_name: Neural Information Processing Systems
+    domain: 机器学习
+    ccf_rating: A
+    date_start: "2026-12-06"
+    date_end: "2026-12-12"
+    location:
+      city: Sydney
+      country: Australia
+    website: https://neurips.cc
+    submission_deadline: null
+    notification_date: null
+    sources:
+      openreview:
+        venue_id: NeurIPS.cc/2026/Conference
+      dblp:
+        key: conf/nips/2026
