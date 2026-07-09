@@ -5,7 +5,15 @@ collector:
   max_retries: 3
   timeout: 30
   dblp_max_papers: 500       # DBLP 单会议最大采集数
-  user_agent: "ConferenceTracker/1.0 (Academic Research; +https://github.com)"
+  user_agent: "Mozilla/5.0 (compatible; ConferenceTracker/1.0; +https://github.com)"
+
+enrichment:
+  enabled: true
+  max_papers_per_conference: 80    # 每个会议最多尝试补全机构信息的论文数
+  max_author_fallback_papers: 0    # 作者历史机构推断（较慢，默认关闭）
+  max_authors_per_paper: 4
+  request_delay: 0.12
+  openalex_mailto: "conference-tracker@users.noreply.github.com"
 
 openreview:
   api_base: "https://api2.openreview.net"
@@ -21,10 +29,10 @@ semantic_scholar:
 university_news:
   tsinghua:
     url: "https://www.cs.tsinghua.edu.cn"
-    search_path: "/xwzx/xyxw.htm"
+    search_path: "/index/xwdt.htm"
   peking:
     url: "https://cs.pku.edu.cn"
-    search_path: "/info/1028/"
+    search_path: "/"
 
 output:
   report_dir: reports

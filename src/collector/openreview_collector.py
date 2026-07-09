@@ -16,12 +16,16 @@ class OpenReviewCollector(BaseCollector):
 
     def __init__(self, settings: dict[str, Any]):
         super().__init__(settings)
-        self.api_bases = [
-            settings.get("openreview", {}).get("api_base", "https://api2.openreview.net"),
-            "https://api.openreview.net",
-        ]
+        # api2 在 CI/脚本环境需要 Challenge 验证，仅使用 v1
+        self.api_bases = ["https://api.openreview.net"]
         self.batch_size = settings.get("openreview", {}).get("batch_size", 1000)
-        self.session.headers.update({"Accept": "application/json"})
+        self.session.headers.update(
+            {
+                "Accept": "application/json",
+                "Origin": "https://openreview.net",
+                "Referer": "https://openreview.net/",
+            }
+        )
 
     @property
     def source_name(self) -> str:
@@ -56,17 +60,32 @@ class OpenReviewCollector(BaseCollector):
         return papers
 
     def _fetch_notes(self, venue_id: str, offset: int) -> list[dict]:
-        params = {
-            "content.venueid": venue_id,
-            "limit": self.batch_size,
-            "offset": offset,
-        }
+        param_sets = [
+            {"content.venueid": venue_id},
+            {"content.venue": venue_id},
+            {"invitation": f"{venue_id}/-/Submission"},
+        ]
+
         for api_base in self.api_bases:
-            url = f"{api_base}/notes"
-            response = self.get(url, params=params)
-            if response:
-                data = response.json()
-                return data.get("notes", [])
+            for params in param_sets:
+                params = {
+                    **params,
+                    "limit": self.batch_size,
+                    "offset": offset,
+                }
+                url = f"{api_base}/notes"
+                response = self.get(url, params=params)
+                if not response:
+                    continue
+                if response.status_code == 403:
+                    logger.warning("OpenReview 403 on %s, skipping", api_base)
+                    break
+                try:
+                    notes = response.json().get("notes", [])
+                except ValueError:
+                    continue
+                if notes:
+                    return notes
         return []
 
     def _parse_note(self, note: dict) -> Paper | None:
@@ -103,10 +122,6 @@ class OpenReviewCollector(BaseCollector):
         author_names = content.get("authors", [])
         if isinstance(author_names, dict):
             author_names = author_names.get("value", [])
-
-        affiliations_raw = content.get("authorids", content.get("affiliations", []))
-        if isinstance(affiliations_raw, dict):
-            affiliations_raw = affiliations_raw.get("value", [])
 
         affiliation_list = content.get("affiliations", [])
         if isinstance(affiliation_list, dict):

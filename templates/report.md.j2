@@ -10,6 +10,7 @@
 | 指标 | 数值 |
 |------|------|
 | 会议总数 | {{ stats.total_conferences }} |
+| 已采集论文总数 | {{ stats.total_collected_papers }} |
 | 国内中稿总数 | {{ stats.total_domestic_papers }} |
 | 清华大学中稿 | {{ stats.tsinghua_total }} 篇 🔵 |
 | 北京大学中稿 | {{ stats.peking_total }} 篇 🔴 |
@@ -37,9 +38,11 @@
 {% if conf.notification_date %}- 录用通知：{{ conf.notification_date }}{% endif %}
 
 **国内中稿概览**
-- 总中稿数：{{ conf.domestic_count }} 篇
+- 已采集论文：{{ conf.collected_count }} 篇
+- 国内中稿数：{{ conf.domestic_count }} 篇
 - 清华大学：{{ conf.tsinghua_count }} 篇 🔵
 - 北京大学：{{ conf.peking_count }} 篇 🔴
+{% if conf.collected_count > conf.domestic_count %}- 机构待补全：{{ conf.collected_count - conf.domestic_count }} 篇（DBLP 已收录但 OpenAlex 暂无机构信息）{% endif %}
 
 {% if conf.highlighted_papers %}
 **清北高亮论文列表**
@@ -61,6 +64,15 @@
 
 {% for paper in conf.other_domestic_papers %}
 - {{ paper.title }}{% if paper.url %} — [链接]({{ paper.url }}){% endif %}
+{% endfor %}
+{% endif %}
+
+{% if conf.sample_papers and conf.domestic_count == 0 and conf.collected_count > 0 %}
+**已采集论文示例**（机构信息待补全，前 10 篇）
+
+{% for paper in conf.sample_papers %}
+- {{ paper.title }}{% if paper.url %} — [链接]({{ paper.url }}){% endif %}
+
 {% endfor %}
 {% endif %}
 

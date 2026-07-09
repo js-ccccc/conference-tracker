@@ -18,7 +18,7 @@ def main():
     output_cfg = settings.get("output", {})
 
     cache = CacheManager(output_cfg.get("cache_dir", "data"))
-    processor = DataProcessor(institutions)
+    processor = DataProcessor(institutions, load_settings())
 
     conferences = []
     for cfg in load_conferences():

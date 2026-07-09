@@ -12,6 +12,14 @@ from src.models import Author, Conference, Paper
 
 logger = logging.getLogger(__name__)
 
+PROCEEDINGS_TITLE_MARKERS = (
+    "proceedings of",
+    "conference on",
+    "international conference",
+    "symposium on",
+    "workshop on",
+)
+
 
 class DBLPCollector(BaseCollector):
     """通过 DBLP API 按会议检索论文"""
@@ -33,13 +41,28 @@ class DBLPCollector(BaseCollector):
             return []
 
         dblp_key = source_config["key"]
-        query = f"venue:{conference.abbr}:{conference.date_start[:4]}"
+        papers: list[Paper] = []
+
+        # 优先用 proceedings key 查询（如 conf/acl/2026），比 venue: 语法更准确
+        papers = self._search_by_query(dblp_key)
+
+        if not papers:
+            query = f"venue:{conference.abbr}:{conference.date_start[:4]}"
+            papers = self._search_by_query(query)
+
+        if not papers:
+            papers = self._search_by_key(dblp_key)
+
+        papers = self._filter_proceedings(papers)[: self.max_papers]
+        logger.info("DBLP: collected %d papers for %s", len(papers), conference.abbr)
+        return papers
+
+    def _search_by_query(self, query: str) -> list[Paper]:
         papers: list[Paper] = []
         first = 0
         batch_size = 100
-        max_papers = self.max_papers
 
-        while len(papers) < max_papers:
+        while len(papers) < self.max_papers:
             batch = self._search(query, first, batch_size)
             if not batch:
                 break
@@ -48,25 +71,31 @@ class DBLPCollector(BaseCollector):
                 break
             first += batch_size
 
-        if not papers:
-            papers = self._search_by_key(dblp_key)
-
-        papers = papers[:max_papers]
-        logger.info("DBLP: collected %d papers for %s", len(papers), conference.abbr)
         return papers
 
     def _search(self, query: str, first: int, count: int) -> list[Paper]:
         params = {"q": query, "format": "json", "h": count, "f": first}
         response = self.get(self.api_base, params=params)
-        if not response:
+        if not response or response.status_code != 200:
+            if response and response.status_code == 429:
+                logger.warning("DBLP rate limited, stopping pagination")
             return []
 
-        data = response.json()
+        try:
+            data = response.json()
+        except ValueError:
+            return []
+
         hits = data.get("result", {}).get("hits", {}).get("hit", [])
         if isinstance(hits, dict):
             hits = [hits]
 
-        return [self._parse_hit(hit) for hit in hits if self._parse_hit(hit)]
+        papers = []
+        for hit in hits:
+            paper = self._parse_hit(hit)
+            if paper:
+                papers.append(paper)
+        return papers
 
     def _search_by_key(self, dblp_key: str) -> list[Paper]:
         url = f"https://dblp.org/rec/{dblp_key}.xml"
@@ -81,11 +110,24 @@ class DBLPCollector(BaseCollector):
 
         papers: list[Paper] = []
         for pub in root.iter():
-            if pub.tag in ("inproceedings", "article", "proceedings"):
+            if pub.tag in ("inproceedings", "article"):
                 paper = self._parse_xml_pub(pub)
                 if paper:
                     papers.append(paper)
         return papers
+
+    def _filter_proceedings(self, papers: list[Paper]) -> list[Paper]:
+        filtered = []
+        for paper in papers:
+            title_lower = paper.title.lower().strip()
+            if title_lower.startswith("proceedings of the"):
+                continue
+            if title_lower.startswith("proceedings of "):
+                continue
+            if "proceedings" in title_lower and len(paper.authors) >= 5:
+                continue
+            filtered.append(paper)
+        return filtered
 
     def _parse_hit(self, hit: dict) -> Paper | None:
         info = hit.get("info", {})
@@ -95,7 +137,7 @@ class DBLPCollector(BaseCollector):
 
         title = re.sub(r"</?[^>]+>", "", title).strip()
         authors = self._parse_authors_json(info.get("authors", {}))
-        url = info.get("ee") or info.get("url")
+        url = self._extract_url(info)
         paper_id = info.get("key", "")
 
         return Paper(
@@ -106,16 +148,34 @@ class DBLPCollector(BaseCollector):
             paper_id=paper_id,
         )
 
+    @staticmethod
+    def _extract_url(info: dict) -> str | None:
+        ee = info.get("ee")
+        if isinstance(ee, str):
+            return ee
+        if isinstance(ee, list) and ee:
+            return str(ee[0])
+        return info.get("url")
+
     def _parse_authors_json(self, authors_data: dict | list) -> list[Author]:
         if isinstance(authors_data, dict):
             author_list = authors_data.get("author", [])
         else:
             author_list = authors_data
 
+        if isinstance(author_list, dict):
+            author_list = [author_list]
+
         if isinstance(author_list, str):
             author_list = [author_list]
 
-        return [Author(name=str(a)) for a in author_list]
+        authors: list[Author] = []
+        for item in author_list:
+            if isinstance(item, dict):
+                authors.append(Author(name=str(item.get("text", ""))))
+            else:
+                authors.append(Author(name=str(item)))
+        return authors
 
     def _parse_xml_pub(self, elem) -> Paper | None:
         title_elem = elem.find("title")

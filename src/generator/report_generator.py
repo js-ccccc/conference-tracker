@@ -82,6 +82,7 @@ class ReportGenerator:
 
         return {
             "total_conferences": len(conferences),
+            "total_collected_papers": sum(len(c.papers) for c in conferences),
             "total_domestic_papers": total_domestic,
             "tsinghua_total": tsinghua_total,
             "peking_total": peking_total,
@@ -103,11 +104,13 @@ class ReportGenerator:
             "ccf_rating": conf.ccf_rating,
             "submission_deadline": conf.submission_deadline,
             "notification_date": conf.notification_date,
+            "collected_count": len(conf.papers),
             "domestic_count": len(conf.domestic_papers()),
             "tsinghua_count": len(conf.tsinghua_papers()),
             "peking_count": len(conf.peking_papers()),
             "highlighted_papers": [self._prepare_paper(p) for p in highlighted],
             "other_domestic_papers": [self._prepare_paper(p) for p in other_domestic],
+            "sample_papers": [self._prepare_paper(p) for p in conf.papers[:10]],
         }
 
     def _prepare_paper(self, paper: Paper) -> dict[str, Any]:

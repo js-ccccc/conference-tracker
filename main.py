@@ -72,6 +72,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="强制重新采集（忽略缓存）",
     )
+    parser.add_argument(
+        "--no-enrich",
+        action="store_true",
+        help="跳过机构信息补全（加快速度）",
+    )
     return parser.parse_args()
 
 
@@ -99,7 +104,7 @@ def run(args: argparse.Namespace) -> None:
     report_filename = output_cfg.get("report_filename", "2026-H2-conferences.md")
 
     collector_mgr = CollectorManager(settings)
-    processor = DataProcessor(institutions)
+    processor = DataProcessor(institutions, settings)
     cache = CacheManager(cache_dir)
     incremental = not args.full
 
@@ -117,7 +122,20 @@ def run(args: argparse.Namespace) -> None:
                 continue
 
         raw_papers = collector_mgr.collect_all(conference, conf_cfg)
-        processed = processor.process_conference(conference, raw_papers)
+        if not raw_papers:
+            cached = cache.load_conference(conference.id)
+            if cached and cached.papers:
+                logger.warning(
+                    "Collection returned 0 papers for %s, keeping cached %d papers",
+                    conference.abbr,
+                    len(cached.papers),
+                )
+                conferences.append(cached)
+                continue
+
+        processed = processor.process_conference(
+            conference, raw_papers, enrich=not args.no_enrich
+        )
 
         if incremental and not args.force:
             cached = cache.load_conference(conference.id)
@@ -125,7 +143,20 @@ def run(args: argparse.Namespace) -> None:
                 processed.papers = cache.merge_papers(
                     cached.papers, processed.papers
                 )
-                processed.papers = processor.process_papers(processed.papers)
+                processed.papers = processor.process_papers(
+                    processed.papers, enrich=not args.no_enrich
+                )
+
+        if not processed.papers:
+            cached = cache.load_conference(conference.id)
+            if cached and cached.papers:
+                logger.warning(
+                    "Skipping empty save for %s, keeping %d cached papers",
+                    conference.abbr,
+                    len(cached.papers),
+                )
+                conferences.append(cached)
+                continue
 
         cache.save(processed)
         conferences.append(processed)

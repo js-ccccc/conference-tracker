@@ -17,7 +17,7 @@ conferences:
     notification_date: null
     sources:
       openreview:
-        venue_id: ACL.org/2026/Conference
+        venue_id: aclweb.org/ACL/2026/Conference
       dblp:
         key: conf/acl/2026
 

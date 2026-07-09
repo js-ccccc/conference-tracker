@@ -47,6 +47,8 @@ class BaseCollector(ABC):
                 response = self.session.get(
                     url, params=params, headers=headers, timeout=self.timeout
                 )
+                if response.status_code in (403, 404, 429):
+                    return response
                 response.raise_for_status()
                 return response
             except requests.RequestException as exc:
