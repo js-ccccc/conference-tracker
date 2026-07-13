@@ -6,22 +6,26 @@ import logging
 from typing import Any
 
 from src.collector.base import BaseCollector
-from src.collector.dblp_collector import DBLPCollector
-from src.collector.openreview_collector import OpenReviewCollector
+from src.collector.conference_official_collector import ConferenceOfficialCollector
+from src.collector.tech_news_collector import TechNewsCollector
 from src.collector.university_news_collector import UniversityNewsCollector
+from src.collector.wechat_collector import WeChatCollector
 from src.models import Conference, Paper
 
 logger = logging.getLogger(__name__)
 
 
 class CollectorManager:
-    """管理多数据源采集，单源失败不影响整体"""
+    """管理多数据源采集：会议官网、科技新闻、学校官网、微信公众号"""
+
+    GLOBAL_SOURCES = ("tech_news", "university_news", "wechat")
 
     def __init__(self, settings: dict[str, Any]):
         self.collectors: dict[str, BaseCollector] = {
-            "openreview": OpenReviewCollector(settings),
-            "dblp": DBLPCollector(settings),
+            "official": ConferenceOfficialCollector(settings),
+            "tech_news": TechNewsCollector(settings),
             "university_news": UniversityNewsCollector(settings),
+            "wechat": WeChatCollector(settings),
         }
 
     def collect_all(self, conference: Conference, conf_config: dict) -> list[Paper]:
@@ -29,15 +33,15 @@ class CollectorManager:
         sources = conf_config.get("sources", {})
 
         for source_name, collector in self.collectors.items():
-            source_config = sources.get(source_name)
-            if source_config is None and source_name != "university_news":
-                continue
+            if source_name in self.GLOBAL_SOURCES:
+                source_config = {}
+            else:
+                source_config = sources.get(source_name)
+                if source_config is None:
+                    continue
 
             try:
-                if source_name == "university_news":
-                    papers = collector.collect(conference, {})
-                else:
-                    papers = collector.collect(conference, source_config or {})
+                papers = collector.collect(conference, source_config or {})
                 all_papers.extend(papers)
                 logger.info(
                     "%s: %d papers from %s",

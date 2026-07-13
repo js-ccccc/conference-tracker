@@ -27,6 +27,22 @@ class DataProcessor:
             papers = self.enricher.enrich(papers)
         tagged = [self.matcher.process_paper(p) for p in papers]
         deduped = self.deduplicator.deduplicate(tagged)
+
+        # 会议官网录用名单默认视为国际论文库；国内中稿主要来自新闻/学校/公众号
+        for paper in deduped:
+            if paper.source == "conference_official":
+                valid_authors = [
+                    a for a in paper.authors
+                    if a.name and not a.name.startswith("http") and len(a.name) >= 2
+                ]
+                if not valid_authors:
+                    paper.authors = []
+                    paper.is_domestic = False
+                    paper.has_tsinghua = False
+                    paper.has_peking = False
+                    for a in paper.authors:
+                        a.tags = []
+
         domestic = [p for p in deduped if p.is_domestic]
         logger.info(
             "Processed %d papers -> %d after dedup -> %d domestic (keeping all %d)",

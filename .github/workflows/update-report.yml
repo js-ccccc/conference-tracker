@@ -27,7 +27,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run collector
-        run: python main.py --full --no-enrich --push
+        run: python main.py --full --push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_USER_NAME: github-actions[bot]

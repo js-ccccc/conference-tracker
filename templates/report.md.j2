@@ -1,7 +1,7 @@
 # 2026年下半年计算机顶会信息报告
 
 > 自动生成时间：{{ generated_at }}
-> 数据来源：OpenReview、DBLP、高校官网
+> 数据来源：会议官网、科技新闻网站、高校官网、微信公众号
 
 ---
 
@@ -42,7 +42,7 @@
 - 国内中稿数：{{ conf.domestic_count }} 篇
 - 清华大学：{{ conf.tsinghua_count }} 篇 🔵
 - 北京大学：{{ conf.peking_count }} 篇 🔴
-{% if conf.collected_count > conf.domestic_count %}- 机构待补全：{{ conf.collected_count - conf.domestic_count }} 篇（DBLP 已收录但 OpenAlex 暂无机构信息）{% endif %}
+{% if conf.collected_count > conf.domestic_count %}- 机构待补全：{{ conf.collected_count - conf.domestic_count }} 篇（待从新闻报道进一步核实）{% endif %}
 
 {% if conf.highlighted_papers %}
 **清北高亮论文列表**

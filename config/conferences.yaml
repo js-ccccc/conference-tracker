@@ -1,5 +1,5 @@
 # 2026年下半年 CCF A 类顶会配置
-# sources 中的 venue_id / dblp_key 可在官方公布录用名单后更新
+# sources.official.pages：会议官网录用名单 / Program 页面（可随官方更新）
 
 conferences:
   - id: acl-2026
@@ -16,10 +16,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview:
-        venue_id: aclweb.org/ACL/2026/Conference
-      dblp:
-        key: conf/acl/2026
+      official:
+        pages:
+          - https://2026.aclweb.org
+          - https://aclanthology.org/events/acl-2026/
 
   - id: icml-2026
     abbr: ICML
@@ -35,10 +35,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview:
-        venue_id: ICML.cc/2026/Conference
-      dblp:
-        key: conf/icml/2026
+      official:
+        pages:
+          - https://icml.cc/Conferences/2026
+          - https://icml.cc/virtual/2026/events/list
 
   - id: siggraph-2026
     abbr: SIGGRAPH
@@ -54,9 +54,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/siggraph/2026
+      official:
+        pages:
+          - https://s2026.siggraph.org
+          - https://s2026.siggraph.org/program/
 
   - id: dac-2026
     abbr: DAC
@@ -72,9 +73,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/dac/2026
+      official:
+        pages:
+          - https://www.dac.com
+          - https://www.dac.com/conference/technical-program
 
   - id: kdd-2026
     abbr: KDD
@@ -90,9 +92,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/kdd/2026
+      official:
+        pages:
+          - https://kdd.org/kdd2026
+          - https://kdd.org/kdd2026/program
 
   - id: usenix-security-2026
     abbr: USENIX Security
@@ -108,9 +111,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/uss/2026
+      official:
+        pages:
+          - https://www.usenix.org/conference/usenixsecurity26
+          - https://www.usenix.org/conference/usenixsecurity26/technical-sessions
 
   - id: ijcai-2026
     abbr: IJCAI
@@ -126,10 +130,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview:
-        venue_id: ijcai.org/IJCAI/2026/Conference
-      dblp:
-        key: conf/ijcai/2026
+      official:
+        pages:
+          - https://www.ijcai.org
+          - https://2026.ijcai.org
 
   - id: vldb-2026
     abbr: VLDB
@@ -145,9 +149,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/vldb/2026
+      official:
+        pages:
+          - https://vldb.org/2026
+          - https://vldb.org/2026/program
 
   - id: issta-2026
     abbr: ISSTA
@@ -163,9 +168,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/issta/2026
+      official:
+        pages:
+          - https://issta.org
+          - https://conf.researchr.org/home/issta-2026
 
   - id: ase-2026
     abbr: ASE
@@ -181,9 +187,9 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/kbse/2026
+      official:
+        pages:
+          - https://conf.researchr.org/home/ase-2026
 
   - id: emnlp-2026
     abbr: EMNLP
@@ -199,10 +205,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview:
-        venue_id: EMNLP/2026/Conference
-      dblp:
-        key: conf/emnlp/2026
+      official:
+        pages:
+          - https://2026.emnlp.org
+          - https://aclanthology.org/events/emnlp-2026/
 
   - id: focs-2026
     abbr: FOCS
@@ -218,9 +224,10 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview: null
-      dblp:
-        key: conf/focs/2026
+      official:
+        pages:
+          - https://ieee-focs.org
+          - https://ieee-focs.org/FOCS/2026/
 
   - id: neurips-2026
     abbr: NeurIPS
@@ -236,7 +243,7 @@ conferences:
     submission_deadline: null
     notification_date: null
     sources:
-      openreview:
-        venue_id: NeurIPS.cc/2026/Conference
-      dblp:
-        key: conf/nips/2026
+      official:
+        pages:
+          - https://neurips.cc/Conferences/2026
+          - https://neurips.cc/virtual/2026/events/list

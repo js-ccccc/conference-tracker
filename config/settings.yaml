@@ -1,38 +1,127 @@
 # 全局运行配置
 
 collector:
-  request_delay: 1.5          # 请求间隔（秒）
+  request_delay: 1.5
   max_retries: 3
   timeout: 30
-  dblp_max_papers: 500       # DBLP 单会议最大采集数
+  official_max_papers: 800   # 单会议官网最大采集论文数
   user_agent: "Mozilla/5.0 (compatible; ConferenceTracker/1.0; +https://github.com)"
 
+# 机构信息补全（可选，用于官网论文缺少机构时）
 enrichment:
-  enabled: true
-  max_papers_per_conference: 80    # 每个会议最多尝试补全机构信息的论文数
-  max_author_fallback_papers: 0    # 作者历史机构推断（较慢，默认关闭）
+  enabled: false
+  max_papers_per_conference: 50
+  max_author_fallback_papers: 0
   max_authors_per_paper: 4
   request_delay: 0.12
   openalex_mailto: "conference-tracker@users.noreply.github.com"
 
-openreview:
-  api_base: "https://api2.openreview.net"
-  batch_size: 1000
+# 科技新闻网站
+tech_news:
+  sites:
+    - name: 机器之心
+      url: https://www.jiqizhixin.com
+      list_path: /articles
+      search_url: "https://www.jiqizhixin.com/search?q={query}"
+      max_articles: 10
+      enabled: true
 
-dblp:
-  api_base: "https://dblp.org/search/publ/api"
+    - name: 量子位
+      url: https://www.qbitai.com
+      list_path: /
+      search_url: "https://www.qbitai.com/?s={query}"
+      max_articles: 10
+      enabled: true
 
-semantic_scholar:
-  api_base: "https://api.semanticscholar.org/graph/v1"
-  # 可选：设置环境变量 SEMANTIC_SCHOLAR_API_KEY 提高限额
+    - name: 雷锋网
+      url: https://www.leiphone.com
+      list_path: /category/academic
+      search_url: "https://www.leiphone.com/search?q={query}"
+      max_articles: 8
+      enabled: true
 
+    - name: 新智元
+      url: https://www.aiust.com
+      list_path: /
+      max_articles: 8
+      enabled: true
+
+# 高校官网（院系新闻页）
 university_news:
-  tsinghua:
-    url: "https://www.cs.tsinghua.edu.cn"
-    search_path: "/index/xwdt.htm"
-  peking:
-    url: "https://cs.pku.edu.cn"
-    search_path: "/"
+  sites:
+    - name: 清华大学计算机系
+      affiliation: 清华大学
+      url: https://www.cs.tsinghua.edu.cn
+      news_paths:
+        - /index/xwdt.htm
+        - /index/kydt.htm
+      max_articles: 15
+      enabled: true
+
+    - name: 北京大学计算机学院
+      affiliation: 北京大学
+      url: https://cs.pku.edu.cn
+      news_paths:
+        - /
+      max_articles: 15
+      enabled: true
+
+    - name: 上海交通大学计算机系
+      affiliation: 上海交通大学
+      url: https://www.cs.sjtu.edu.cn
+      news_paths:
+        - /index/xwdt.htm
+      max_articles: 10
+      enabled: true
+
+    - name: 浙江大学计算机学院
+      affiliation: 浙江大学
+      url: http://www.cs.zju.edu.cn
+      news_paths:
+        - /chinese/
+      max_articles: 10
+      enabled: true
+
+    - name: 南京大学计算机系
+      affiliation: 南京大学
+      url: https://cs.nju.edu.cn
+      news_paths:
+        - /main.htm
+      max_articles: 10
+      enabled: true
+
+    - name: 中科大计算机学院
+      affiliation: 中国科学技术大学
+      url: http://cs.ustc.edu.cn
+      news_paths:
+        - /
+      max_articles: 10
+      enabled: true
+
+# 微信公众号
+wechat:
+  use_sogou_search: true
+  max_articles_per_query: 6
+  accounts:
+    - name: 机器之心
+      affiliation: null
+      article_pages: []
+      enabled: true
+
+    - name: 量子位
+      affiliation: null
+      article_pages: []
+      enabled: true
+
+    - name: 新智元
+      affiliation: null
+      article_pages: []
+      enabled: true
+
+    - name: 清华计算机系
+      affiliation: 清华大学
+      article_pages: []
+      enabled: true
 
 output:
   report_dir: reports

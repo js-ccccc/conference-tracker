@@ -5,7 +5,7 @@
 ## 功能
 
 - **会议信息采集**：时间、地点、官网、领域、CCF 评级等
-- **中稿论文采集**：OpenReview、DBLP、清华/北大官网新闻
+- **中稿论文采集**：会议官网、科技新闻（机器之心/量子位等）、高校官网、微信公众号
 - **清北标注**：自动识别清华 🔵、北大 🔴 作者并高亮
 - **报告生成**：按会议时间排序的 Markdown 报告
 - **自动化更新**：GitHub Actions 每周定时运行
@@ -57,10 +57,13 @@ python main.py --full --push
 | `--push` | 自动 git commit + push |
 | `--force` | 强制重新采集 |
 | `--no-report` | 跳过报告生成 |
+| `--no-enrich` | 跳过 OpenAlex 机构补全（默认已关闭） |
 
 ## 配置说明
 
-在 `config/conferences.yaml` 中维护会议列表与各数据源 ID。当官方公布录用名单后，更新对应会议的 `openreview.venue_id` 或 `dblp.key` 即可。
+在 `config/conferences.yaml` 中维护会议列表与各会议官网页面（`sources.official.pages`）。
+
+在 `config/settings.yaml` 中配置科技新闻站、高校官网、微信公众号采集源。
 
 在 `config/institutions.yaml` 中可扩展清北关键词与国内机构列表。
 

@@ -29,6 +29,11 @@ class Deduplicator:
         return merged
 
     def _find_duplicate(self, paper: Paper, existing: list[Paper]) -> Optional[int]:
+        if paper.paper_id:
+            for i, ex in enumerate(existing):
+                if ex.paper_id and paper.paper_id == ex.paper_id:
+                    return i
+
         norm_title = self._normalize_title(paper.title)
         for i, ex in enumerate(existing):
             ex_norm = self._normalize_title(ex.title)
