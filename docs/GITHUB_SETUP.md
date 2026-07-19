@@ -1,6 +1,51 @@
 # GitHub 仓库配置指南
 
-## 方式一：网页创建（推荐）
+## 重新部署（原仓库已删除）
+
+本地代码保留，只需新建远程仓库并重新推送。
+
+### 1. 在 GitHub 新建空仓库
+
+1. 打开 [https://github.com/new](https://github.com/new)
+2. 仓库名：`conference-tracker` 或 `conference-2026-h2-tracker`
+3. 选 **Public**
+4. **不要**勾选 README / .gitignore / License
+5. 点击 **Create repository**
+
+### 2. 更换远程地址并推送
+
+将 `js-ccccc` 和仓库名换成你的账号与新建仓库名：
+
+```powershell
+cd "c:\Users\24993\Desktop\会议收集"
+
+# 删除指向已删仓库的旧 remote
+git remote remove origin
+
+# 绑定新仓库（示例）
+git remote add origin https://github.com/js-ccccc/conference-tracker.git
+
+# 推送全部本地提交
+git branch -M main
+git push -u origin main
+```
+
+若 `git push` 失败，先登录 GitHub CLI 或使用 Personal Access Token。
+
+### 3. 启用 Actions 并手动跑一次
+
+1. 仓库 **Settings** → **Actions** → **General**
+2. **Workflow permissions** → 选 **Read and write permissions** → Save
+3. **Actions** → **Update Conference Report** → **Run workflow**
+
+### 4. 验证
+
+- `reports/2026-H2-conferences.md` 应有内容
+- Actions 运行日志中应看到四类数据源采集（官网 / 科技新闻 / 学校 / 微信）
+
+---
+
+## 方式一：网页创建（首次部署）
 
 ### 1. 在 GitHub 创建仓库
 

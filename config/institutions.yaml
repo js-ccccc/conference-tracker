@@ -1,28 +1,6 @@
 # 机构名称归一化与标注规则
 
-# 清北高亮标注
-highlight_institutions:
-  tsinghua:
-    label: "🔵清华"
-    canonical: 清华大学
-    keywords:
-      - 清华大学
-      - Tsinghua University
-      - Tsinghua Univ
-      - THU
-      - 清华
-
-  peking:
-    label: "🔴北大"
-    canonical: 北京大学
-    keywords:
-      - 北京大学
-      - Peking University
-      - Peking Univ
-      - PKU
-      - 北大
-
-# 国内机构识别（作者所属机构匹配任一关键词即视为国内中稿）
+# 国内（含港澳）机构识别关键词
 domestic_keywords:
   - 中国
   - China
@@ -54,6 +32,28 @@ domestic_keywords:
   - 中国科学院
   - Chinese Academy of Sciences
   - CAS
+  - 香港大学
+  - University of Hong Kong
+  - HKU
+  - 香港中文大学
+  - Chinese University of Hong Kong
+  - CUHK
+  - 香港科技大学
+  - Hong Kong University of Science and Technology
+  - HKUST
+  - 香港理工大学
+  - Hong Kong Polytechnic University
+  - PolyU
+  - 香港城市大学
+  - City University of Hong Kong
+  - CityU
+  - 香港浸会大学
+  - Hong Kong Baptist University
+  - HKBU
+  - 澳门大学
+  - University of Macau
+  - 澳门科技大学
+  - Macau University of Science and Technology
   - 香港
   - Hong Kong
   - 澳门
@@ -61,7 +61,7 @@ domestic_keywords:
   - 台湾
   - Taiwan
 
-# 机构别名映射（归一化为标准名称）
+# 机构别名映射（归一化为标准中文名）
 aliases:
   Tsinghua University: 清华大学
   Tsinghua Univ.: 清华大学
@@ -74,3 +74,14 @@ aliases:
   Chinese Academy of Sciences: 中国科学院
   CAS: 中国科学院
   中科院: 中国科学院
+  University of Hong Kong: 香港大学
+  HKU: 香港大学
+  Chinese University of Hong Kong: 香港中文大学
+  CUHK: 香港中文大学
+  Hong Kong University of Science and Technology: 香港科技大学
+  HKUST: 香港科技大学
+  Hong Kong Polytechnic University: 香港理工大学
+  PolyU: 香港理工大学
+  City University of Hong Kong: 香港城市大学
+  CityU: 香港城市大学
+  University of Macau: 澳门大学

@@ -35,10 +35,14 @@ if (-not $commitCount -or $commitCount -eq "0") {
 # 检查是否已有 remote
 $remoteUrl = git remote get-url origin 2>$null
 if ($remoteUrl) {
-    Write-Host "已存在 remote: $remoteUrl" -ForegroundColor Green
-    git push -u origin main
-    Write-Host "推送完成！" -ForegroundColor Green
-    exit 0
+    Write-Host "已存在 remote: $remoteUrl" -ForegroundColor Yellow
+    $push = git push -u origin main 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "推送完成！" -ForegroundColor Green
+        exit 0
+    }
+    Write-Host "推送失败（远程仓库可能已删除），将移除旧 remote 并重新创建..." -ForegroundColor Yellow
+    git remote remove origin
 }
 
 # 创建 GitHub 仓库

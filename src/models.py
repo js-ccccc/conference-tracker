@@ -11,12 +11,14 @@ class Author:
     name: str
     affiliations: list[str] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
+    chinese_name: Optional[str] = None
 
     def to_dict(self) -> dict:
         return {
             "name": self.name,
             "affiliations": self.affiliations,
             "tags": self.tags,
+            "chinese_name": self.chinese_name,
         }
 
     @classmethod
@@ -25,6 +27,7 @@ class Author:
             name=data.get("name", ""),
             affiliations=data.get("affiliations", []),
             tags=data.get("tags", []),
+            chinese_name=data.get("chinese_name"),
         )
 
 

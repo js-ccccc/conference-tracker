@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -57,43 +58,33 @@ class ReportGenerator:
         return output_path
 
     def _compute_stats(self, conferences: list[Conference]) -> dict[str, Any]:
-        per_conference = []
         total_domestic = 0
-        tsinghua_total = 0
-        peking_total = 0
+        institution_counter: Counter[str] = Counter()
 
         for conf in conferences:
             domestic = conf.domestic_papers()
-            tsinghua = conf.tsinghua_papers()
-            peking = conf.peking_papers()
-
             total_domestic += len(domestic)
-            tsinghua_total += len(tsinghua)
-            peking_total += len(peking)
+            for paper in domestic:
+                for author in paper.authors:
+                    for aff in author.affiliations:
+                        normalized = self.matcher.normalize(aff)
+                        if self.matcher.is_domestic(normalized):
+                            institution_counter[normalized] += 1
 
-            per_conference.append(
-                {
-                    "abbr": conf.abbr,
-                    "tsinghua": len(tsinghua),
-                    "peking": len(peking),
-                    "domestic": len(domestic),
-                }
-            )
+        institution_stats = [
+            {"institution": inst, "count": count}
+            for inst, count in institution_counter.most_common(20)
+        ]
 
         return {
             "total_conferences": len(conferences),
             "total_collected_papers": sum(len(c.papers) for c in conferences),
             "total_domestic_papers": total_domestic,
-            "tsinghua_total": tsinghua_total,
-            "peking_total": peking_total,
-            "per_conference": per_conference,
+            "institution_stats": institution_stats,
         }
 
     def _prepare_conference(self, conf: Conference) -> dict[str, Any]:
-        highlighted = conf.highlighted_papers()
-        other_domestic = [
-            p for p in conf.domestic_papers() if not (p.has_tsinghua or p.has_peking)
-        ]
+        domestic_papers = conf.domestic_papers()
 
         return {
             "display_name": conf.display_name,
@@ -101,32 +92,32 @@ class ReportGenerator:
             "location": conf.location,
             "website": conf.website,
             "domain": conf.domain,
-            "ccf_rating": conf.ccf_rating,
-            "submission_deadline": conf.submission_deadline,
-            "notification_date": conf.notification_date,
             "collected_count": len(conf.papers),
-            "domestic_count": len(conf.domestic_papers()),
-            "tsinghua_count": len(conf.tsinghua_papers()),
-            "peking_count": len(conf.peking_papers()),
-            "highlighted_papers": [self._prepare_paper(p) for p in highlighted],
-            "other_domestic_papers": [self._prepare_paper(p) for p in other_domestic],
-            "sample_papers": [self._prepare_paper(p) for p in conf.papers[:10]],
+            "domestic_count": len(domestic_papers),
+            "domestic_papers": [self._prepare_paper(p) for p in domestic_papers],
         }
 
     def _prepare_paper(self, paper: Paper) -> dict[str, Any]:
-        authors_display = ", ".join(
-            self.matcher.format_author_display(a) for a in paper.authors
-        )
-        all_affs: list[str] = []
+        domestic_authors = []
         for author in paper.authors:
+            domestic_affs = []
             for aff in author.affiliations:
-                if aff and aff not in all_affs:
-                    all_affs.append(aff)
+                normalized = self.matcher.normalize(aff)
+                if self.matcher.is_domestic(normalized):
+                    domestic_affs.append(normalized)
+            if domestic_affs:
+                domestic_authors.append(
+                    {
+                        "name": author.name,
+                        "chinese_name": author.chinese_name,
+                        "affiliation": "，".join(domestic_affs),
+                    }
+                )
 
         return {
             "title": paper.title,
-            "authors_display": authors_display or "未知",
-            "affiliations_display": "，".join(all_affs) if all_affs else "未知",
-            "url": paper.url,
-            "award": paper.award,
+            "arxiv_id": paper.paper_id or "",
+            "url": paper.url or "",
+            "abstract": paper.abstract or "",
+            "domestic_authors": domestic_authors,
         }

@@ -1,83 +1,7 @@
-# 2026年下半年 CCF A 类顶会配置
-# sources.official.pages：会议官网录用名单 / Program 页面（可随官方更新）
+# 目标会议配置
+# sources.arxiv.categories: arXiv 主题分类；keywords: 检索关键词
 
 conferences:
-  - id: acl-2026
-    abbr: ACL
-    full_name: Annual Meeting of the Association for Computational Linguistics
-    domain: 自然语言处理
-    ccf_rating: A
-    date_start: "2026-07-02"
-    date_end: "2026-07-02"
-    location:
-      city: San Diego
-      country: USA
-    website: https://2026.aclweb.org
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://2026.aclweb.org
-          - https://aclanthology.org/events/acl-2026/
-
-  - id: icml-2026
-    abbr: ICML
-    full_name: International Conference on Machine Learning
-    domain: 机器学习
-    ccf_rating: A
-    date_start: "2026-07-06"
-    date_end: "2026-07-11"
-    location:
-      city: Seoul
-      country: South Korea
-    website: https://icml.cc
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://icml.cc/Conferences/2026
-          - https://icml.cc/virtual/2026/events/list
-
-  - id: siggraph-2026
-    abbr: SIGGRAPH
-    full_name: Special Interest Group on Computer Graphics
-    domain: 计算机图形学
-    ccf_rating: A
-    date_start: "2026-07-19"
-    date_end: "2026-07-19"
-    location:
-      city: Los Angeles
-      country: USA
-    website: https://s2026.siggraph.org
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://s2026.siggraph.org
-          - https://s2026.siggraph.org/program/
-
-  - id: dac-2026
-    abbr: DAC
-    full_name: Design Automation Conference
-    domain: 体系结构/EDA
-    ccf_rating: A
-    date_start: "2026-07-26"
-    date_end: "2026-07-26"
-    location:
-      city: Long Beach
-      country: USA
-    website: https://www.dac.com
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://www.dac.com
-          - https://www.dac.com/conference/technical-program
-
   - id: kdd-2026
     abbr: KDD
     full_name: Knowledge Discovery and Data Mining
@@ -89,32 +13,10 @@ conferences:
       city: Jeju
       country: Korea
     website: https://kdd.org/kdd2026
-    submission_deadline: null
-    notification_date: null
     sources:
-      official:
-        pages:
-          - https://kdd.org/kdd2026
-          - https://kdd.org/kdd2026/program
-
-  - id: usenix-security-2026
-    abbr: USENIX Security
-    full_name: USENIX Security Symposium
-    domain: 网络安全
-    ccf_rating: A
-    date_start: "2026-08-12"
-    date_end: "2026-08-12"
-    location:
-      city: Baltimore
-      country: USA
-    website: https://www.usenix.org/conference/usenixsecurity26
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://www.usenix.org/conference/usenixsecurity26
-          - https://www.usenix.org/conference/usenixsecurity26/technical-sessions
+      arxiv:
+        categories: ["cs.DB", "cs.IR"]
+        keywords: ["KDD 2026", "knowledge discovery", "data mining"]
 
   - id: ijcai-2026
     abbr: IJCAI
@@ -127,107 +29,58 @@ conferences:
       city: Bremen
       country: Germany
     website: https://www.ijcai.org
-    submission_deadline: null
-    notification_date: null
     sources:
-      official:
-        pages:
-          - https://www.ijcai.org
-          - https://2026.ijcai.org
+      arxiv:
+        categories: ["cs.AI"]
+        keywords: ["IJCAI 2026", "artificial intelligence"]
 
-  - id: vldb-2026
-    abbr: VLDB
-    full_name: Very Large Data Bases
-    domain: 数据库
-    ccf_rating: A
-    date_start: "2026-08-31"
-    date_end: "2026-08-31"
+  - id: eccv-2026
+    abbr: ECCV
+    full_name: European Conference on Computer Vision
+    domain: 计算机视觉
+    ccf_rating: B
+    date_start: "2026-09-08"
+    date_end: "2026-09-12"
     location:
-      city: Boston
+      city: Malmö
+      country: Sweden
+    website: https://eccv.ecva.net/Conferences/2026
+    sources:
+      arxiv:
+        categories: ["cs.CV"]
+        keywords: ["ECCV 2026", "computer vision"]
+
+  - id: iros-2026
+    abbr: IROS
+    full_name: IEEE/RSJ International Conference on Intelligent Robots and Systems
+    domain: 机器人
+    ccf_rating: A
+    date_start: "2026-09-27"
+    date_end: "2026-10-01"
+    location:
+      city: Pittsburgh
       country: USA
-    website: https://vldb.org/2026
-    submission_deadline: null
-    notification_date: null
+    website: https://2026.ieee-iros.org
     sources:
-      official:
-        pages:
-          - https://vldb.org/2026
-          - https://vldb.org/2026/program
+      arxiv:
+        categories: ["cs.RO"]
+        keywords: ["IROS 2026", "intelligent robots", "robotics"]
 
-  - id: issta-2026
-    abbr: ISSTA
-    full_name: International Symposium on Software Testing
-    domain: 软件工程
+  - id: acmmm-2026
+    abbr: ACM MM
+    full_name: ACM International Conference on Multimedia
+    domain: 多媒体
     ccf_rating: A
-    date_start: "2026-10-03"
-    date_end: "2026-10-09"
+    date_start: "2026-11-10"
+    date_end: "2026-11-14"
     location:
-      city: Oakland
-      country: USA
-    website: https://issta.org
-    submission_deadline: null
-    notification_date: null
+      city: Rio de Janeiro
+      country: Brazil
+    website: https://2026.acmmm.org
     sources:
-      official:
-        pages:
-          - https://issta.org
-          - https://conf.researchr.org/home/issta-2026
-
-  - id: ase-2026
-    abbr: ASE
-    full_name: Automated Software Engineering
-    domain: 软件工程
-    ccf_rating: A
-    date_start: "2026-10-12"
-    date_end: "2026-10-16"
-    location:
-      city: TBD
-      country: TBD
-    website: https://conf.researchr.org/home/ase-2026
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://conf.researchr.org/home/ase-2026
-
-  - id: emnlp-2026
-    abbr: EMNLP
-    full_name: Empirical Methods in NLP
-    domain: 自然语言处理
-    ccf_rating: A
-    date_start: "2026-10-24"
-    date_end: "2026-10-29"
-    location:
-      city: Budapest
-      country: Hungary
-    website: https://2026.emnlp.org
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://2026.emnlp.org
-          - https://aclanthology.org/events/emnlp-2026/
-
-  - id: focs-2026
-    abbr: FOCS
-    full_name: Foundations of Computer Science
-    domain: 理论计算机
-    ccf_rating: A
-    date_start: "2026-11-08"
-    date_end: "2026-11-11"
-    location:
-      city: New York
-      country: USA
-    website: https://ieee-focs.org
-    submission_deadline: null
-    notification_date: null
-    sources:
-      official:
-        pages:
-          - https://ieee-focs.org
-          - https://ieee-focs.org/FOCS/2026/
+      arxiv:
+        categories: ["cs.MM"]
+        keywords: ["ACM Multimedia 2026", "ACM MM 2026", "multimedia"]
 
   - id: neurips-2026
     abbr: NeurIPS
@@ -240,10 +93,23 @@ conferences:
       city: Sydney
       country: Australia
     website: https://neurips.cc
-    submission_deadline: null
-    notification_date: null
     sources:
-      official:
-        pages:
-          - https://neurips.cc/Conferences/2026
-          - https://neurips.cc/virtual/2026/events/list
+      arxiv:
+        categories: ["cs.LG", "cs.NE"]
+        keywords: ["NeurIPS 2026", "neural information processing"]
+
+  - id: aaai-2027
+    abbr: AAAI
+    full_name: AAAI Conference on Artificial Intelligence
+    domain: 人工智能综合
+    ccf_rating: A
+    date_start: "2027-02-16"
+    date_end: "2027-02-23"
+    location:
+      city: Montréal
+      country: Canada
+    website: https://aaai.org/conference/aaai/aaai-27/
+    sources:
+      arxiv:
+        categories: ["cs.AI"]
+        keywords: ["AAAI 2027", "artificial intelligence"]
