@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '0 0 * * 1'  # 每周一 UTC 00:00 执行
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - 'templates/**'
+      - 'main.py'
+      - 'requirements.txt'
+      - '.github/workflows/update-report.yml'
 
 permissions:
   contents: write
