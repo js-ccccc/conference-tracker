@@ -39,10 +39,16 @@ class AffiliationEnricher:
             }
         )
         self._last_request = 0.0
+        self._consecutive_429 = 0
+        self._circuit_open = False
 
     def enrich(self, papers: list[Paper]) -> list[Paper]:
         if not self.enabled or not papers:
             return papers
+
+        # 每次补全重置熔断器，给新会议重新尝试的机会
+        self._circuit_open = False
+        self._consecutive_429 = 0
 
         enriched_count = 0
         limit = min(len(papers), self.max_papers)
@@ -51,6 +57,13 @@ class AffiliationEnricher:
         )
 
         for i, paper in enumerate(papers[:limit]):
+            if self._circuit_open:
+                logger.warning(
+                    "Enrichment circuit breaker tripped (rate limited), "
+                    "skipping remaining %d papers",
+                    limit - i,
+                )
+                break
             if self._has_affiliations(paper):
                 continue
             if self._enrich_from_openalex_work(paper):
@@ -76,21 +89,33 @@ class AffiliationEnricher:
         self._last_request = time.time()
 
     def _get(self, url: str, params: dict | None = None) -> dict | None:
-        for attempt in range(3):
+        if self._circuit_open:
+            return None
+        for attempt in range(2):
             try:
                 self._rate_limit()
-                response = self.session.get(url, params=params, timeout=30)
+                response = self.session.get(url, params=params, timeout=15)
                 if response.status_code == 429:
+                    self._consecutive_429 += 1
+                    if self._consecutive_429 >= 5:
+                        self._circuit_open = True
+                        logger.warning(
+                            "OpenAlex rate limit hit %d times, circuit breaker open",
+                            self._consecutive_429,
+                        )
+                        return None
                     time.sleep(2 ** (attempt + 1))
                     continue
                 if response.status_code == 404:
+                    self._consecutive_429 = 0
                     return None
                 response.raise_for_status()
+                self._consecutive_429 = 0
                 return response.json()
             except requests.RequestException as exc:
                 logger.debug("Enrichment request failed: %s - %s", url, exc)
-                if attempt < 2:
-                    time.sleep(2**attempt)
+                if attempt < 1:
+                    time.sleep(1)
         return None
 
     @staticmethod
@@ -120,15 +145,29 @@ class AffiliationEnricher:
         return None
 
     def _enrich_from_openalex_work(self, paper: Paper) -> bool:
+        # 先尝试 DOI 查找
         doi = self.extract_doi(paper)
-        if not doi:
-            return False
+        if doi:
+            data = self._get(f"https://api.openalex.org/works/https://doi.org/{doi}")
+            if data:
+                return self._apply_openalex_authorships(paper, data.get("authorships", []))
 
-        data = self._get(f"https://api.openalex.org/works/https://doi.org/{doi}")
-        if not data:
-            return False
+        # 再尝试标题查找（arXiv 论文无 DOI）
+        if paper.title:
+            data = self._get(
+                "https://api.openalex.org/works",
+                params={
+                    "search": paper.title[:200],
+                    "per_page": 1,
+                    "select": "id,title,authorships",
+                },
+            )
+            if data and data.get("results"):
+                return self._apply_openalex_authorships(
+                    paper, data["results"][0].get("authorships", [])
+                )
 
-        return self._apply_openalex_authorships(paper, data.get("authorships", []))
+        return False
 
     def _enrich_from_crossref(self, paper: Paper) -> bool:
         doi = self.extract_doi(paper)

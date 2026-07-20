@@ -1,7 +1,7 @@
 # 2026年下半年计算机顶会信息报告
 
 > 自动生成时间：{{ generated_at }}
-> 数据来源：arXiv、OpenAlex（机构补全）
+> 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
 
@@ -11,8 +11,9 @@
 |------|------|
 | 会议总数 | {{ stats.total_conferences }} |
 | arXiv 检索论文总数 | {{ stats.total_collected_papers }} |
-| 国内作者论文总数 | {{ stats.total_domestic_papers }}
+| 国内作者论文总数 | {{ stats.total_domestic_papers }} |
 
+{% if stats.institution_stats %}
 ### 各机构中稿统计
 
 | 单位 | 论文数 |
@@ -20,6 +21,9 @@
 {% for row in stats.institution_stats %}
 | {{ row.institution }} | {{ row.count }} |
 {% endfor %}
+{% else %}
+> 机构统计暂无数据（OpenAlex 机构补全可能被限流，稍后重试）
+{% endif %}
 
 ---
 
@@ -51,8 +55,16 @@
 
 {% endfor %}
 {% else %}
-*暂无国内作者论文（机构信息可能待补全）*
+> 暂无国内作者论文（机构信息可能待补全，下方为该领域最新 arXiv 预印本）
+
 {% endif %}
+**最新 arXiv 预印本（Top 15）**
+
+| # | 标题 | 作者 | arXiv |
+|---|------|------|-------|
+{% for paper in conf.recent_papers %}
+| {{ loop.index }} | {{ paper.title[:60] }}{% if paper.title|length > 60 %}...{% endif %} | {{ paper.authors[:40] }}{% if paper.authors|length > 40 %}...{% endif %} | [{{ paper.arxiv_id }}]({{ paper.url }}) |
+{% endfor %}
 
 ---
 

@@ -1,0 +1,2593 @@
+{
+  "id": "acmmm-2026",
+  "abbr": "ACM MM",
+  "full_name": "ACM International Conference on Multimedia",
+  "domain": "多媒体",
+  "ccf_rating": "A",
+  "date_start": "2026-11-10",
+  "date_end": "2026-11-14",
+  "location_city": "Rio de Janeiro",
+  "location_country": "Brazil",
+  "website": "https://2026.acmmm.org",
+  "submission_deadline": null,
+  "notification_date": null,
+  "papers": [
+    {
+      "title": "Toward Semantic Communication for Real-time Mobile 3D Reconstruction",
+      "authors": [
+        {
+          "name": "Fangzhou Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yao Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuesong Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Runze Cheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shang Kai",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yi Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Real-time mobile 3D reconstruction is fundamental to many emerging applications such as autonomous navigation and digital twin construction, where a moving platform continuously captures an image stream and transmit to a computing server for scene understanding. Unlike offline reconstruction, camera poses and scene geometry are estimated on-the-fly during acquisition, making multi-view consistency a real-time requirement and rendering geometric estimation highly sensitive to communication-induced distortions. Semantic communication (SemCom) transmits compact semantic information, offering a promising way to preserve task-critical data over unreliable links. However, existing designs are optimized at the image or single-view level and without providing explicit reliability information for geometric estimation, limiting their applicability to real-time mobile 3D reconstruction. In this context, we propose a SemCom framework for real-time mobile 3D reconstruction. The framework includes a semantic transceiver that outputs a reconstructed image alongside a pixel-wise confidence map, quantifying the reliability of each region. We further introduce a confidence-guided geometric estimation method, incorporating confidence into RANSAC-based pose initialization and bundle adjustment to reduce the influence of unreliable regions and enhance robustness under noisy channels. Simulations show that, compared to existing SemCom and traditional seperate source and channel coding, our framework maintains high image quality while significantly improving pose estimation accuracy and 3D structural consistency.\n\n[提交时间: 2026-07-17; 分类: cs.CV, cs.MA, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.16128v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.16128v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling",
+      "authors": [
+        {
+          "name": "Bo-An Chang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yu-Chih Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "As Text-to-Image (T2I) systems rapidly advance, evaluating the cultural authenticity of synthesized content has become increasingly important for fair and trustworthy generative AI. Existing T2I evaluation metrics and multimodal judges often rely on visual-semantic representations that underrepresent implicit cultural norms, leading to biased preference judgments and the omission of fine-grained cultural cues. In addition, visual question answering (VQA)-based evaluators typically depend on autoregressive text generation, which limits their scalability for real-time reward modeling. To address these limitations, we introduce an Implicit Cultural Alignment Reward Model built upon a lightweight 4.2-billion-parameter Multimodal Large Language Model (MLLM). Our framework integrates an Implicit Cultural Probe with a Skip-connection Cross-Attention (SkipCA) mechanism, enabling late-stage semantic features to directly attend to early-stage visual representations and better preserve culturally salient details. Evaluations on 3,323 challenging and carefully curated image pairs from the CulturalFrames benchmark show that our approach achieves 80.54% pairwise accuracy, with Pearson and Kendall correlation coefficients of 0.546 and 0.377, respectively, outperforming representative vision-language metrics and MLLM-based evaluators. Moreover, by bypassing autoregressive text generation, our model processes each evaluation in 0.21 seconds under our local inference setup, achieving a $10\\times$ speedup over standard VQA-based evaluators. These results suggest that the proposed reward model can provide an efficient and culturally aware scalar signal for preference optimization pipelines such as Reinforcement Learning from Human Feedback and Direct Preference Optimization.\n\n[提交时间: 2026-07-17; 分类: cs.CV, cs.AI, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.15740v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15740v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SPEED: One-Step Pixel Diffusion for High-quality Video Frame Interpolation",
+      "authors": [
+        {
+          "name": "Zihao Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haoyu Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Siqian Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yidi Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yudong Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zuxuan Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Despite the success of diffusion models in Video Frame Interpolation (VFI), existing methods still suffer from two critical limitations. First, latent diffusion inevitably loses fine-grained details when reconstructing images from latent representations back to the pixel space. Second, multi-step sampling incurs prohibitive memory consumption and inference latency. To address these issues, we propose SPEED, a one-step pixel diffusion framework for high-quality VFI. Specifically, SPEED employs a progressive multi-stage architecture with dynamic patch scaling to effectively learn multi-scale motion, structural, and appearance representations. Furthermore, we propose a novel Noise-Update-Only Attention mechanism to prevent semantic degradation of the clean condition frames while reducing the computational overhead by nearly 50%. Besides, we introduce a Drift-aware Timestep Sampling strategy coupled with a tailored training objective to directly predict images in the pixel space, enabling one-step inference without compromising the quality of the generated frames. Extensive experiments show that SPEED achieves state-of-the-art performance. On SNU-FILM, SPEED reduces LPIPS by 8.8% while delivering 63.3% faster inference and 10.6% lower memory usage. On challenging 4K benchmarks, it further surpasses prior methods by up to 51.5% in LPIPS.\n\n[提交时间: 2026-07-17; 分类: cs.MM]",
+      "url": "https://arxiv.org/abs/2607.15585v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15585v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "authors": [
+        {
+          "name": "Mingfei Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zijun Cui",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruoke Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hyeonggon Ryu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Eli Shlizerman",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instance-level semantics (i.e., what is present), but often lack explicit spatial structure (i.e., where it is). SceneBind addresses this gap by representing each scene as a semantic-spatial entity, combining a global semantic embedding with object-centric semantic-spatial slots. This representation explicitly captures object-level semantics, spatial attributes, and uncertainty. We further propose SceneBind Matching, a semantic-spatial matching scheme that integrates global scene similarity with object alignment, supporting cross-modal scene retrieval and object grounding. To train and evaluate SceneBind, we curate a novel real-world binaural audio-visual dataset with structured semantic and spatial annotations, and propose a training protocol for aligning semantic and spatial signals across modalities. SceneBind is compatible with large-scale pretrained semantic encoders, adds lightweight spatial modeling with only a few additional tokens. It achieves state-of-the-art scene and spatial retrieval while enabling strong zero-shot transfer to downstream tasks such as audio-visual localization.\n\n[提交时间: 2026-07-16; 分类: cs.CV, cs.AI, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2607.15265v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15265v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
+      "authors": [
+        {
+          "name": "Hoang-Loc Cao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Van Pham",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Truong Thanh Hung Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Phuc Truong Loc Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Phuc Ho",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Veronica Whitford",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hung Cao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Annotation quality is a major bottleneck in building reliable and explainable artificial intelligence (XAI) systems for mental health research. In depression-related datasets, labels are often assigned without structured evidence, symptom-level justification, or traceable alignment with the criteria of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR), limiting both transparency and downstream model interpretability. We propose a self-evolving, expert-in-the-loop annotation framework for Major Depressive Disorder (MDD) that combines large language model (LLM)-assisted labeling with expert verification. The framework is intended to support the construction of explainable, DSM-5-TR-aligned datasets rather than to perform clinical diagnosis. It operates in three stages: candidate evidence selection from textual records, criterion-level DSM-5-TR analysis, and case-level synthesis that produces label-level diagnostic and severity annotations. A dual-memory architecture, composed of Example Memory and Reflection Memory, is designed to internalize expert feedback and iteratively improve future annotations without retraining. We describe this mechanism and leave its evaluation across multiple feedback cycles to future work. In addition to final labels, the framework exports clinical evidence, reasoning traces, and edit histories, enabling comprehensive auditability. In a pilot study using expert-reviewed samples, the proposed approach improves annotation consistency and explainability while reducing manual revision effort.\n\n[提交时间: 2026-07-16; 分类: cs.AI, cs.HC, cs.MA, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.15202v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15202v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "URVC: A Unified Real-Time Neural Video Coding Model with Temporal, Spatial, and Perceptual Adaptivity",
+      "authors": [
+        {
+          "name": "Xihua Sheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chang Wen Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Neural video coding has advanced rapidly, achieving competitive compression performance while also enabling real-time coding speed. Yet, existing codecs exhibit severe rigidity when deployed in dynamic environments, failing to adapt to different video content, user requirements, and quality preferences. First, to meet the real-time constraint, they discard explicit motion estimation and motion compression, thereby losing the ability to adapt temporal prediction to motion complexity and bitrate constraints. Second, their spatial bit allocation strategy is coarse and, once trained, is fixed. It cannot adapt to dynamic user requirements at test time, preventing users from freely controlling the spatial distribution of bits. Third, they cannot adapt their quality preference to varying application requirements without deploying separate models. We address all three limitations within a single real-time neural video codec--URVC, transforming a rigid system into a unified framework with temporal, spatial, and perceptual adaptivity. First, we propose a rate-aware adaptive temporal prediction method that generates diverse prediction candidates through a multi-candidate architecture and couples candidate selection directly to rate-distortion optimization. Second, we propose a decomposition-based spatial rate control method that achieves finer-grained spatial bit allocation through feature decomposition and separate quantization, and allows users to perform direct spatial rate control at test time without retraining. Third, we propose a perceptual switching method that only requires learning a secondary module bank alongside a frame generator, enabling a codec to switch between signal fidelity and perceptual quality modes.\n\n[提交时间: 2026-07-16; 分类: cs.MM]",
+      "url": "https://arxiv.org/abs/2607.15033v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15033v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Groc-PO: Grounded Context Preference Optimization for Truthful Multimodal LLMs",
+      "authors": [
+        {
+          "name": "Zhixiao Zheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zheren Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhiyuan Yao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chunxiao Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dongming Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhendong Mao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Despite the rapid progress of Multimodal Large Language Models (MLLMs), they still suffer from untruthfulness issues, such as visual hallucinations, content fabrication, and unfaithful reasoning, which substantially undermine their faithfulness and practical utility. Alignment methods based on human preference, such as Direct Preference Optimization (DPO), have been widely adopted to address these issues. However, multimodal reasoning errors often propagate across stages, and final-answer errors can often be traced to mistakes in early grounding stages, yet standard DPO typically applies preference optimization at the final-answer level. This credit-assignment challenge means that supervision for early grounding stages is indirect rather than stage-specific, making it difficult to suppress error propagation arising from grounding drift and context inconsistency. To address this, we propose Grounded Context Preference Optimization (Groc-PO), a grounded preference optimization framework for MLLMs. We further construct the Grounded Context Preference Dataset (GCPD), organizing multi-stage preference samples around three stages of Object Grounding, Contextual Grounding, and Grounded Reasoning, to capture the formation, integration, and utilization of grounded context. By introducing more explicit preference supervision over multiple grounded stages, Groc-PO strengthens context-dependent reasoning and mitigates cross-stage error propagation. Extensive experiments show that, compared with standard DPO and other strong baselines, Groc-PO achieves improved performance in hallucination mitigation, faithful reasoning, and overall reliability, supporting the value of more explicit grounded supervision for trustworthy multimodal reasoning.\n\n[提交时间: 2026-07-15; 分类: cs.CV, cs.AI, cs.CL, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.13712v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.13712v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "VIP-MINGLE: A Corpus for Videoconference and In-Person Multimodal Interaction in Group Language Engagement",
+      "authors": [
+        {
+          "name": "Andrew Chang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Abhinay K Bodi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenxin Deng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Junrui Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Venu G Kadamba",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sumanth B H Karanam",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dhiwahar A Kennady",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "David Poeppel",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dustin Freeman",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Group conversations are a fundamental yet complex form of social interaction central to human cognition and telecommunication technology. While understanding and facilitating these interactions has been a long-standing goal, findings are often isolated within specific in-person or videoconferencing settings due to a scarcity of datasets that bridge the two. We introduce VIP-MINGLE, a multimodal dataset comprising 59 hours of recordings (32 groups, 105 participants), featuring paired within-subject sessions in both settings. The dataset includes raw audio/video, psychometric data, processed multimodal features (e.g., diarized speech, facial expressions, transcriptions), and time-resolved human annotations. Our analysis reveals significant behavioral distribution shifts across multiple modalities between settings, reinforcing the need for a cross-setting corpus. VIP-MINGLE serves as a critical resource for developing robust models of group conversations across settings.\n\n[提交时间: 2026-07-15; 分类: cs.HC, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.13614v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.13614v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Bring Music The Horizon: Music-Driven 360$^\\circ$ Video Generation",
+      "authors": [
+        {
+          "name": "Kai Hsu Tsai",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yong Wei Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hung I Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yu-Chih Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Music visualization offers a powerful way to enhance listeners' understanding and experience of music by translating auditory signals into visual forms. However, most existing approaches either rely heavily on lyrics or generate flat, non-immersive videos similar to conventional music videos, which limits their ability to convey the emotional dynamics of music and provide an immersive listening experience. We propose Bring Music The Horizon, an emotion-aware pipeline for music-driven 360$^\\circ$ video generation. Given an input song, our work first estimates its emotional trajectory by predicting valence-arousal values at the level of every four bars. These values are then converted into emotion-aware visual guidance using EmotiCrafter, and these guidance vectors can be manipulated by the SEGA framework, which provides fine-grained semantic control for keyframe generation. Finally, image-to-video models are applied to the generated keyframes to synthesize temporally continuous 360$^\\circ$ videos for immersive music visualization. Our pipeline generates 360$^\\circ$ music visualization videos that reflect the emotional progression and temporal structure of the input song. We demonstrate its capability using songs from different genres and provide qualitative comparisons with From-Sound-To-Sight, a representative audio-to-visual generation baseline, on our project page at https://etoile-et-toi-mp3.github.io/BMTH_Project_Page/.\n\n[提交时间: 2026-07-15; 分类: cs.CV, cs.MM, cs.SD, eess.AS, eess.IV]",
+      "url": "https://arxiv.org/abs/2607.13471v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.13471v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Accuracy Without Grounding: Diagnosing Visual Dependency Dissociation in Video LLM Benchmarks",
+      "authors": [
+        {
+          "name": "Jae Joong Lee",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Benchmark accuracy in video large language models (LLMs) is often treated as evidence of visual understanding. We audit this assumption across twenty models spanning 2-78B parameters and ten architecture families. We introduce the Visual Dependency Gap (VDG), the difference in per-question correctness between original-video and black-screen conditions. Paired McNemar tests on MVBench show that accuracy and visual dependency are separable: models differ on original video (p = 0.0003) but not on black screens (p = 0.53). Across models, task-type rankings are stable: Attribute Perception is strongly visual, whereas Temporal Reasoning approaches the language-only baseline. A diagnostic ladder from black screen to single frame, shuffled frames, and original video reveals that frame diversity supplies most of the visual benefit, while temporal order contributes near-zero accuracy across sixteen open-weight models. An ablation from 0.5 to 24 FPS rules out sparse sampling as the cause. H.264 experiments further show that stable aggregate accuracy conceals bidirectional question-level answer flips. The diagnostic also generalizes to four API-accessed models, whose VDG values range from 0.025 to 0.315. These results motivate VDG as a standard audit for whether video benchmarks measure visually grounded capability. Code is available at https://github.com/JaeLee18/accuracy-without-grounding.\n\n[提交时间: 2026-07-14; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.13305v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.13305v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "What Would You Click? Personalized Video Thumbnail Generation with Preference-aware Highlight Retrieval",
+      "authors": [
+        {
+          "name": "Zhiyu He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zecheng Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tong Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zi Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yiqun Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Min Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Video thumbnails are a key factor for attracting user clicks on video platforms, and are increasingly supported by automation. However, existing thumbnail generation methods typically produce generic results shared across users, overlooking the diversity of individual preferences. We therefore introduce personalized video thumbnail generation, a novel task that aims to create thumbnails tailored to user-specific preferences. It is challenging in two aspects: (i) identifying visual anchors (i.e., key frames) from each video to guide the generation, which requires a balance between personalization and informativeness that existing highlight detection methods fail to achieve; and (ii) generating personalized thumbnails that are both visually coherent and faithful to the original video. As a response, we propose a two-stage framework that tightly couples preference-aware retrieval with controllable generation. In the first stage, a personalized highlight retriever captures fine-grained user-video interactions and incorporates video semantics through summarization, enabling the selection of diverse visual anchors aligned with both user preferences and video contexts. In the second stage, a VLM-guided diffusion pipeline transforms these anchors into thumbnails by extracting and injecting semantically grounded visual cues, improving personalization while preserving visual coherence and fidelity. Experiments on two public datasets show our method delivers state-of-the-art performance compared with both retrieval-based and generative baselines. A user study further demonstrates improved click preference, highlighting its effectiveness in enhancing user engagement. The code is available at https://github.com/hezy18/PVTG.\n\n[提交时间: 2026-07-14; 分类: cs.MM, cs.IR]",
+      "url": "https://arxiv.org/abs/2607.12882v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.12882v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Do We Really Need Multimodal Emotion Language Models Larger Than 1B Parameters?",
+      "authors": [
+        {
+          "name": "Kaiwen Zheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Junchen Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenhao Deng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hu Han",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Joemon M. Jose",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuri Ge",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Recent advances in multimodal large language models (MLLMs) have significantly improved the performance of multimodal emotion recognition (MER) and enabled interpretable description generation by jointly modeling video, audio, and language, etc. However, these performance improvements are often accompanied by an increase in model parameter size (e.g, at least 7B), which simultaneously incurs high computational costs and reduces inference efficiency, thereby hindering real-time deployment on resource-constrained platforms such as robots and mobile devices. This raises a fundamental question: do we really need the multimodal MER model larger than 1B parameters for high-quality MER?\n  In this paper, we challenge the assumption that larger models are inherently necessary and proposes a lightweight MER framework (called Light-MER), which achieves better and faster multimodal sentiment understanding and recognition through knowledge distillation. It can transfer knowledge from a strong, large-scale teacher model to a lightweight sub-billion-parameter student model, aiming to preserve rich multimodal emotion reasoning and recognition while substantially improving deployment efficiency. Specifically, we introduce two new optimization strategies to enhance knowledge transfer: (1) a new optimal transport loss that combines Sliced Wasserstein Distance with hidden-state alignment, and (2) a new multi-reward optimization strategy based on GRPO that balances MER performance and efficiency, aimed at further enhancing the learning capabilities of student models. Extensive experiments on nine benchmark datasets demonstrate that Light-MER achieves state-of-the-art performance while significantly improving inference efficiency. This highlights the strong potential of small multimodal emotion language models for future research. Code is available at https://github.com/GAIR-Lab/Light-MER.\n\n[提交时间: 2026-07-14; 分类: cs.AI, cs.CL, cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.12787v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.12787v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "GeoFovea-GS: Geometry-Aware Cross-Layer Gaussian Splatting for Wireless Aerial VR",
+      "authors": [
+        {
+          "name": "Zeyi Ren",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wencheng Yan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiawen Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jintao Yan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sheng Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhisheng Niu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Wireless aerial virtual reality (VR) aims to provide immersive access to large-scale scenes, but high-resolution view generation and delivery are jointly constrained by limited bandwidth, latency, and power. 3D Gaussian Splatting (3DGS) can reduce the payload by rendering views from compact pose information, yet its geometry errors may cause severe VR quality degradation. Existing channel-aware or pixel-level resource allocation schemes fail to capture such geometry-sensitive distortion. To address this issue, this paper proposes GeoFovea-GS as a geometry-aware cross-layer framework for communication-efficient wireless aerial VR. A foveated geometry-aware distortion metric is developed to characterize photometric rendering error, geometric inconsistency, and view-dependent perceptual importance in a unified form. Based on this metric, the joint selection of pose-only 3DGS rendering and image/tile correction transmission is formulated as a cross-layer optimization problem under wireless constraints. A lightweight value-of-information scheduler is further developed to allocate communication resources to regions that are both geometry-critical and perceptually important. Experiments on real-world 3DGS scenes demonstrate that GeoFovea-GS achieves superior immersive rendering quality with substantially reduced transmission cost.\n\n[提交时间: 2026-07-14; 分类: cs.MM, eess.IV]",
+      "url": "https://arxiv.org/abs/2607.12641v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.12641v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Explainable-by-Design Audio Deepfake Detection via Wiener-Hopf Linear Prediction",
+      "authors": [
+        {
+          "name": "Mattia Tamiazzo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Simone Milani",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Massimo Iuliani",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Marco Fontani",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "The rapid advancement of synthetic speech generation methods has made audio deepfake detection a critical challenge in multimedia forensics. While recent approaches achieve high detection accuracy, they typically rely on black-box architectures that offer limited interpretability and high computational complexity. In this paper, we propose an explainable-by-design audio deepfake detection framework based on Wiener-Hopf linear prediction, processed by a lightweight 2D Convolutional Neural Network (CNN). This design enables a direct and transparent connection between classification outcomes and the acoustic properties of the signal. Experimental results on benchmark datasets demonstrate competitive detection performance while maintaining significantly lower computational complexity compared to state-of-the-art solutions. The interpretability analysis using Grad-CAM reveals that the classifier focuses on low-order predictor coefficients and on silence and transitional regions, suggesting that the Wiener-Hopf predictor captures reverberation characteristics and subtle statistical inconsistencies in synthetic speech. Finally, robustness experiments show that fine-tuning effectively recovers detection performance under common post-processing degradations, including additive noise, MP3 compression, and telephone filtering.\n\n[提交时间: 2026-07-14; 分类: cs.SD, cs.AI, cs.CR, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.12584v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.12584v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Traceback Translators Against Forgetting in Continual Fake Speech Detection",
+      "authors": [
+        {
+          "name": "Enrico Gottardis",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mattia Tamiazzo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Simone Milani",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Fake speech detectors are increasingly challenged by the development of new and more accurate generative models. To cope with this problem, continual learning techniques are nowadays widely considered feasible strategies for updating models to new datasets, but they also lead to decreased performance on previously seen samples (catastrophic forgetting). In this work, we propose a forgetting-resilient solution based on the adoption of domain translators within a frozen detector, which remaps the new feature spaces into the original ones by means of a traceback translator network. Experimental results show that this strategy enables the achievement of high detection rates with respect to traditional retraining, while minimizing the computational effort and preserving the detection accuracy on previous data.\n\n[提交时间: 2026-07-14; 分类: cs.CV, cs.AI, cs.CR, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2607.12569v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.12569v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "LightMem-Ego: Your AI Memory for Everyday Life",
+      "authors": [
+        {
+          "name": "Yijun Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Boyi Xiao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yixian Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haoting Xia",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Buqiang Xu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jizhan Fang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yanya Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yaqi Zheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuehai Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zirui Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Liuxin Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hui Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ningyu Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Personal AI assistants on mobile and wearable devices continuously perceive users' daily lives through visual and audio streams. However, answering queries about past experiences requires lightweight multimodal memory that can continuously accumulate, organize, and retrieve long-term experiences, which remains challenging. To address this challenge, we present LightMem-Ego, a lightweight streaming multimodal memory system for everyday-life assistance. The system continuously captures egocentric visual and audio streams, aligns them on a shared timeline, and organizes them into a hierarchical memory consisting of current, short-term, and long-term memory. Given a user query, LightMem-Ego dynamically routes retrieval to the appropriate memory level and generates answers grounded in multimodal evidence. The demonstration can be deployed on smartphones and AI glasses, supporting object finding, conversation recall, life summarization, routine discovery, and personalized assistance. Code is available at https://github.com/zjunlp/LightMem-Ego.\n\n[提交时间: 2026-07-13; 分类: cs.CL, cs.AI, cs.CV, cs.HC, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.11487v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11487v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "BackgroundMellow: A Multi-Modal Cohesive Framework for Narrative-Driven Rich Cinematic Soundscape Generation",
+      "authors": [
+        {
+          "name": "Ajitesh Jamulkar",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Aritra Hazra",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Generating immersive, synchronized and cinematic audio for long-form textual narratives remains a significant challenge in multi-modal AI. While current Text-to-Audio (TTA) frameworks successfully synthesize isolated sound effects, they struggle with narrative cohesion, temporal alignment, and cinematic emotional depth. We present BackgroundMellow, a framework that treats story-to-audio generation as a precise orchestration and signal processing problem. This framework is enabled without ground-truth through a master-specialist agent architecture that decomposes text into precise and multi-layered audio cues, generates each category of sounds with suitable specialist model, and superimposes the soundscapes to create a unified and aligned audio segment. Our pipeline is built over Tango2 latent diffusion model for environmental synthesis alongside a novel Cinematic BGM Retriever mined from professional soundtracks. To automate the sound mixing process, we use an NLP based module that predicts precise audio parameters, like start time, duration, and relative loudness, based on the narrative timeline. We further empirically evaluate and show the efficacy of the proposed framework leveraging nearest-neighbor retrieval against a curated dataset of YouTube cinematic trailers to measure temporal synchronization, coverage, and spectral richness.\n\n[提交时间: 2026-07-13; 分类: cs.LG, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.11364v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11364v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SAIL: Perceptual Quality-Aware Rate Control for Cloud Gaming",
+      "authors": [
+        {
+          "name": "Houde Qian",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chenglei Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiaxing Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Rui-Xiao Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jing Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meijia Song",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sijia Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaozhong Xu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhi Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lifeng Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Honghao Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Cloud gaming streams cloud-rendered frames under strict motion-to-photon latency, yet its at-scale viability is increasingly constrained by bandwidth cost: in our study of the T cloud gaming platform, bandwidth accounts for 30-60% of total operating expense. This high bandwidth consumption stems from a fidelity-first objective of making the stream perceptually indistinguishable from local gameplay. It drives production systems toward best-effort bitrate allocation that pushes the encoder to the highest rate allowed by congestion control. However, the bitrate-perception relationship saturates: beyond a frame-dependent perceptually lossless threshold, additional bits yield negligible perceptual improvement, creating systematic redundant quality that wastes bandwidth.\n  We present SAIL, a production quality-aware rate control system with the goal of achieving perceptually lossless quality while avoiding unnecessary bandwidth waste. SAIL adopts a post-encoding architecture to enable millisecond-scale feedback at near-zero overhead. It comprises three key designs: (i) an encoder-driven quality assessment model that leverages zero-cost encoder outputs for real-time quality estimation; (ii) a hybrid rate control mechanism that balances steady-state adaptation with dynamic spike absorption; and (iii) a network-aware strategy that coordinates with congestion control to prevent capacity underestimation. SAIL has been fully deployed on the T cloud gaming platform and reduces bandwidth consumption by 44.27% and end-to-end latency by 8.37% without degrading perceived quality, serving tens of millions of users and accumulating billions of hours of total gameplay.\n\n[提交时间: 2026-07-13; 分类: cs.NI, cs.MM, eess.IV]",
+      "url": "https://arxiv.org/abs/2607.11231v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11231v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Q-BridgeNet: A Quantization Network for Cross-Lingual Sign Language Translation",
+      "authors": [
+        {
+          "name": "Liqian Feng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lintao Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaochen Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anusha Withana",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ken-Tye Yong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dehui Kong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhiyong Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kun Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Most sign language translation (SLT) methods focus on isolated native sign-spoken pairs (e.g., American Sign Language - English). Extending language-specific SLT models to multilingual translation would improve accessibility by enabling communication across diverse sign and spoken language communities. However, existing multilingual SLT approaches still struggle to learn a unified model that minimizes cross-lingual conflicts while capturing shared cross-lingual semantics and preserving language-specific variations across different sign languages. Therefore, we propose Q-BridgeNet, a unified framework for multilingual SLT that jointly mitigates cross-lingual conflicts across both the sign language and spoken language sides. On the sign language side, Q-BridgeNet learns discrete Q-units via adaptive segmentation and residual vector quantization: a shared base codebook provides language-agnostic semantic primitives, while language-specific residual codebooks refine heterogeneous signing semantics. On the spoken language side, a multilingual LLM is fine-tuned to operate in the Q-unit space, leveraging cross-lingual priors to enable a unified SLT model. Experiments on PHOENIX14T, How2Sign, and CSL-Daily show that Q-BridgeNet effectively mitigates cross-lingual conflicts, achieving state-of-the-art performance on native sign-spoken pairs while also demonstrating strong generalization to non-native pairs. Our source code is publicly available at: https://github.com/FengLiQ/Q-BridgeNet\n\n[提交时间: 2026-07-13; 分类: cs.CL, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.11215v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11215v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "RetroHolmes: When Semantic Plausibility Fails Retrospective Physical Process Reasoning",
+      "authors": [
+        {
+          "name": "Ruoxuan Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qiyun Zheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Siyu Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ling Zou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hongxia Xie",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhiyu Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jian-Yu Jiang-Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zihan Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhengguang Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bin Wen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ling Lo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jianlong Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meibao Yao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Juncheng Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wen-Huang Cheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Humans can infer hidden physical processes from sparse observations, yet current evaluation protocols for Vision Language Models fail to assess whether such physical reasoning is genuinely captured. To address this gap, we introduce Retrospective Physical Process Reasoning, a new evaluation paradigm to reason backward from outcomes under explicit physical constraints. Building on the paradigm, we present RetroHolmes, the first real-world benchmark for Retrospective Physical Process Reasoning, comprising object-centric image pairs annotated with reachability labels and causal step sequences across diverse physical transitions. Using RetroHolmes, we analyze state of the art Vision Language Models and uncover systematic failure modes, including judgment bias in reachability assessment and belief dominance over physical evidence, mirroring sycophancy behavior observed in large language models. We further demonstrate a simple analysis-by-synthesis instantiation with visual simulation as an intermediate step, validating the diagnostic value of RetroHolmes and highlighting the importance of physically grounded intermediate representations for physical reasoning.\n\n[提交时间: 2026-07-13; 分类: cs.MM]",
+      "url": "https://arxiv.org/abs/2607.11044v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11044v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "MMRM: A Multiplex Multimodal Representation Model for Product Ranking in E-commerce Search",
+      "authors": [
+        {
+          "name": "Zhen-Lin Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Maosen Sheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Peng Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jianmin Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhuojian Xiao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dongyue Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiwei Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Multimodal information is pivotal for e-commerce search ranking. Existing works leverage multimodal data typically by fine-tuning general Multimodal Large Language Models (MLLMs) via collaborative signals, subsequently integrating the derived representations into ranking models as item features. Despite their efficacy, these methods face two primary limitations: (1) they rely on a single collaborative signal for MLLM fine-tuning, failing to exploit the heterogeneous signals essential for multitask ranking; and (2) they treat multimodal representations as regular item features in ranking models, underutilizing their latent potential for user behavior modeling. To address these challenges, we propose the Multiplex Multimodal Representation Model (MMRM), a unified framework that aligns MLLMs with diverse collaborative signals. By employing a shared backbone with task-specific tokens and projection layers, MMRM simultaneously learns from multiple signals and generates comprehensive multiplex item representations in a single inference pass. Furthermore, we introduce a multiplex user representation strategy in ranking models, which derives task-specific user representations via search-based behavior sequence modeling leveraging multiplex item representations. Extensive experiments demonstrate MMRM's superior efficiency and effectiveness. Notably, MMRM has been successfully deployed in the JD e-commerce search engine, yielding significant performance gains for millions of daily users.\n\n[提交时间: 2026-07-13; 分类: cs.IR, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.11030v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.11030v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Dance to Music Generation leveraging Pre-training with Unpaired data and Contrastive Alignment",
+      "authors": [
+        {
+          "name": "Ryota Kimura",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sangheon Park",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Natalia Polouliakh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Taketo Akama",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Dance-to-music generation is a promising task for applications such as choreography support and automatic accompaniment, where temporal coordination between body movement and sound is essential. In particular, using human joint positions as the motion representation is attractive because they explicitly capture body dynamics while being lightweight, privacy-preserving, and easy to integrate with motion capture and pose-estimation pipelines. A central challenge in this setting, however, is the scarcity of high-quality paired dance-music data, since collecting accurately synchronized pairs is costly and often constrained by copyright and performance rights. This makes it difficult to train end-to-end models solely from paired data. To address this issue, we propose a dance-conditioned music generation framework that efficiently exploits both unpaired and paired data. Our method combines pretrained unimodal encoders for motion and music, beat-guided contrastive pretraining to align their feature spaces, and a ControlNet-style conditioning module on top of a pretrained text-to-audio diffusion model. Experiments on AIST++ demonstrate that the proposed techniques improve both dance-music alignment and audio quality, as confirmed by quantitative and qualitative evaluations. Compared to a state-of-the-art method, our approach achieves superior dance alignment performance and competitive audio quality. Code is available at https://github.com/kmraven/AudioLDM-ControlNet .\n\n[提交时间: 2026-07-12; 分类: cs.SD, cs.MM, eess.AS]",
+      "url": "https://arxiv.org/abs/2607.10537v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.10537v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "What Does Your Short-Answer VQA Score Actually Measure? Evaluator-Dependent Instability in Multimodal Short-Answer Benchmarks",
+      "authors": [
+        {
+          "name": "Guanhua Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Niu Jingbin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meiyu Liang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhe Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yingxia Shao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yawen Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Short-answer VQA benchmarks conflate two distinct quantities: whether a model's answer is semantically correct, and whether that answer matches the surface form expected by the automatic evaluator. We study this conflation across six vision--language models and six benchmarks, using a human-validated semantic judge (97.6% precision) to audit over 37k official errors. A second text-only judge reproduces the same benchmark-level false-negative pattern, showing that the effect is not an artifact of a single audit model. On text-rich benchmarks, up to half of these errors are semantically acceptable answers penalized purely for surface-form mismatch. This instability is structured by answer type: extractive and multi-span answers are far more evaluator-sensitive than scalar answers. Benign prompt and context rewrites further destabilize official outcomes, flipping item-level correctness at substantial rates without changing the underlying task. A deterministic CPU-only contract repair confirms that the undercount is partially recoverable. These findings imply that official short-answer VQA scores should be accompanied by semantic audits and answer-type diagnostics to remain interpretable.\n\n[提交时间: 2026-07-11; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.10240v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.10240v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Label-Free Target-Domain Adaptation for Unconstrained Event-Image Feature Matching via Dual-Stage Distillation",
+      "authors": [
+        {
+          "name": "Zhonghua Yi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hao Shi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qi Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yufan Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kailun Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kaiwei Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Building pixel-level correspondence between event and image data is a fundamental task for multi-sensor systems. However, existing cross-modal matching methods are largely restricted by their reliance on either matching labels or strictly aligned hardware, which limits them to unlabeled and unconstrained real-world scenarios where neither matching ground truth nor prior sensor relationships are available. To address this, we propose a novel two-stage training paradigm. First, we leverage large-scale data to perform label-agnostic distillation pretraining, upgrading optimization objectives with distribution-based and contrastive losses to learn highly generalizable representations. Second, to tackle unlabeled and unconstrained downstream data, we introduce an epipolar-guided self-distillation framework. By utilizing consistency verification to isolate robust matches and incorporating geometric confidence derived from an external epipolar prior, our model can effectively self-evolve directly on target domains without any supervision. Furthermore, we introduce a rigorous cross-modal evaluation benchmark based on TUM-VIE, featuring physically separated cameras with distinct intrinsic parameters and resolutions. Extensive experiments demonstrate that our proposed method achieves state-of-the-art performance on both MVSEC and TUM-VIE pose estimation tasks. The source code and benchmark will be made publicly available at https://github.com/ZhonghuaYi/nexus2-official.\n\n[提交时间: 2026-07-11; 分类: cs.CV, cs.MM, cs.RO, eess.IV]",
+      "url": "https://arxiv.org/abs/2607.10082v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.10082v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Local Multimodal Music Alignment from Global Supervision",
+      "authors": [
+        {
+          "name": "Irmak Bukey",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zachary Novack",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jongmin Jung",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dasaem Jeong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chris Donahue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Understanding music requires understanding localized relationships across data modalities, e.g., how time in performance audio maps onto position in a score image. Yet supervision for such local correspondences is difficult to obtain-in practice, we often only have access to coarser global supervision like paired segments of audio and images. To address this gap, we propose FuSiLi (Fused Sinkhorn-Localized Similarity), a similarity score for multimodal contrastive learning operating directly on local image patch and audio frame features via Sinkhorn-based soft alignment. We show that FuSiLi (i) effectively learns local relationships, (ii) requires only global supervision, and (iii) retains the global alignment capabilities of conventional contrastive approaches. We fine-tune pretrained CLIP and CLAP encoders on pairs of raw sheet music images and audio using a hybrid contrastive objective combining FuSiLi with conventional global similarity. We evaluate on cross-modal retrieval and frame-level alignment tasks against a range of global and local baselines, showing that our approach outperforms them on local alignment while remaining competitive on retrieval.\n\n[提交时间: 2026-07-10; 分类: cs.SD, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.10023v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.10023v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Scalable Visual Pretraining for Language Intelligence",
+      "authors": [
+        {
+          "name": "Yiming Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhonghan Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenwei Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haiteng Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tianyang Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yunhua Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Demin Song",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kuikun Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haochen Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haian Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yuzhe Gu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haijun Lv",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qipeng Guo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bin Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Gaoang Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kai Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning language intelligence. This paper challenges the default assumption that language models must be trained on text-only representations and shows that Visual Pretraining is a scalable learner for foundation model intelligence. To this end, we conduct a systematic study of unsupervised visual pretraining paradigms that directly leverage visual documents without text extraction. Across multiple backbones and benchmarks, visual pretraining on the same underlying corpora consistently outperforms text-only pretraining, offering an efficient pathway to scalable language intelligence.\n\n[提交时间: 2026-07-10; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.09657v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.09657v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Event Stream based Multi-Modal Video Anomaly Detection: A Benchmark Dataset and Algorithms",
+      "authors": [
+        {
+          "name": "Peipei Zhu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yueqing Niu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lin Zhu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Guanchong Niu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yang Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zheng Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Video anomaly detection (VAD) is critical for automated surveillance but remains fragile under challenging conditions such as illumination variations, fast motion, and complex backgrounds when relying solely on visible light videos. To address these limitations, we propose EVAD, an event enhanced VAD framework that jointly exploits conventional video and event streams captured by bio inspired event cameras. Event sensors asynchronously capture brightness changes with high temporal resolution, offering robustness to motion blur and extreme lighting, and providing motion salient cues complementary to video based visual information. To support multi modal VAD research, we construct a large scale visible event benchmark comprising 6.3 billion events and 376,368 video frames collected under diverse illumination levels, motion patterns, and background complexities, filling the gap of realistic and scalable datasets for event based anomaly detection. Building upon this dataset, we design a contrastive multi modal pretraining framework to learn discriminative event representations by aligning semantic embeddings across event streams, visible videos, and textual descriptions. An adaptive fusion module then dynamically integrates event based temporal cues with video based spatial semantics, improving robustness to environmental disturbances. Experiments on benchmarks and the proposed TJUTCM Pha dataset demonstrate that E VAD consistently outperforms methods, validating the effectiveness of event-based sensing for VAD in real world scenarios.\n\n[提交时间: 2026-07-10; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.09114v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.09114v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Beyond Metadata: CAPRA for Hidden Subgroup Analysis under Missing Metadata in Medical Imaging",
+      "authors": [
+        {
+          "name": "Yawen Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhe Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yingxia Shao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meiyu Liang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Guanhua Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Medical imaging models are often deployed without the demographic, acquisition, and quality metadata needed for subgroup auditing. Once those metadata disappear, clinically critical failure modes can be masked by strong aggregate performance, and many robust-learning methods lose the group structure they rely on. We present CAPRA, a calibrated proxy-axis framework for hidden subgroup analysis under missing metadata. CAPRA predicts image-derived semantic axes, calibrates axis posteriors on a small metadata-labeled split via patient-level cross-fitting, and organizes those posteriors into a calibrated subgroup interface that supports both deployment-time failure analysis and downstream robust learning without requiring subgroup labels at deployment. Across fundus, dermoscopy, and chest radiography, CAPRA reveals disparity patterns missed by metadata-only slicing, remains informative under dataset shift, and produces subgroup partitions that align more closely with explicit failure axes than image-only or latent-slice baselines. The same interface can also be reused by downstream robust learners, although those gains are domain-dependent. Overall, CAPRA turns hidden subgroup analysis under missing metadata into a calibrated, interpretable, and reusable subgroup interface for deployment-time analysis and robust transfer.\n\n[提交时间: 2026-07-10; 分类: eess.IV, cs.AI, cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.09102v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.09102v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Event-Based Token Sequences for Audio-Conditioned Music-Game Level Modeling",
+      "authors": [
+        {
+          "name": "Ke Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chu-Hsuan Hsueh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kokolo Ikeda",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Procedural generation of music game levels is an exciting yet challenging problem, as levels must translate musical structure into interactive sequences of timed gameplay events. Most existing approaches formulate this task by frame-based representations, dividing audio into uniform time grids and predicting events at each frame. This makes gameplay events implicit across many frames. As a result, it is hard to describe event-level timing relations and longer-range structure found in human-authored levels. We use procedural generation as a practical setting to study how musical cues map to interactive event sequences. Inspired by event-based symbolic music modeling, we propose a token-level sequence formulation that casts level generation as a multimodal sequence-to-sequence problem. Conditioned on an audio excerpt and level metadata, the model generates a token sequence alternating gameplay-event and beat-shift tokens. This explicitly represents actions and their relative timing in beat space. Based on this formulation, we build a Transformer model. It outperforms representative frame-level baselines under event-level evaluation. It also enables systematic analysis of how audio supports rhythm-aligned event prediction beyond metadata conditioning.\n\n[提交时间: 2026-07-10; 分类: cs.SD, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.09095v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.09095v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Multimodal Unlearning Across Vision, Language, Video, and Audio: Survey of Methods, Datasets, and Benchmarks",
+      "authors": [
+        {
+          "name": "Nobin Sarwar",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shubhashis Roy Dipta",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zheyuan Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vaidehi Patil",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "With the growing adoption of VLMs, DMs, LLMs, and AFMs, these multimodal foundation models can inadvertently encode sensitive, copyrighted, biased, or unsafe cross-modal associations that originate from their training data. Retraining after deletion requests or policy updates is often impractical, and targeted forgetting remains difficult because knowledge is distributed across shared representations. Multimodal unlearning addresses this challenge by enabling selective removal across modalities while retaining overall utility. This survey offers a unified, system-oriented view of multimodal unlearning across vision, language, audio, and video, grounded in recent advances, emerging applications, and open problems. Our taxonomy enables systematic comparison across model architectures and modalities, clarifying trade-offs among deletion strength, retention, efficiency, reversibility, and robustness. This survey highlights open problems and practical considerations to support future research and deployment of multimodal unlearning. We release a curated repository: https://smsnobin77.github.io/Awesome-Multimodal-Unlearning/\n\n[提交时间: 2026-07-08; 分类: cs.LG, cs.AI, cs.CL, cs.CR, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.07907v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.07907v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Towards Robust Semantic Video Transmission over Block Erasure Channels",
+      "authors": [
+        {
+          "name": "Nargis Fayaz",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Homa Esfahanizadeh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Matin Mortaheb",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jinfeng Du",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Harish Viswanathan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "This paper investigates semantic-aware neural joint source-channel coding (JSCC) for robust video transmission over block erasure channels. We propose a neural video compression framework exploring both spatial-domain and feature-domain designs. In the spatial domain, video frames are partitioned into blocks, enabling localized erasure handling and fine-grained robustness control via uniform erasure and two-level, semantic-guided non-uniform erasure strategies. In the feature domain, latent features are partitioned, enabling missing features to be semantically recovered while maintaining overall spatial consistency. Comprehensive experiments quantify reconstruction quality under varying uniform and non-uniform erasure probabilities. Our results show that spatial-domain JSCC excels at handling random localized losses, whereas feature-domain JSCC provides superior robustness to distributed erasures and maintains fidelity under low-loss scenarios. The analysis highlights the trade-offs between spatial continuity and semantic redundancy, offering insights for designing robust, task-aware video communication systems.\n\n[提交时间: 2026-07-08; 分类: eess.IV, cs.IT, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.07823v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.07823v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "-8 dB SNR + 90% Packet Loss: MamVSC -- CSI-Guided Semantic Mamba for Extreme-Robust Video Semantic Communication",
+      "authors": [
+        {
+          "name": "Lei Teng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Senran Fan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chen Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haotai Liang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaodong Xu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ping Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Semantic communication, leveraging joint source-channel coding, is designed to mitigate semantic distortion introduced by the channel. However, most current studies focus solely on semantic deviation distortion caused by physical wireless channels, while overlooking semantic erasure distortion due to packet loss. A CSI-Guided Mamba-based video semantic wireless digital communication system (MamVSC) employing semantic grouping is proposed to simultaneously address both semantic deviation and erasure distortions. In this system, a semantic Mamba module, guided by channel state information (CSI) feedback, is utilized to dynamically adjust the granularity of extracted semantic information, adapting to channel conditions. Furthermore, a Semantic Channel Codec based on dynamic Semantic clustering centers is introduced, where the distance between semantic vectors within the same semantic class and their corresponding Semantic clustering center is dynamically adjusted according to channel conditions, enhancing robustness against channel noise. Additionally, a adaptive packet loss recovery module, dynamically adaptive to the CSI, is proposed. The system achieves an MS-SSIM greater than 0.6 and a PSNR exceeding 21 dB at an SNR of -8 dB and a packet loss rate of 90% in AWGN channel.\n\n[提交时间: 2026-07-08; 分类: cs.ET, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.07293v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.07293v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space",
+      "authors": [
+        {
+          "name": "Thanh V. T. Tran",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ngoc-Son Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Luong Tran",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Long-Khanh Pham",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Paarth Neekhara",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shehzeen Hussain",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Van Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Video-to-audio (V2A) generation aims to synthesize realistic audio that is both semantically consistent with and temporally synchronized to a silent video. Despite recent progress, many methods still rely on multi-stage training, resulting in high computational costs and long runtimes, or transform visual input into text to leverage pretrained text-to-audio models, sacrificing fine-grained temporal cues. To overcome these limitations, we propose Flowley, an end-to-end, single-stage training architecture that produces soundtracks by combining visual features with textual prompts. Crucially, we introduce Progressive Soft-masked Cross-Attention, which embeds audio-visual synchronization directly within its attention mechanism, adding zero additional computational cost compared to standard attention layers. We further observe that existing V2A benchmarks lack sound-oriented descriptive captions, which can potentially degrade the quality of the synthesized audio. To remedy this, we propose SoundCap, a plug-and-play pipeline for creating detailed, sound-aware captions that guide the model. Remarkably, without integrating any pretrained audio-visual alignment modules, Flowley achieves state-of-the-art performance on VGGSound across multiple metrics. Moreover, by incorporating SoundCap, we further exceed the performance of the strongest existing close-sourced methods in terms of audio quality in the zero-shot setting.\n\n[提交时间: 2026-07-07; 分类: cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2607.06405v2",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.06405v2",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Tuning-Free Latent Diffusion Models for Ultrahigh-Resolution Image Editing",
+      "authors": [
+        {
+          "name": "Wanglong Lu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lingming Su",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kaijie Shi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Minglun Gong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaogang Jin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hanli Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xianta Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Recent diffusion-based generative models have shown impressive performance in image generation and editing. However, due to memory limitations and the high cost of collecting high-resolution training images, existing methods are typically restricted to inputs with linear resolutions below 1K. In contrast, photos captured by modern mobile devices often reach linear resolutions up to 8K, revealing a significant gap between current capabilities and real-world demands. Simply upscaling low-resolution edited results often results in visually enlarged but blurry images that lack fine details. This paper introduces UltraDiffEdit, a novel, tuning-free image editing framework that extends off-the-shelf latent diffusion models (LDMs) to ultrahigh resolutions. UltraDiffEdit employs a multi-scale progressive editing strategy, iteratively blending high-resolution edited content with unedited areas in a coarse-to-fine manner. We employ multi-patch encoding to preserve both edited and unedited visual details within the latent space. To mitigate editing artifacts, our global-local consistency denoising technique consistently integrates edited and unedited latent features, ensuring smooth transition at editing boundaries from the latent representation to the final image. We also introduce a patch-based hybrid sampling approach that captures local, intermediate, and global features, ensuring semantic coherence and enhancing fine detail during denoising. We conduct extensive experiments demonstrating UltraDiffEdit's superior editing quality and flexibility: it can handle image resolutions up to 8K using only a single NVIDIA GeForce RTX 3090 GPU. The source code is publicly available at https://github.com/LonglongaaaGo/UltraDiffEdit.\n\n[提交时间: 2026-07-07; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.06136v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.06136v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "WebRetriever: A Large-Scale Comprehensive Benchmark for Efficient Web Agent Evaluation",
+      "authors": [
+        {
+          "name": "Wei Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tianyu Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhe Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hanning Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anyang Su",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhizhou Fang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yuyang Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shuo Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Minghui Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ping Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhen Lei",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chenxu Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "As web agents increasingly demonstrate capabilities in automated task execution, the development of robust evaluation frameworks for assessing their navigation and task completion performance has emerged as a critical research priority. However, existing benchmarks exhibit fundamental limitations. First, they suffer from insufficient scale and limited domain diversity, constraining comprehensive evaluation of cross-domain generalization. Second, prevailing LLM-as-Judge evaluation methodologies inadequately capture fine-grained interaction semantics, particularly regarding precise query formulation and filtering operations. Third, current benchmarks predominantly emphasize navigation success metrics while neglecting critical requirements for real-world deployment scenarios. To address these limitations, we introduce WebRetriever, a large-scale benchmark encompassing 800 websites and 1,550 tasks across diverse domains, including consumer, professional, and enterprise sectors, with comprehensive coverage of user intent patterns. We propose NavEval (Navigation Evaluation), a novel LLM-as-Judge framework that leverages rich interaction context beyond visual screenshots, achieving state-of-the-art alignment with human judgment across multiple evaluation datasets. Furthermore, we establish three complementary evaluation protocols that collectively provide holistic assessment of web agent capabilities: navigation proficiency, knowledge-assisted interaction, and end-to-end task completion with information extraction. Extensive experimental analysis reveals substantial performance disparities across evaluation protocols, demonstrating that navigation success alone is an insufficient predictor of real-world application effectiveness. WebRetriever delivers fine-grained diagnostic insights into agent capabilities and establishes a rigorous foundation for advancing web agent research and development.\n\n[提交时间: 2026-07-07; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.06118v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.06118v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "MLLM-DataEngine: Closing the Loop of Multimodal Instruction Tuning Data Generation",
+      "authors": [
+        {
+          "name": "Zhiyuan Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bin Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Linke Ouyang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yiqi Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Pan Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaoyi Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiaqi Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Conghui He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "In this paper, we propose MLLM-DataEngine, a novel closed-loop system that bridges data generation, model training, and evaluation. Within each loop iteration, the MLLM-DataEngine first analyzes the weakness of the model based on the evaluation results, then generates a proper incremental dataset for the next training iteration, and enhances the model capability iteratively. Compared with previous instruction fine-tuning dataset collection methods which are separate from the benchmarking, MLLM-DataEngine shows better targeting and can improve MLLMs's capabilities more effectively. Firstly, we propose an Adaptive Bad-case Sampling module, which can effectively analyze model weakness based on the benchmarking results and adjust the generation of incremental datasets flexibly. Secondly, in order to ensure high-quality data for specific capability types, the most representative in-context examples and abundant information are provided to GPT-4, which helps GPT-4 fully comprehend the model's weakness and further guarantees high-quality generated data. Through extensive experiments, we find MLLM-DataEngine could boost the MLLMs capability in a targeted and automatic manner without human participants. We hope MLLM-DataEngine could be a general solution for the following MLLMs data curation. Code, data, and model are available at https://github.com/opendatalab/MLLM-DataEngine.\n\n[提交时间: 2026-07-07; 分类: cs.MM, cs.CV, cs.LG]",
+      "url": "https://arxiv.org/abs/2607.15299v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15299v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Multimodal Video-to-Music Recommendation via Semantic Retrieval and Temporal Reranking",
+      "authors": [
+        {
+          "name": "Seungheon Doh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Minhee Lee",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sangmoon Lee",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ben Sangbae Chon",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Juhan Nam",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We present VTMR, a two-stage framework for Video-To-Music Recommendation. In Stage~1, VTMR aligns comprehensive video and music signals in a joint audio-visual-text representation space and efficiently retrieves semantically compatible candidates using coarse global embeddings. In Stage~2, it reranks the retrieved candidates by attending to the temporal sequences of both video and music, thereby capturing fine-grained temporal correspondence. Evaluated on the video-to-music recommendation task, the multimodal retrieval stage improves R@10 from 14.2 to 15.9 and Median Rank from 75 to 58 over the strongest baseline; the temporal reranker further boosts R@10 to 18.3 and Median Rank to 46, demonstrating complementary gains from richer query encoding and temporal alignment. A human preference study confirms that VTMR is on par with a commercial baseline in overall preference, while outperforming a generative baseline in music quality.\n\n[提交时间: 2026-07-07; 分类: cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2607.05971v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.05971v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SleepBand: Single-Source Domain Generalization for Sleep Staging via Physiologically Structured Spectral Modeling",
+      "authors": [
+        {
+          "name": "Zhi Lu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yang Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Generalizing sleep staging models to unseen datasets is challenging, and typical domain generalization (DG) methods often rely on multiple source domains or domain labels that are rarely available in practice. We tackle the stricter and more practical setting of single-source domain generalization: training on a single labeled source dataset, without domain labels or access to target data. We present SleepBand, a physiology-guided framework that embeds oscillatory priors via a learnable Morlet filter bank and a structured integration-and-recalibration pipeline. This anchors representations to domain-invariant sleep rhythms (e.g., slow waves, spindles), reducing reliance on dataset-specific artefacts. On five public datasets, SleepBand achieves state-of-the-art SDG performance and remains competitive under leave-one-domain-out (multi-source) DG. Analyses show that the learned filters align with canonical neurophysiology and that robustness stems from focusing on narrowband, physiologically meaningful cues. Our results suggest that principled, physiology-aware inductive biases are a promising path for robust single-domain sleep staging. Code is available at https://github.com/lzcn/sleep-band\n\n[提交时间: 2026-07-06; 分类: cs.MM, cs.LG]",
+      "url": "https://arxiv.org/abs/2607.04851v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04851v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Discovering shared interpretable operations in image compression autoencoders",
+      "authors": [
+        {
+          "name": "Caroline Mazini Rodrigues",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nicolas Keriven",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Thomas Maugey",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "With the increasing adoption of deep learning for applications such as image compression, improvements in the rate-distortion trade-off have been achieved at the cost of increasingly larger and more opaque ''black-box'' models. Autoencoders are among the most widely used architectures for this task; however, without a clear understanding of their internal behavior, these models tend to grow in complexity to achieve more performance gains. In this paper, we investigate whether universal behaviors can be detected from the internal operations of bias-free autoencoders through Jacobian analysis. If such behaviors exist, they may be extracted to design low-complexity image compression models inspired by high-complexity deep learning architectures.\n\n[提交时间: 2026-07-06; 分类: eess.IV, cs.MM, eess.SP]",
+      "url": "https://arxiv.org/abs/2607.04839v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04839v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "CompressedVQA-AEV: Full-Reference and No-Reference Quality Assessment Models for Asymmetric Encoded Videos",
+      "authors": [
+        {
+          "name": "Wei Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xingwei Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dandan Zhu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiangyang Zhu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Weixia Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Guangtao Zhai",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "This report presents our solutions to the QoMEX 2026 Grand Challenge on Video Quality Assessment for Asymmetric Encoded Videos, comprising a full-reference (FR) model, CompressedVQA-AEV-FR, and a no-reference (NR) model, CompressedVQA-AEV-NR. The FR approach leverages a Swin-B backbone to extract multi-stage similarity statistics between reference and distorted videos for quality prediction. For the NR setting, our model employs complementary frame-level encoders based on SigLIP2 and Swin-B, followed by temporal mean pooling and cross-fold ensembling to estimate perceptual quality without reference data. Our CompressedVQA-AEV-FR achieves first place in the FR track of QoMEX 2026 Grand Challenge, while CompressedVQA-AEV-NR secures fourth place in the NR track, demonstrating the effectiveness of our proposed models. The code is available at https://github.com/sunwei925/CompressedVQA-AEV.\n\n[提交时间: 2026-07-06; 分类: eess.IV, cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.04606v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04606v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Lights, Camera, Carbon: Architectural Scaling Laws for Video Generation Energy Consumption",
+      "authors": [
+        {
+          "name": "Nidhal Jegham",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Boris Gamazaychikov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sasha Luccioni",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We present a bidirectional framework for estimating the energy consumption of text-to-video (T2V) and text-to-video-audio (T2VA) models from architectural first principles and observable generation parameters such as resolution and duration, requiring no access to weights, model size, or implementation details. Forward, it predicts energy from generation parameters and architectural principles; backward, it recovers architectural scaling behavior from observed inference times, with accuracy serving as a criterion for architectural validity. Building on the established compute-bound nature of video diffusion models, we demonstrate that each model's energy profile obeys theoretically derived scaling laws, decomposing into quadratic and linear terms whose coefficients directly reflect the underlying architectural complexity. Validated across six open-source models spanning 8.3B-27B parameters and three GPU configurations, this decomposition achieves below 3% MAPE across all architectures. This approach offers a standardized, empirically and theoretically grounded framework for sustainability benchmarking across T2V models and architectures.\n\n[提交时间: 2026-07-05; 分类: cs.MM, cs.AI]",
+      "url": "https://arxiv.org/abs/2607.04553v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04553v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog",
+      "authors": [
+        {
+          "name": "Lingao Xiao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yalun Dai",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yangyu Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qihao Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenshan Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hugo He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruishuo Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jin Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qianli Ma",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiahuan Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xin Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ying Xin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yang Ou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Xia",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Scarlett Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Longbo Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhipeng Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yang He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yap Kim Hui",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Lu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Research dissemination, turning a paper into a poster, a talk video, and a blog post, is still a manual last mile. Prior automation treats each artifact in isolation that each re-extract the paper from scratch, usually ship one-way renders the author cannot reopen in PowerPoint or Word, and gates quality on soft VLM-preference scores that plateau while load-bearing sections still read as empty. We argue this last mile is best built as a composition of skills: thin agent-readable contracts that share one upstream extractor and wrap deterministic primitives in a measured-fill loop whose exits are hard pass/fail render gates. We instantiate this as ResearchStudio-Reel, five Claude Code and Codex skills organized into one shared extractor (Paper2Assets), three editable generators (Paper2Poster, Paper2Video, Paper2Blog), and one interactive convergence layer (Paper2Reel). Paper2Assets extracts each paper once into a shared bundle that can be reused by every downstream skill; The three generators produce a print-ready poster, a synchronized talk video, and a bilingual blog that stay factually consistent and round-trip through PowerPoint or Word; Paper2Reel then binds all three into a self-contained HTML viewer whose section-level clicks jump the video, slides, captions, and blog to matching content. On the Paper2Poster benchmark, our posters lead every aesthetic and information sub-criterion against both prior automated systems and single-shot frontier LLMs, surpassing the authors' own on aesthetics under two held-out VLM judges and winning overall on 84% to 93% of papers; capability audits further show that, by uniquely pairing narration-aligned on-slide highlights with a bilingual blog gated by layout-aware DOCX repair, ResearchStudio-Reel is the only pipeline to ship all three editable artifacts. Project is available at https://aka.ms/ResearchStudio\n\n[提交时间: 2026-07-05; 分类: cs.CV, cs.AI, cs.HC, cs.MA, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.04438v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04438v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "UI-MOPD: Multi-Platform On-Policy Distillation for Continual GUI Agent Learning",
+      "authors": [
+        {
+          "name": "Niu Lian",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alan Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhehao Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chengzhen Duan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Fazhan Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hui Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Pei Fu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jian Luan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yaowei Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shu-Tao Xia",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jinpeng Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Recent advances in multimodal foundation models and agent systems have driven GUI agents from single-platform task execution toward cross-platform interaction. However, building multi-platform GUI agents remains challenging. On one hand, high-quality and executable cross-platform interaction trajectories are still scarce, and existing data often suffer from limited platform coverage. On the other hand, different platforms exhibit distinct interaction conventions, making joint or continual training prone to behavioral pattern mixing, platform-specific capability degradation, and catastrophic forgetting. To address these challenges, we construct Uni-GUI, a high-quality cross-platform GUI interaction dataset, and propose UI-MOPD, the first method that incorporates multi-teacher on-policy distillation into continual learning for GUI agents. UI-MOPD dynamically selects a platform-specific teacher according to the current environment and transfers platform-specific behavioral priors to a shared policy through platform-conditioned distillation, enabling adaptation to new platforms while preserving capabilities on existing ones. Experiments on OSWorld and MobileWorld show that UI-MOPD achieves task success rates of 38.2% and 12.0%, respectively, demonstrating its effectiveness in balancing cross-platform capability retention and new-platform adaptation.\n  Project page: https://elispectre.github.io/UI-MOPD/.\n\n[提交时间: 2026-07-05; 分类: cs.CL, cs.AI, cs.CV, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.04425v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.04425v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Towards Standardized Light Field Quality Assessment: Hybrid Subjective Benchmarking and Objective Metric Evaluation",
+      "authors": [
+        {
+          "name": "Saeed Mahmoudpour",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mylene C. Q. Farias",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Gi-Mun Um",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Myllena A. Prado",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ismael Seidel",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Leonardo de Sousa Marques",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Leonardo Andrade",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shengyang Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Carla L Pagliari",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Benchmarking immersive media coding solutions, especially in the standardization context, requires reliable and reproducible subjective quality assessment (QA) procedures, along with objective quality metrics that remain accurate across different distortion types. This paper presents a standardized workflow for light field QA, developed and deployed in the context of JPEG Pleno standardization activities, which integrates benchmark generation, a hybrid subjective evaluation, and objective metric analysis into a common workflow. The benchmark is designed to encompass not only traditional coding-only artifacts but also distortions that arise in processing pipelines in which light field encoding is accompanied with view synthesis and reconstruction techniques. A hybrid subjective method is proposed enabling fine-grained assessment by combining reference-anchored quality rating with targeted pairwise refinement in perceptually ambiguous regions. The reliability of subjective scores is verified using statistical consistency analyses between observers of two cohorts. Finally, a large set of objective metrics is systematically evaluated in terms of global prediction accuracy, local agreement in ambiguous quality regions, and robustness across distortion families. The results show that several metrics achieve strong agreement for coding-only stimuli, but their performance consistently drops when view synthesis distortions are included. The analysis further highlights the importance of view-pooling strategy in the design of future light field quality metrics. The work provides a reproducible and standardization-ready framework for fine-grained light field QA, while identifying key limitations of current objective metrics under emerging coding pipelines. The subjectively annotated dataset is publicly available at https://plenodb.jpeg.org/lfqa/objectivecfp.\n\n[提交时间: 2026-07-03; 分类: cs.CV, cs.MM, eess.IV]",
+      "url": "https://arxiv.org/abs/2607.03494v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.03494v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Taste-aware music retrieval from audio embeddings",
+      "authors": [
+        {
+          "name": "Matteo Spanio",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Antonio Rodà",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Crossmodal correspondences between sound and taste are well established in psychology and neuroscience, but largely absent from content-based multimedia retrieval. We formalise taste-from-audio prediction as a content-based music information retrieval benchmark over a perceptually validated multi-source corpus, comparing ten frozen audio encoders from the four HEAR families under a shared multi-task regression head, with gated late-fusion as a configurable variant. In order to assess the effectiveness of the models, we compute absolute error and rank correlation. The strongest systems predict the five tastes within a macro RMSE of 0.134; on held-out real music their error is less than half a single rater's deviation from the consensus (RMSE 0.13 vs. 0.28), so the model tracks the group consensus more closely than an average human rater, and well below the previous state of the art baseline (0.219). On absolute error the encoders are statistically flat, with a single VGGish matching the best fusion, but gated late-fusion's advantage is confined to rank correlation (macro Pearson r 0.724 vs. 0.666). Operationalised as a content-based retrieval index, the predicted taste space ranks a 309-item pool far more faithfully than a CLAP-text baseline, which sits at chance; ridge probes and an audio-bandstop knockout read the strongest representations against documented sound-taste correspondences.\n\n[提交时间: 2026-07-03; 分类: cs.SD, cs.IR, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.03296v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.03296v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "authors": [
+        {
+          "name": "Wenzheng Zeng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Siyi Jiao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chen Gao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hwee Tou Ng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mike Zheng Shou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Dense video captioning aims to generate temporally grounded descriptions of video events, benefiting both event-level video understanding and generation. In this domain, autoregressive video large language models have emerged as a prevalent paradigm due to their strong generative and cross-modal modeling capacity. However, generating dense captions under the token-by-token paradigm severely limits inference efficiency and hinders scalability as video length and event density increase. In this work, we propose a parallelized autoregressive framework that not only improves generation efficiency but also enhances temporally grounded captioning performance. Our key insight is to exploit the weak local dependencies across temporally distinct events to restructure the causal dependency graph, thereby enabling lossless parallel generation. Specifically, tokens with weak cross-event dependencies can be decoded in parallel, while tightly coupled tokens within each event retain sequential decoding to preserve local semantic coherence. To realize this insight, we introduce two key components for lossless parallel decoding: (1) a latent global planning mechanism that automatically learns the event-level structure and produces compact tokens encoding global inter-event causality while adaptively aggregating event-level audio-visual semantics, guiding subsequent dependency restructuring and parallel decoding; and (2) an event-factorized parallel decoding mechanism that effectively balances local focus with global inter-event awareness. Experiments on various benchmarks demonstrate the clear advantage of our approach in both efficiency and performance in omni-modal event grounding and captioning. Project website: https://github.com/showlab/PadCaptioner.\n\n[提交时间: 2026-07-03; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.02963v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.02963v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "See the Emotion: A Facial Emoji Proxy Modeling for EEG Emotion Recognition",
+      "authors": [
+        {
+          "name": "Jingjing Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Guo Dan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haofan Cheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ying Zeng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhan Si",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jinxing Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meng Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Despite the high accuracy of EEG-based emotion recognition, existing models remain opaque \"black boxes\", lacking semantic grounding between abstract neural features and human-interpretable states. In this paper, we reframe EEG explainability as a cross-modal generation task, shifting the paradigm from feature attribution to behavioral visualization. We introduce Facial Emoji Proxy Modeling, a novel framework that translates high-dimensional EEG signals into identity-anonymized facial emojis. Guided by the neuroscientific inspiration of neural-facial association, this approach grounds neural representations in the manifold of observable facial dynamics. Technically, our framework integrates FMENet, a specialized backbone modeling expression-relevant spatial synergies, and the Facial Emoji Learning Branch (FELB), which treats emoji reconstruction as a structured semantic regularizer. Extensive experiments on EAV and MMER benchmarks demonstrate that our method achieves state-of-the-art accuracy among EEG-only models. Crucially, it generates semantically faithful facial animations that provide a transparent, privacy-preserving window into the brain's emotional evolution, effectively allowing users to \"see the emotion\" directly from neural signals. Code is available at https://github.com/xian-sh/SeeEmotion\n\n[提交时间: 2026-07-03; 分类: cs.CV, cs.HC, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.02912v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.02912v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Data-driven Video Codec with Implicit Neural Representations",
+      "authors": [
+        {
+          "name": "Nishan Khanal",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Saugat Neupane",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Abhinav Chalise",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nimesh Gopal Pradhan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dinesh Baniya Kshatri",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "A conventional codec stores a video as compressed pixel data. We instead store the video, together with its audio track, as the weights of a single sinusoidal representation network (SIREN) that maps space-time coordinates to RGB values and audio amplitudes. The network uses separate audio and video initialization layers, a stack of shared fully connected hidden layers, and three output branches: one for video and two Siamese audio branches whose disagreement is used to estimate and subtract residual noise. The overfitted teacher network is then compressed by response-based knowledge distillation into a smaller student, followed by 16-bit symmetric weight quantization and lossless LZMA2 (xz) encoding. On a 6.08 MiB test video, the quantized student reaches a video PSNR of 28.72 dB with SSIM of 0.75, and an audio PSNR of 24.18 dB with a log spectral distance of 10.69 dB, while the pipeline shrinks the representation from 9.05 MiB to 2.33 MiB, an overall compression ratio of 2.61. A bit-width sweep from 1-bit to 32-bit quantization shows that reconstruction quality saturates at 16 bits. We compare against H.264, HEVC, and MP3, report where the approach falls short of them, and describe a browser-based prototype that trains, transfers, and decodes these models over WebRTC.\n\n[提交时间: 2026-07-02; 分类: eess.IV, cs.AI, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2607.15298v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15298v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Large Language Model-Enhanced Multi-hop Parallel Image Semantic Communication",
+      "authors": [
+        {
+          "name": "Bingyan Xie",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jihong Park",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Rui Mao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Longyu Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tianhao Liang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yongpeng Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenjun Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "This paper proposes a large language model-enhanced multi-hop parallel image semantic communication (LLM-MHPSC) framework to mitigate distortion accumulation in multi-hop wireless image transmission. Unlike conventional single-hop semantic communication schemes, LLM-MHPSC deploys an extra residual compensation link at each hop to counteract accumulated distortions. To minimize additional bandwidth overhead, a coarse-to-fine residual compression scheme is designed by integrating a deep learning-based compressor with adaptive arithmetic coding (AAC). Furthermore, a large language model-based residual transmission optimizer (LLM-RTO) is developed to accurately estimate residual distributions and enable channel state and hop-aware rate adjustment, thereby improving residual compression efficiency under varying channel and hop conditions. An adaptive hop selection strategy is also proposed to activate the residual link on demand, striking a balance between transmission performance and computational cost. Experimental results show that LLM-MHPSC outperforms state-of-the-art semantic communication and traditional schemes, realizing robust image transmission with a marginal increase in bandwidth. This framework provides a flexible and effective solution for extending semantic communication to practical multi-hop application scenarios.\n\n[提交时间: 2026-07-02; 分类: eess.IV, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.15297v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.15297v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SABER: A Semantic-Aligned Brain Network Analysis Framework via Multi-scale Hypergraphs",
+      "authors": [
+        {
+          "name": "Yidan Xu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiangmin Han",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Rundong Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Huihui Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Effective brain disease diagnosis requires the synergy of brain connectivity patterns and high-level semantic knowledge. Existing methods, however, largely treat semantics from large language models (LLMs) as auxiliary features or supervision, limiting their direct role in decision-making and constraining classification stability and robustness. To overcome this, we propose a semantic-aligned brain network framework that actively integrates LLM-derived semantics into the prediction process. Specifically, ROI-level semantics are first incorporated via global self-attention to enrich node representations and provide whole-brain context. Multi-scale hypergraphs are then constructed to explicitly model functional subnetworks and multi-ROI interactions, addressing the locality limitations of traditional GNNs and capturing high-order dependencies. Finally, a decision-level semantic alignment mechanism selectively injects patient-specific textual embeddings into graph representations, enabling semantics to directly guide predictions without perturbing the underlying network structure. Experiments on public brain network datasets ABIDE and ADHD-200 demonstrate state-of-the-art performance, enhanced stability, and improved interpretability, particularly in small-sample settings.\n\n[提交时间: 2026-07-02; 分类: cs.LG, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2607.01901v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2607.01901v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    }
+  ],
+  "_cached_at": "2026-07-20T17:30:37.748574"
+}

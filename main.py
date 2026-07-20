@@ -77,6 +77,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="跳过机构信息补全（加快速度）",
     )
+    parser.add_argument(
+        "--enrich",
+        action="store_true",
+        help="强制开启机构信息补全（覆盖配置文件）",
+    )
     return parser.parse_args()
 
 
@@ -95,6 +100,12 @@ def filter_conferences(
 
 def run(args: argparse.Namespace) -> None:
     settings = load_settings()
+
+    # --enrich 覆盖配置文件，强制开启补全
+    if args.enrich:
+        settings.setdefault("enrichment", {})["enabled"] = True
+        logger.info("Enrichment force-enabled via --enrich flag")
+
     institutions = load_institutions()
     conf_configs = filter_conferences(load_conferences(), args.conference)
 
@@ -109,6 +120,9 @@ def run(args: argparse.Namespace) -> None:
     incremental = not args.full
 
     conferences: list[Conference] = []
+
+    # 确定是否补全：--no-enrich 优先级最高，其次 --enrich，最后配置文件
+    do_enrich = (not args.no_enrich) and (args.enrich or settings.get("enrichment", {}).get("enabled", False))
 
     for conf_cfg in conf_configs:
         conference = Conference.from_config(conf_cfg)
@@ -134,7 +148,7 @@ def run(args: argparse.Namespace) -> None:
                 continue
 
         processed = processor.process_conference(
-            conference, raw_papers, enrich=not args.no_enrich
+            conference, raw_papers, enrich=do_enrich
         )
 
         if incremental and not args.force:
@@ -144,7 +158,7 @@ def run(args: argparse.Namespace) -> None:
                     cached.papers, processed.papers
                 )
                 processed.papers = processor.process_papers(
-                    processed.papers, enrich=not args.no_enrich
+                    processed.papers, enrich=do_enrich
                 )
 
         if not processed.papers:

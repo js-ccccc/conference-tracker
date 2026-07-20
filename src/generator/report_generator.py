@@ -86,6 +86,13 @@ class ReportGenerator:
     def _prepare_conference(self, conf: Conference) -> dict[str, Any]:
         domestic_papers = conf.domestic_papers()
 
+        # 最新论文（按 arXiv 提交时间倒序，取前 15 篇）
+        recent_papers = sorted(
+            conf.papers,
+            key=lambda p: p.paper_id or "",
+            reverse=True,
+        )[:15]
+
         return {
             "display_name": conf.display_name,
             "date_range": conf.date_range,
@@ -95,6 +102,7 @@ class ReportGenerator:
             "collected_count": len(conf.papers),
             "domestic_count": len(domestic_papers),
             "domestic_papers": [self._prepare_paper(p) for p in domestic_papers],
+            "recent_papers": [self._prepare_recent_paper(p) for p in recent_papers],
         }
 
     def _prepare_paper(self, paper: Paper) -> dict[str, Any]:
@@ -120,4 +128,16 @@ class ReportGenerator:
             "url": paper.url or "",
             "abstract": paper.abstract or "",
             "domestic_authors": domestic_authors,
+        }
+
+    def _prepare_recent_paper(self, paper: Paper) -> dict[str, Any]:
+        author_names = [a.name for a in paper.authors[:5]]
+        if len(paper.authors) > 5:
+            author_names.append("et al.")
+        return {
+            "title": paper.title,
+            "arxiv_id": paper.paper_id or "",
+            "url": paper.url or "",
+            "authors": ", ".join(author_names),
+            "abstract": (paper.abstract or "")[:200],
         }

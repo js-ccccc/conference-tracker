@@ -8,16 +8,17 @@ collector:
 
 arxiv:
   api_base: "http://export.arxiv.org/api/query"
-  max_results_per_conference: 200
-  page_size: 100
+  max_results_per_conference: 50
+  page_size: 50
 
-# 机构信息补全（OpenAlex，arXiv 无机构信息时使用）
+# 机构信息补全（通过 OpenAlex 按标题查找）
+# CI 默认关闭（OpenAlex 限流严重），本地可用 --enrich 开启
 enrichment:
-  enabled: true
-  max_papers_per_conference: 100
-  max_author_fallback_papers: 30
-  max_authors_per_paper: 4
-  request_delay: 0.15
+  enabled: false
+  max_papers_per_conference: 30
+  max_author_fallback_papers: 0
+  max_authors_per_paper: 3
+  request_delay: 0.2
   openalex_mailto: "conference-tracker@users.noreply.github.com"
 
 # 中文名推断

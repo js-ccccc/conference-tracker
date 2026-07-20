@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import logging
 import re
-import time
 from typing import Any
 from xml.etree import ElementTree
 
@@ -25,8 +24,8 @@ class ArxivCollector(BaseCollector):
         self.api_base = arxiv_cfg.get(
             "api_base", "http://export.arxiv.org/api/query"
         )
-        self.max_results = arxiv_cfg.get("max_results_per_conference", 200)
-        self.page_size = arxiv_cfg.get("page_size", 100)
+        self.max_results = arxiv_cfg.get("max_results_per_conference", 50)
+        self.page_size = arxiv_cfg.get("page_size", 50)
         # arXiv 要求请求间隔 >= 3 秒
         self.request_delay = max(self.request_delay, 3.0)
 
@@ -45,44 +44,43 @@ class ArxivCollector(BaseCollector):
         if not keywords:
             keywords = self._default_keywords(conference, year)
 
-        queries = self._build_queries(categories, keywords, year)
         papers: list[Paper] = []
         seen_ids: set[str] = set()
 
-        for query in queries:
-            for batch in self._query_arxiv(query):
+        # 策略1：按 arXiv 分类检索最新论文（不限制关键词，获取该领域最新预印本）
+        if categories:
+            cat_query = " OR ".join(f"cat:{c}" for c in categories)
+            logger.info("arXiv: searching by category '%s' for %s", cat_query, conference.abbr)
+            for batch in self._query_arxiv(cat_query):
                 for paper in batch:
-                    if paper.paper_id and paper.paper_id in seen_ids:
-                        continue
-                    seen_ids.add(paper.paper_id or paper.title)
-                    papers.append(paper)
-                    if len(papers) >= self.max_results:
-                        logger.info(
-                            "arXiv: reached max_results %d for %s",
-                            self.max_results,
-                            conference.abbr,
-                        )
+                    if self._add_paper(paper, seen_ids, papers):
+                        return papers
+
+        # 策略2：按关键词检索（匹配论文标题/摘要中提到会议名的）
+        for kw in keywords[:2]:
+            logger.info("arXiv: searching keyword '%s' for %s", kw, conference.abbr)
+            for batch in self._query_arxiv(kw):
+                for paper in batch:
+                    if self._add_paper(paper, seen_ids, papers):
                         return papers
 
         logger.info("arXiv: collected %d papers for %s", len(papers), conference.abbr)
         return papers
 
+    def _add_paper(
+        self, paper: Paper, seen_ids: set[str], papers: list[Paper]
+    ) -> bool:
+        """添加论文到列表，返回是否达到上限"""
+        pid = paper.paper_id or paper.title
+        if pid in seen_ids:
+            return False
+        seen_ids.add(pid)
+        papers.append(paper)
+        return len(papers) >= self.max_results
+
     @staticmethod
     def _default_keywords(conference: Conference, year: str) -> list[str]:
         return [f"{conference.abbr} {year}", conference.full_name]
-
-    @staticmethod
-    def _build_queries(
-        categories: list[str], keywords: list[str], year: str
-    ) -> list[str]:
-        queries: list[str] = []
-        for kw in keywords:
-            if categories:
-                cat_filter = " OR ".join(f"cat:{c}" for c in categories)
-                queries.append(f"({kw}) AND ({cat_filter})")
-            else:
-                queries.append(kw)
-        return queries
 
     def _query_arxiv(self, query: str) -> list[list[Paper]]:
         start = 0
@@ -90,7 +88,7 @@ class ArxivCollector(BaseCollector):
             params = {
                 "search_query": query,
                 "start": start,
-                "max_results": self.page_size,
+                "max_results": min(self.page_size, self.max_results - start),
                 "sortBy": "submittedDate",
                 "sortOrder": "descending",
             }
@@ -103,7 +101,7 @@ class ArxivCollector(BaseCollector):
                 break
 
             yield batch
-            start += self.page_size
+            start += len(batch)
             if len(batch) < self.page_size:
                 break
 
@@ -161,7 +159,9 @@ class ArxivCollector(BaseCollector):
                 meta.append(f"提交时间: {published}")
             if categories:
                 meta.append(f"分类: {', '.join(categories)}")
-            abstract_with_meta = f"{abstract}\n\n[{'; '.join(meta)}]" if abstract else "; ".join(meta)
+            abstract_with_meta = (
+                f"{abstract}\n\n[{'; '.join(meta)}]" if abstract else "; ".join(meta)
+            )
 
         return Paper(
             title=title,

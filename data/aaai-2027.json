@@ -1,14 +1,14 @@
 {
-  "id": "ijcai-2026",
-  "abbr": "IJCAI",
-  "full_name": "International Joint Conference on AI",
+  "id": "aaai-2027",
+  "abbr": "AAAI",
+  "full_name": "AAAI Conference on Artificial Intelligence",
   "domain": "人工智能综合",
   "ccf_rating": "A",
-  "date_start": "2026-08-15",
-  "date_end": "2026-08-15",
-  "location_city": "Bremen",
-  "location_country": "Germany",
-  "website": "https://www.ijcai.org",
+  "date_start": "2027-02-16",
+  "date_end": "2027-02-23",
+  "location_city": "Montréal",
+  "location_country": "Canada",
+  "website": "https://aaai.org/conference/aaai/aaai-27/",
   "submission_deadline": null,
   "notification_date": null,
   "papers": [
@@ -2187,5 +2187,5 @@
       "has_peking": false
     }
   ],
-  "_cached_at": "2026-07-20T17:30:27.509972"
+  "_cached_at": "2026-07-20T17:30:49.516424"
 }
