@@ -1,6 +1,6 @@
 # 2026年下半年计算机顶会信息报告
 
-> 自动生成时间：2026-08-03 02:51:16
+> 自动生成时间：2026-08-10 01:49:48
 > 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
@@ -107,21 +107,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | Robot-Factored World Models via Robot Rendering | Byungjun Kim, Taeksoo Kim, Hyunsoo Cha, ... | [2607.22535v1](https://arxiv.org/abs/2607.22535v1) |
-| 2 | SM4RT: Learning Structured Motion Geometry for 4D Reconstruc... | Shing Ho J. Lin, Wenzhao Zheng, Dong Zhu... | [2607.22534v1](https://arxiv.org/abs/2607.22534v1) |
-| 3 | Twins: Learn to Predict Unified Representations with Focal L... | Kaixiong Gong, Xin Cai, Bin Lin, Hao Wan... | [2607.22531v1](https://arxiv.org/abs/2607.22531v1) |
-| 4 | CARA: Concept-Aware Risk Attention for Interpretable Collisi... | Zhishan Tao, Ruoyu Wang, Yucheng Wu, Enj... | [2607.22494v1](https://arxiv.org/abs/2607.22494v1) |
-| 5 | Optimal Transport Image Representation and Deep Covariance A... | Seshu K. Damarla | [2607.22486v1](https://arxiv.org/abs/2607.22486v1) |
-| 6 | Deformable Triangle Splatting: Flexible Primitives for Real-... | Oriol Jiménez-Ayguadé, Antonio Agudo | [2607.22446v1](https://arxiv.org/abs/2607.22446v1) |
-| 7 | SceneActBench: Can Agents Act on the 3D Scenes They See? | Yifei Zhao, Xiangxin Zhou, Wenhao Yang, ... | [2607.22393v1](https://arxiv.org/abs/2607.22393v1) |
-| 8 | Correlation-Aware and Gaussianity-Preserving Robust Latent A... | Yebin Zheng, Haonan An, Guang Hua, Zhipi... | [2607.22386v1](https://arxiv.org/abs/2607.22386v1) |
-| 9 | IR275K: A Benchmark for Infrared Multi-Frame Super-Resolutio... | Jie Deng, Heyang Wang, Changxin Wang, Ju... | [2607.22380v1](https://arxiv.org/abs/2607.22380v1) |
-| 10 | Active few-shot segmentation by reinforcing data selection | Chenlan Zhao, Benny Wong, Timothy F. Lun... | [2607.22371v1](https://arxiv.org/abs/2607.22371v1) |
-| 11 | SiPhy: Single-Image Physical Property Reasoning | Hoang Le, Joonwoo Kwon, Elkhan Ismayilza... | [2607.22355v1](https://arxiv.org/abs/2607.22355v1) |
-| 12 | Time-Reversed Imaging: A Multimodal Benchmark and Framework ... | Jorge Bacca, Kebin Contreras, Luis Tosca... | [2607.22352v1](https://arxiv.org/abs/2607.22352v1) |
-| 13 | SLIP: Segmentation with Low-latency Interactive Prompting fo... | Baptiste Podvin, Alexandre Ancel, Flavio... | [2607.22332v1](https://arxiv.org/abs/2607.22332v1) |
-| 14 | Geometric 2D Scene Graph Generation | Christoph Jahn, Urs Waldmann, Bastian Go... | [2607.22325v1](https://arxiv.org/abs/2607.22325v1) |
-| 15 | fMRI2Face: A Full-HD fMRI-Video Dataset and Geometry-Guided ... | Jingyang Huo, Xiangru Huang, Chentao She... | [2607.22302v1](https://arxiv.org/abs/2607.22302v1) |
+| 1 | Does FLAIR super-resolution erase or hallucinate small white... | Zahra Khodakarami, Yue Li, Pulkit Khande... | [2608.06311v1](https://arxiv.org/abs/2608.06311v1) |
+| 2 | UQ-Loc: Uncertainty-Aware LiDAR Scene Coordinate Regression | Jacek Komorowski | [2608.06307v1](https://arxiv.org/abs/2608.06307v1) |
+| 3 | TLNM: Externally Validated Tooth Detection, Numbering and Se... | Arash Nedaei, Henna Tiensuu, Elina Väyry... | [2608.06275v1](https://arxiv.org/abs/2608.06275v1) |
+| 4 | OTLesMix: Wasserstein Barycenter and Optimal Transport Map f... | Robin Trombetta, Carole Lartizien | [2608.06264v1](https://arxiv.org/abs/2608.06264v1) |
+| 5 | MASS: Multiplayer World Models with Authoritative Shared Sta... | Ziqi Cai, Siqi Yang, Yimu Wang, Zixian G... | [2608.06257v1](https://arxiv.org/abs/2608.06257v1) |
+| 6 | Toward Deployable Bangla Sign Language Recognition with Expe... | Saad Ahmed, Md Khalid Syfullaha | [2608.06252v1](https://arxiv.org/abs/2608.06252v1) |
+| 7 | PRISM: Distribution-Gated Flow Matching for Controllable Unp... | Elad Yoshai, Natan T. Shaked | [2608.06240v1](https://arxiv.org/abs/2608.06240v1) |
+| 8 | Depth-Guided Video Object Counting in Crowded Scenes | Yuanjing Xu, Xinyan Liu, Weidong Chen, Z... | [2608.06236v1](https://arxiv.org/abs/2608.06236v1) |
+| 9 | EmoWorld: A Decoupled Affective Field for Controllable Emoti... | Bingyuan Wang, Baistan Zhyldyzbekov, Kun... | [2608.06231v1](https://arxiv.org/abs/2608.06231v1) |
+| 10 | Reversible Unlearnable Examples: Towards the Copyright Prote... | Binze Wang, Jinyu Tian, Xingrun Wang, Xi... | [2608.06211v1](https://arxiv.org/abs/2608.06211v1) |
+| 11 | CFGPNet: Cross-Attention-Based Fused Gradient Programmed Net... | Nima Hatami, Karim Faez, Saeed Sharifian... | [2608.06205v1](https://arxiv.org/abs/2608.06205v1) |
+| 12 | HOPE: Hand-Object Pressure Estimation from Monocular Videos | Subin Jeon, Byungjun Kim, Hanbyul Joo | [2608.06192v1](https://arxiv.org/abs/2608.06192v1) |
+| 13 | EvReflection: Event-Driven Micro-Dynamics for Reflection Rem... | Jiaxiao Wang, Dachun Kai, Huyue Zhu, Qua... | [2608.06184v1](https://arxiv.org/abs/2608.06184v1) |
+| 14 | Support Operation Factorization: Compositional Readout of Fr... | Zhongyao Wang, Wanli Ouyang, Taoyong Cui... | [2608.06174v1](https://arxiv.org/abs/2608.06174v1) |
+| 15 | Prior-SG: Task and Prior Driven Region Segmentation for Scen... | Giorgio Tonetti, Laurent Kneip, Abel Gaw... | [2608.06170v1](https://arxiv.org/abs/2608.06170v1) |
 
 ---
 
