@@ -1,6 +1,6 @@
 # 2026年下半年计算机顶会信息报告
 
-> 自动生成时间：2026-08-17 01:19:13
+> 自动生成时间：2026-08-24 01:18:35
 > 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
@@ -71,21 +71,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | AutoDesign: Meta-Harness Optimization for Long-Horizon Agent... | Yaxin Luo, Haobin Jiang, Jialv Zou, Xu H... | [2608.13560v1](https://arxiv.org/abs/2608.13560v1) |
-| 2 | OmniScientist: An Omni-Modal Omni-Discipline AI Scientist | Bobo Li, Hao Fei, Tianjie Ju, Mong-Li Le... | [2608.13558v1](https://arxiv.org/abs/2608.13558v1) |
-| 3 | HumanTracker: Towards Comprehensive and Human-Aligned Motion... | Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Y... | [2608.13555v1](https://arxiv.org/abs/2608.13555v1) |
-| 4 | QuoteBench: How Matched Scores Can Hide Command-Path Failure... | Shangao Li, Yao Zhang, Volker Tresp, Yua... | [2608.13547v1](https://arxiv.org/abs/2608.13547v1) |
-| 5 | LittleLearner: Language Models Under Pedagogically Controlle... | Fanfei Li, Jana Zeller, Manuel Prada-Cor... | [2608.13545v1](https://arxiv.org/abs/2608.13545v1) |
-| 6 | Vero: Can AI Agents Build Formally Verified Software Reposit... | Zhe Ye, Hantao Lou, Yuechun Sun, Peiyang... | [2608.13522v1](https://arxiv.org/abs/2608.13522v1) |
-| 7 | The data geometry of masking diffusion: Certified-optimal sc... | Martin J. Wainwright | [2608.13520v1](https://arxiv.org/abs/2608.13520v1) |
-| 8 | DFM Mimir v1: An Open HRM Delivering Frontier Performance at... | Peter Schneider-Kamp, Jacob Nielsen, Gia... | [2608.13517v1](https://arxiv.org/abs/2608.13517v1) |
-| 9 | AlayaWorld: Interactive Long-Horizon World Modeling - Full T... | AlayaWorld Team, Kaipeng Zhang, Chuanhao... | [2608.13492v1](https://arxiv.org/abs/2608.13492v1) |
-| 10 | Toward a Gricean Retreat: Probing LLMs for Knowledge Boundar... | Dananjay Srinivas, Saksham Khatwani, Mar... | [2608.13484v1](https://arxiv.org/abs/2608.13484v1) |
-| 11 | Synthetic Persona Pretraining: Alignment from Token Zero | Julian Minder, Viktor Moskvoretskii, Rag... | [2608.13482v1](https://arxiv.org/abs/2608.13482v1) |
-| 12 | MARC v1: An Open-Source Multi-Agent Framework for Clinical A... | Saisha Shetty, Satvik Tripathi, Austin L... | [2608.13476v1](https://arxiv.org/abs/2608.13476v1) |
-| 13 | AaLLM: An End-to-End Analog Circuit Design Framework from To... | Mohammed Ayman Habib, Rylan Hart, Mortez... | [2608.13472v1](https://arxiv.org/abs/2608.13472v1) |
-| 14 | Concept Drift Detection and Adaptive Retraining of Malware C... | Christofer Washington Berruz Chungata, M... | [2608.13465v1](https://arxiv.org/abs/2608.13465v1) |
-| 15 | MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset... | Daniel Perkins, John Squires, Janou Mill... | [2608.13463v1](https://arxiv.org/abs/2608.13463v1) |
+| 1 | G-CARL: Grounded Checklist-Aligned Reward Learning for Patie... | Shiao Xie, Siyu Chen, Jianwei Lv, Bo Yua... | [2608.20331v1](https://arxiv.org/abs/2608.20331v1) |
+| 2 | An Agentic Approach for Active Data Collection, Travel Behav... | Narges Ahmadi, Yubo Jiao, Jônatas August... | [2608.20320v1](https://arxiv.org/abs/2608.20320v1) |
+| 3 | Inducing Task Models from Computer-Use Traces | Yucheng Jiang, Zora Zhiruo Wang, Ruishi ... | [2608.20319v1](https://arxiv.org/abs/2608.20319v1) |
+| 4 | AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design f... | Yizhe Chi, Wenyi Li, Deyao Hong, Xiaoqiu... | [2608.20318v1](https://arxiv.org/abs/2608.20318v1) |
+| 5 | Pandora's AI Model Routing Box: Efficient Allocation with Co... | Adam Fisch, Shubhendu Trivedi, Fantine H... | [2608.20316v1](https://arxiv.org/abs/2608.20316v1) |
+| 6 | MidTool: Mid-training Data Synthesis for Agentic Tool Use | Fengqing Jiang, Yite Wang, Boyi Liu, Zha... | [2608.20314v1](https://arxiv.org/abs/2608.20314v1) |
+| 7 | Phantom Gains: Auditing Self-Improvement Against a Measured ... | Cheng Xu, Nan Yan, Liming Chen, M-Tahar ... | [2608.20290v1](https://arxiv.org/abs/2608.20290v1) |
+| 8 | Inject, Align, Recover: Staged Post-Training for Retrieval-F... | Qian Kou, Xiaofeng Shi, Xiaosong Qiu, Hu... | [2608.20281v1](https://arxiv.org/abs/2608.20281v1) |
+| 9 | Break It Down, Pass It On: Cross-Task Skill Transfer in LLM ... | Yiyang Feng, Biddut Sarker Bijoy, Niranj... | [2608.20274v1](https://arxiv.org/abs/2608.20274v1) |
+| 10 | Catching the Rug: Early Prediction of Fraudulent Memecoins o... | Jianghai Li, Pavel Kuznetsov, Yury Yanov... | [2608.20271v1](https://arxiv.org/abs/2608.20271v1) |
+| 11 | Learning When to Think: Adaptive Reasoning for Test-Time Com... | Gijs Kassenaar, Zhao Yang, Vincent Franç... | [2608.20256v1](https://arxiv.org/abs/2608.20256v1) |
+| 12 | QUASAR: A Quantum-Classical Neural Network for SAR Satellite... | Vincenzo Sammartino, Nathanael Denis, Ro... | [2608.20240v1](https://arxiv.org/abs/2608.20240v1) |
+| 13 | Rule-Compliant Visual Spatial Planning for Multimodal Large ... | Yu Chen, Ting Lei, Yaoyi Li, Jia Cai, Zh... | [2608.20237v1](https://arxiv.org/abs/2608.20237v1) |
+| 14 | Growth Without Us: Machine Consumers, Corporate Circularity,... | Sahil Sharma | [2608.20231v1](https://arxiv.org/abs/2608.20231v1) |
+| 15 | Prompt-Conditioned Channel Attention for Hierarchical Featur... | Mosharof Hossain, Md Rabiul Islam, Limon... | [2608.20229v1](https://arxiv.org/abs/2608.20229v1) |
 
 ---
 
@@ -107,21 +107,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | Does FLAIR super-resolution erase or hallucinate small white... | Zahra Khodakarami, Yue Li, Pulkit Khande... | [2608.06311v1](https://arxiv.org/abs/2608.06311v1) |
-| 2 | UQ-Loc: Uncertainty-Aware LiDAR Scene Coordinate Regression | Jacek Komorowski | [2608.06307v1](https://arxiv.org/abs/2608.06307v1) |
-| 3 | TLNM: Externally Validated Tooth Detection, Numbering and Se... | Arash Nedaei, Henna Tiensuu, Elina Väyry... | [2608.06275v1](https://arxiv.org/abs/2608.06275v1) |
-| 4 | OTLesMix: Wasserstein Barycenter and Optimal Transport Map f... | Robin Trombetta, Carole Lartizien | [2608.06264v1](https://arxiv.org/abs/2608.06264v1) |
-| 5 | MASS: Multiplayer World Models with Authoritative Shared Sta... | Ziqi Cai, Siqi Yang, Yimu Wang, Zixian G... | [2608.06257v1](https://arxiv.org/abs/2608.06257v1) |
-| 6 | Toward Deployable Bangla Sign Language Recognition with Expe... | Saad Ahmed, Md Khalid Syfullaha | [2608.06252v1](https://arxiv.org/abs/2608.06252v1) |
-| 7 | PRISM: Distribution-Gated Flow Matching for Controllable Unp... | Elad Yoshai, Natan T. Shaked | [2608.06240v1](https://arxiv.org/abs/2608.06240v1) |
-| 8 | Depth-Guided Video Object Counting in Crowded Scenes | Yuanjing Xu, Xinyan Liu, Weidong Chen, Z... | [2608.06236v1](https://arxiv.org/abs/2608.06236v1) |
-| 9 | EmoWorld: A Decoupled Affective Field for Controllable Emoti... | Bingyuan Wang, Baistan Zhyldyzbekov, Kun... | [2608.06231v1](https://arxiv.org/abs/2608.06231v1) |
-| 10 | Reversible Unlearnable Examples: Towards the Copyright Prote... | Binze Wang, Jinyu Tian, Xingrun Wang, Xi... | [2608.06211v1](https://arxiv.org/abs/2608.06211v1) |
-| 11 | CFGPNet: Cross-Attention-Based Fused Gradient Programmed Net... | Nima Hatami, Karim Faez, Saeed Sharifian... | [2608.06205v1](https://arxiv.org/abs/2608.06205v1) |
-| 12 | HOPE: Hand-Object Pressure Estimation from Monocular Videos | Subin Jeon, Byungjun Kim, Hanbyul Joo | [2608.06192v1](https://arxiv.org/abs/2608.06192v1) |
-| 13 | EvReflection: Event-Driven Micro-Dynamics for Reflection Rem... | Jiaxiao Wang, Dachun Kai, Huyue Zhu, Qua... | [2608.06184v1](https://arxiv.org/abs/2608.06184v1) |
-| 14 | Support Operation Factorization: Compositional Readout of Fr... | Zhongyao Wang, Wanli Ouyang, Taoyong Cui... | [2608.06174v1](https://arxiv.org/abs/2608.06174v1) |
-| 15 | Prior-SG: Task and Prior Driven Region Segmentation for Scen... | Giorgio Tonetti, Laurent Kneip, Abel Gaw... | [2608.06170v1](https://arxiv.org/abs/2608.06170v1) |
+| 1 | WithEveryone: Unified Planning and Identity Grounding for Gr... | Hengyuan Xu, Qixun Wang, Yiji Cheng, Mil... | [2608.20336v1](https://arxiv.org/abs/2608.20336v1) |
+| 2 | 4DAnyone: Create Anyone in 4D from a Casual Monocular Video | Yudong Jin, Tao Xie, Qihang Zhang, Zehon... | [2608.20335v1](https://arxiv.org/abs/2608.20335v1) |
+| 3 | Swift-Image: Exploring the Performance Frontier of Compact U... | Taihang Hu, Zhao Wang, Zuan Gao, Tao Liu... | [2608.20334v1](https://arxiv.org/abs/2608.20334v1) |
+| 4 | G-CARL: Grounded Checklist-Aligned Reward Learning for Patie... | Shiao Xie, Siyu Chen, Jianwei Lv, Bo Yua... | [2608.20331v1](https://arxiv.org/abs/2608.20331v1) |
+| 5 | Inter-X++: A Comprehensive Benchmark for Multimodal Human-Hu... | Liang Xu, Chengqun Yang, Zili Lin, Xinta... | [2608.20312v1](https://arxiv.org/abs/2608.20312v1) |
+| 6 | DreamHand: Repurposing Video Diffusion Models for Occlusion-... | Yufei Liu, Xixi Wang, Hao Li, Ganlong Zh... | [2608.20308v1](https://arxiv.org/abs/2608.20308v1) |
+| 7 | CalcSeg: Confidence-aware 3D Latent Context Curriculum Learn... | Nivetha Jayakumar, Hannah Kim, Amit R. P... | [2608.20305v1](https://arxiv.org/abs/2608.20305v1) |
+| 8 | Towards Surgical World-Action Modeling: A Preliminary Joint ... | Weiliang Huang, Huanrong Liu, Bob Zhang,... | [2608.20284v1](https://arxiv.org/abs/2608.20284v1) |
+| 9 | Prompt-Conditioned Channel Attention for Hierarchical Featur... | Mosharof Hossain, Md Rabiul Islam, Limon... | [2608.20229v1](https://arxiv.org/abs/2608.20229v1) |
+| 10 | Unwarping the Lens: A Physics-Grounded Approach to Video Gla... | Radim Spetlik, David Futschik, Radek Dan... | [2608.20212v1](https://arxiv.org/abs/2608.20212v1) |
+| 11 | RoMAN-Flow: Taming Autoregressive Normalizing Flows for Offl... | Shaoxuan Wang, Guangting Zheng, Rui Huan... | [2608.20208v1](https://arxiv.org/abs/2608.20208v1) |
+| 12 | G3Ego: Gaze-Guided Graphs for Egocentric Action Understandin... | Marko Haralović, Akash Ramakrishnan, Est... | [2608.20157v1](https://arxiv.org/abs/2608.20157v1) |
+| 13 | Artificial Intelligence for Workflow Analysis in Colorectal ... | Pietro Mascagni, Julia Alekseenko, Pooja... | [2608.20154v1](https://arxiv.org/abs/2608.20154v1) |
+| 14 | PelviNeXt: A Modality-Agnostic Hybrid Network for Pelvic Ima... | Siam Tahsin Bhuiyan, Rashedur Rahman, Se... | [2608.20144v1](https://arxiv.org/abs/2608.20144v1) |
+| 15 | DPC-Net: Dual-Prior Collaborative Network for All-in-One Ima... | Zhaokun He, Kangbiao Shi, Axi Niu, Jian ... | [2608.20141v1](https://arxiv.org/abs/2608.20141v1) |
 
 ---
 
@@ -143,21 +143,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | HumanTracker: Towards Comprehensive and Human-Aligned Motion... | Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Y... | [2608.13555v1](https://arxiv.org/abs/2608.13555v1) |
-| 2 | A Browser-Native Digital Test Range for Benchmarking 4D Ocea... | Edward Holmberg, Elias Ioup, Mahdi Abdel... | [2608.13511v1](https://arxiv.org/abs/2608.13511v1) |
-| 3 | DreamX-Phi 1.0: Action-Conditioned Video World Model for Rob... | DreamX Team, Rui Chen, Xiangxiang Chu, G... | [2608.13489v1](https://arxiv.org/abs/2608.13489v1) |
-| 4 | Decoding Task Progress from VLA Representations | Atiksh Bhardwaj, Edward Weiyi Duan, Prit... | [2608.13474v1](https://arxiv.org/abs/2608.13474v1) |
-| 5 | Mind the Context: Continual Learning of Socially Appropriate... | Rafal Robert Karpinski, Fethiye Irmak Do... | [2608.13448v1](https://arxiv.org/abs/2608.13448v1) |
-| 6 | ContactGuard: Pre-Contact Execution Monitoring with Action-C... | Gehan Zheng, Matthew Johnson-Roberson, W... | [2608.13438v1](https://arxiv.org/abs/2608.13438v1) |
-| 7 | Attention from Action, for Action: Emergent Visual Bottlenec... | Zheyu Zhuang, Ruiyu Wang, Nick Heppert, ... | [2608.13422v1](https://arxiv.org/abs/2608.13422v1) |
-| 8 | Deliberate Practice: Learning Robot Skills under a Budget | Shivam Vats, Sudarshan Harithas, Mete Tu... | [2608.13415v1](https://arxiv.org/abs/2608.13415v1) |
-| 9 | Capstan-driven Continuum Surgical Robot: Design, Modeling, a... | Gang Zhang, Yufu Qiu, Junyan Yan, Wenhui... | [2608.13396v1](https://arxiv.org/abs/2608.13396v1) |
-| 10 | FIRE-VLA: Failure-Informed Self-Evolution for Vision-Languag... | Hao Dou | [2608.13395v1](https://arxiv.org/abs/2608.13395v1) |
-| 11 | NestDex: Nested Policy Learning with Copilot Assisted Teleop... | James Zhao, Jinhe Tang, Mingyuan Ba, Wei... | [2608.13362v1](https://arxiv.org/abs/2608.13362v1) |
-| 12 | Predictive Relative-Velocity Steering for Safe Robotic Manip... | Changhao Hu, Zeyi Liu, Songqiao Hu, Shua... | [2608.13284v1](https://arxiv.org/abs/2608.13284v1) |
-| 13 | Manufacturing Complex Airtight Soft Pneumatic Actuators for ... | Mohammed Abboodi | [2608.13233v1](https://arxiv.org/abs/2608.13233v1) |
-| 14 | FAM-DQ: A Dual-Quadrotor-Based Fully Actuated Aerial Manipul... | Xuwei Yang, Ruoyu Ren, Ziqian Guo | [2608.13220v1](https://arxiv.org/abs/2608.13220v1) |
-| 15 | S2-HWM: Sparse Event-Structured Hierarchical World Model for... | Shuzhe Zhang, Xin Zhu, Yinling Qian, Qio... | [2608.13103v1](https://arxiv.org/abs/2608.13103v1) |
+| 1 | Towards Surgical World-Action Modeling: A Preliminary Joint ... | Weiliang Huang, Huanrong Liu, Bob Zhang,... | [2608.20284v1](https://arxiv.org/abs/2608.20284v1) |
+| 2 | DART-S: Reachability-Audited Active-Suspension Preconditioni... | Yu Hu, Fangzhou Zhao, Liang Chen, Chen M... | [2608.20275v1](https://arxiv.org/abs/2608.20275v1) |
+| 3 | Video2DoorTraversal: Push Door Traversal via Simulated Door ... | Xincheng Tang, Yiji Chen, Youhan Xie, Wa... | [2608.20251v1](https://arxiv.org/abs/2608.20251v1) |
+| 4 | DECOWAM: Decoupled Whole-Body World-Action Model for Legged ... | Siyuan Ma, Boshi Zhang, Yutian Zhang, Qi... | [2608.20114v1](https://arxiv.org/abs/2608.20114v1) |
+| 5 | Planning-Oriented End-to-End Autonomous Driving: Architectur... | Yanchen Guan, Xingcheng Liu, Bin Rao, Ch... | [2608.20111v1](https://arxiv.org/abs/2608.20111v1) |
+| 6 | Towards Professional Tennis Styles for Humanoid Robots with ... | Tao Huang, Ruofei Liu, Xuchen Tang, Xiny... | [2608.20087v1](https://arxiv.org/abs/2608.20087v1) |
+| 7 | Evidence-Gated Task and Motion Planning with Vision-Language... | Tsunehiko Tanaka, Matthew Stephenson, Al... | [2608.20084v1](https://arxiv.org/abs/2608.20084v1) |
+| 8 | Wave-Based Bilateral Teleoperation between Nonlinear Manipul... | G. Q. Bao Tran, Takanori Miyoshi, Ho Duc... | [2608.20043v1](https://arxiv.org/abs/2608.20043v1) |
+| 9 | Learning Highly Dynamic Skills Transition for Quadruped Jump... | Zeren Luo, Jiahui Zhang, Yimin Han, Ji M... | [2608.19977v1](https://arxiv.org/abs/2608.19977v1) |
+| 10 | PVRA: A Pointwise Key-point Voting Framework for Robotic Ass... | Kulunu Samarawickrama, Roel Pieters | [2608.19968v1](https://arxiv.org/abs/2608.19968v1) |
+| 11 | MILD: Tractable Terrain Modeling for Learning Improved Biped... | Zeren Luo, Jiahui Zhang, Zhe Xu, Wanyue ... | [2608.19955v1](https://arxiv.org/abs/2608.19955v1) |
+| 12 | Calming Robot Pitches? Exploring the Influence of Robot Voic... | Nina G. M. van Roij, Emilia I. Barakova,... | [2608.19826v1](https://arxiv.org/abs/2608.19826v1) |
+| 13 | Towards general embodied intelligence: integrating large lan... | Fujiang Yuan, Xia Huang, Lusheng Wang, J... | [2608.19794v1](https://arxiv.org/abs/2608.19794v1) |
+| 14 | CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synt... | Julien Merand, Boris Meden, Liming Chen,... | [2608.19776v1](https://arxiv.org/abs/2608.19776v1) |
+| 15 | GOAG: Generative and Object-Agnostic Grasp Planner for Dexte... | Julien Merand, Boris Meden, Mathieu Gros... | [2608.19759v1](https://arxiv.org/abs/2608.19759v1) |
 
 ---
 
@@ -251,21 +251,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | AutoDesign: Meta-Harness Optimization for Long-Horizon Agent... | Yaxin Luo, Haobin Jiang, Jialv Zou, Xu H... | [2608.13560v1](https://arxiv.org/abs/2608.13560v1) |
-| 2 | OmniScientist: An Omni-Modal Omni-Discipline AI Scientist | Bobo Li, Hao Fei, Tianjie Ju, Mong-Li Le... | [2608.13558v1](https://arxiv.org/abs/2608.13558v1) |
-| 3 | HumanTracker: Towards Comprehensive and Human-Aligned Motion... | Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Y... | [2608.13555v1](https://arxiv.org/abs/2608.13555v1) |
-| 4 | QuoteBench: How Matched Scores Can Hide Command-Path Failure... | Shangao Li, Yao Zhang, Volker Tresp, Yua... | [2608.13547v1](https://arxiv.org/abs/2608.13547v1) |
-| 5 | LittleLearner: Language Models Under Pedagogically Controlle... | Fanfei Li, Jana Zeller, Manuel Prada-Cor... | [2608.13545v1](https://arxiv.org/abs/2608.13545v1) |
-| 6 | Vero: Can AI Agents Build Formally Verified Software Reposit... | Zhe Ye, Hantao Lou, Yuechun Sun, Peiyang... | [2608.13522v1](https://arxiv.org/abs/2608.13522v1) |
-| 7 | The data geometry of masking diffusion: Certified-optimal sc... | Martin J. Wainwright | [2608.13520v1](https://arxiv.org/abs/2608.13520v1) |
-| 8 | DFM Mimir v1: An Open HRM Delivering Frontier Performance at... | Peter Schneider-Kamp, Jacob Nielsen, Gia... | [2608.13517v1](https://arxiv.org/abs/2608.13517v1) |
-| 9 | AlayaWorld: Interactive Long-Horizon World Modeling - Full T... | AlayaWorld Team, Kaipeng Zhang, Chuanhao... | [2608.13492v1](https://arxiv.org/abs/2608.13492v1) |
-| 10 | Toward a Gricean Retreat: Probing LLMs for Knowledge Boundar... | Dananjay Srinivas, Saksham Khatwani, Mar... | [2608.13484v1](https://arxiv.org/abs/2608.13484v1) |
-| 11 | Synthetic Persona Pretraining: Alignment from Token Zero | Julian Minder, Viktor Moskvoretskii, Rag... | [2608.13482v1](https://arxiv.org/abs/2608.13482v1) |
-| 12 | MARC v1: An Open-Source Multi-Agent Framework for Clinical A... | Saisha Shetty, Satvik Tripathi, Austin L... | [2608.13476v1](https://arxiv.org/abs/2608.13476v1) |
-| 13 | AaLLM: An End-to-End Analog Circuit Design Framework from To... | Mohammed Ayman Habib, Rylan Hart, Mortez... | [2608.13472v1](https://arxiv.org/abs/2608.13472v1) |
-| 14 | Concept Drift Detection and Adaptive Retraining of Malware C... | Christofer Washington Berruz Chungata, M... | [2608.13465v1](https://arxiv.org/abs/2608.13465v1) |
-| 15 | MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset... | Daniel Perkins, John Squires, Janou Mill... | [2608.13463v1](https://arxiv.org/abs/2608.13463v1) |
+| 1 | G-CARL: Grounded Checklist-Aligned Reward Learning for Patie... | Shiao Xie, Siyu Chen, Jianwei Lv, Bo Yua... | [2608.20331v1](https://arxiv.org/abs/2608.20331v1) |
+| 2 | An Agentic Approach for Active Data Collection, Travel Behav... | Narges Ahmadi, Yubo Jiao, Jônatas August... | [2608.20320v1](https://arxiv.org/abs/2608.20320v1) |
+| 3 | Inducing Task Models from Computer-Use Traces | Yucheng Jiang, Zora Zhiruo Wang, Ruishi ... | [2608.20319v1](https://arxiv.org/abs/2608.20319v1) |
+| 4 | AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design f... | Yizhe Chi, Wenyi Li, Deyao Hong, Xiaoqiu... | [2608.20318v1](https://arxiv.org/abs/2608.20318v1) |
+| 5 | Pandora's AI Model Routing Box: Efficient Allocation with Co... | Adam Fisch, Shubhendu Trivedi, Fantine H... | [2608.20316v1](https://arxiv.org/abs/2608.20316v1) |
+| 6 | MidTool: Mid-training Data Synthesis for Agentic Tool Use | Fengqing Jiang, Yite Wang, Boyi Liu, Zha... | [2608.20314v1](https://arxiv.org/abs/2608.20314v1) |
+| 7 | Phantom Gains: Auditing Self-Improvement Against a Measured ... | Cheng Xu, Nan Yan, Liming Chen, M-Tahar ... | [2608.20290v1](https://arxiv.org/abs/2608.20290v1) |
+| 8 | Inject, Align, Recover: Staged Post-Training for Retrieval-F... | Qian Kou, Xiaofeng Shi, Xiaosong Qiu, Hu... | [2608.20281v1](https://arxiv.org/abs/2608.20281v1) |
+| 9 | Break It Down, Pass It On: Cross-Task Skill Transfer in LLM ... | Yiyang Feng, Biddut Sarker Bijoy, Niranj... | [2608.20274v1](https://arxiv.org/abs/2608.20274v1) |
+| 10 | Catching the Rug: Early Prediction of Fraudulent Memecoins o... | Jianghai Li, Pavel Kuznetsov, Yury Yanov... | [2608.20271v1](https://arxiv.org/abs/2608.20271v1) |
+| 11 | Learning When to Think: Adaptive Reasoning for Test-Time Com... | Gijs Kassenaar, Zhao Yang, Vincent Franç... | [2608.20256v1](https://arxiv.org/abs/2608.20256v1) |
+| 12 | QUASAR: A Quantum-Classical Neural Network for SAR Satellite... | Vincenzo Sammartino, Nathanael Denis, Ro... | [2608.20240v1](https://arxiv.org/abs/2608.20240v1) |
+| 13 | Rule-Compliant Visual Spatial Planning for Multimodal Large ... | Yu Chen, Ting Lei, Yaoyi Li, Jia Cai, Zh... | [2608.20237v1](https://arxiv.org/abs/2608.20237v1) |
+| 14 | Growth Without Us: Machine Consumers, Corporate Circularity,... | Sahil Sharma | [2608.20231v1](https://arxiv.org/abs/2608.20231v1) |
+| 15 | Prompt-Conditioned Channel Attention for Hierarchical Featur... | Mosharof Hossain, Md Rabiul Islam, Limon... | [2608.20229v1](https://arxiv.org/abs/2608.20229v1) |
 
 ---
 
