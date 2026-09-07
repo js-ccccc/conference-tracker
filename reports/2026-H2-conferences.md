@@ -1,6 +1,6 @@
 # 2026年下半年计算机顶会信息报告
 
-> 自动生成时间：2026-08-31 03:59:50
+> 自动生成时间：2026-09-07 03:19:18
 > 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
@@ -143,21 +143,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for De... | Nan Wang, Mohit Yadav, Jonathan Wulff, A... | [2608.28578v1](https://arxiv.org/abs/2608.28578v1) |
-| 2 | ChainSplat: A Physics-Inspired Screw-Theoretic Model for Lea... | Seungyeon Kim, Noémie Jaquier | [2608.28570v1](https://arxiv.org/abs/2608.28570v1) |
-| 3 | When Robots Mishear Us: Mapping the Safety Risks of Voice-Co... | Sihan Jia, Oliver Lemon | [2608.28518v1](https://arxiv.org/abs/2608.28518v1) |
-| 4 | AcrossVAM1.0: Particle World Modeling for Text-Assisted Robo... | Yafei Zhang, Nan Wu | [2608.28491v1](https://arxiv.org/abs/2608.28491v1) |
-| 5 | LUCID: An Agentic AI Framework on Digital-Twin in the Loop f... | Hyeonsu Lyu, Minwoo Kim, Sehyun Ryu, Hyu... | [2608.28437v1](https://arxiv.org/abs/2608.28437v1) |
-| 6 | Linear Temporal Logic Translation via Human-Inspired Self-Co... | Haofei Hou, Fanxu Meng, Shunyi Zhao, Kai... | [2608.28435v1](https://arxiv.org/abs/2608.28435v1) |
-| 7 | Cooperative Risk-Aware Exploration in Heterogeneous Multi-Ro... | Brooks A. Butler, Jair Certório, João P.... | [2608.28409v1](https://arxiv.org/abs/2608.28409v1) |
-| 8 | PanelShield: Verifiable Closed-Loop Safe Planning for Roboti... | Guipeng Xin, Jiahe Xu, Chenhui Wan, Jie ... | [2608.28305v1](https://arxiv.org/abs/2608.28305v1) |
-| 9 | MaCoPlanner: LLM-Assisted Manual-Compiled Task Planning with... | Guipeng Xin, Jiahe Xua, Mohammad Deghat,... | [2608.28300v1](https://arxiv.org/abs/2608.28300v1) |
-| 10 | STEGNav: Spatio-Temporal Event Graph Reasoning for Multimoda... | Yang Chen, Zhenyu Huang, Wenbo Fu, Danya... | [2608.28279v1](https://arxiv.org/abs/2608.28279v1) |
-| 11 | Spatial-Semantic Reasoning using Large Language Models for E... | Marin Maletic, Marijana Peti, Tamara Pet... | [2608.28270v1](https://arxiv.org/abs/2608.28270v1) |
-| 12 | CoCoBench: A Cooperative Coordination Benchmark for Embodied... | Yang Chen, Ye-Xin Xie, Lirong Che, Danya... | [2608.28266v1](https://arxiv.org/abs/2608.28266v1) |
-| 13 | Training-free Suction Grasp Detection for Deformed Aseptic C... | Marin Maletic, Goran Vasiljevic | [2608.28246v1](https://arxiv.org/abs/2608.28246v1) |
-| 14 | Probabilistic Multi-Robot Gas Source Localization with Uncal... | Wanting Jin, Marc Zoel Arias Mitjà, Alch... | [2608.28214v1](https://arxiv.org/abs/2608.28214v1) |
-| 15 | PAMoR: Parameterized Affective Motion Generation in Real Tim... | Yan Pan, Lingfan Bao, Tianhu Peng, Cheng... | [2608.28213v1](https://arxiv.org/abs/2608.28213v1) |
+| 1 | Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraph... | Wonje Jeung, Sangyeon Yoon, Hyesoo Hong,... | [2609.05401v1](https://arxiv.org/abs/2609.05401v1) |
+| 2 | CrossDepth: Geometry-Constrained Attention for Generalizable... | Samer Abualhanud, Max Mehltretter | [2609.05397v1](https://arxiv.org/abs/2609.05397v1) |
+| 3 | What Matters, When? Diagnosing and Improving Conditional Vis... | Vivek Chavan, Pengtao Xie, Yahuan Shi, O... | [2609.05376v1](https://arxiv.org/abs/2609.05376v1) |
+| 4 | Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon... | Vivek Chavan, Yahuan Shi, Oliver Heimann... | [2609.05369v1](https://arxiv.org/abs/2609.05369v1) |
+| 5 | Development of a Humanoid Robot Prototype for Multimodal Hum... | Thang Tran Viet, Thanh Nguyen Canh, Huy ... | [2609.05361v1](https://arxiv.org/abs/2609.05361v1) |
+| 6 | Adaptation Needs in Robotic Systems: Assessing Behavior Tree... | Mehran Rostamnia, Gianluca Filippone, Ri... | [2609.05331v1](https://arxiv.org/abs/2609.05331v1) |
+| 7 | FIRE-LIVWO: Robust LiDAR-Inertial-Visual-Wheel Odometry via ... | Kun Hu, Menggang Li, Kaidi Wu, Zhiwen Ji... | [2609.05325v1](https://arxiv.org/abs/2609.05325v1) |
+| 8 | RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Ho... | Zhenxuan Fan, Bo Zhang, Yutong Lin, Yuqi... | [2609.05324v1](https://arxiv.org/abs/2609.05324v1) |
+| 9 | Human-Human & Human-Robot Interaction Transformer (H2INT) fo... | Ao Shen, Kaixi Chen, Shiwei Liu, Fang De... | [2609.05300v1](https://arxiv.org/abs/2609.05300v1) |
+| 10 | Temporal Tactile Encoding and Compliance for Intent-Aware Ro... | Pasquale Marra, Stefano Berti, Gabriele ... | [2609.05282v1](https://arxiv.org/abs/2609.05282v1) |
+| 11 | TacPAC: Tactile Prediction and Real-Time Action Correction i... | Zipei Ma, Xiaofei Wei, Junzhe Jiang, Shu... | [2609.05266v1](https://arxiv.org/abs/2609.05266v1) |
+| 12 | One Word, Different Action: A Real-Robot Benchmark for Langu... | Yiwei Liu, Luwei Yang, Shunbo Lei | [2609.05260v1](https://arxiv.org/abs/2609.05260v1) |
+| 13 | Morphology and actuation as inductive biases in robotic hand... | Zalán Tari, Eszter Birtalan, Péter Polcz... | [2609.05206v1](https://arxiv.org/abs/2609.05206v1) |
+| 14 | Risk-Aware Optimal Control with Rulebooks | Tichakorn Wongpiromsarn | [2609.05199v1](https://arxiv.org/abs/2609.05199v1) |
+| 15 | LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery... | Lin Liu, Zhicheng Bao, Lu Zhang, Ziying ... | [2609.05178v1](https://arxiv.org/abs/2609.05178v1) |
 
 ---
 
@@ -251,21 +251,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for De... | Nan Wang, Mohit Yadav, Jonathan Wulff, A... | [2608.28578v1](https://arxiv.org/abs/2608.28578v1) |
-| 2 | Learning a Size-Weight Frontier for Synthetic-Augmented Infe... | Chengpiao Huang, Kaizheng Wang | [2608.28576v1](https://arxiv.org/abs/2608.28576v1) |
-| 3 | Blog: Survey of Optimizers | Ruoran Xu | [2608.28557v1](https://arxiv.org/abs/2608.28557v1) |
-| 4 | Logos: An Agent Harness on a Cross-Process Bus | Hanzhang Jia, Liheng Zeng, Hao Cheng, Yi... | [2608.28553v1](https://arxiv.org/abs/2608.28553v1) |
-| 5 | Video Generative Models as Geometry Learner | Haosen Yang, Jifei Song, Zhensong Zhang,... | [2608.28549v1](https://arxiv.org/abs/2608.28549v1) |
-| 6 | An Enclosed Mode Is a Gauge Choice: Topology Relative to Rea... | Javier Aguilar Martín | [2608.28541v1](https://arxiv.org/abs/2608.28541v1) |
-| 7 | InstructMesh: Selective Refinement of Generative 3D Models f... | Faraz Faruqi, Ahmed Katary, Demircan Tas... | [2608.28534v1](https://arxiv.org/abs/2608.28534v1) |
-| 8 | Texture Image Classification Using DWT AlexNet Feature Fusio... | Arun D. Kulkarni | [2608.28524v1](https://arxiv.org/abs/2608.28524v1) |
-| 9 | When Robots Mishear Us: Mapping the Safety Risks of Voice-Co... | Sihan Jia, Oliver Lemon | [2608.28518v1](https://arxiv.org/abs/2608.28518v1) |
-| 10 | Conformal Uncertainty Quantification Guarantees for Neural O... | Tom Stent, Nicolas Boullé | [2608.28515v1](https://arxiv.org/abs/2608.28515v1) |
-| 11 | Training Communication-Efficient Mixture-of-Experts Language... | Simeng Sun, Roger Waleffe | [2608.28511v1](https://arxiv.org/abs/2608.28511v1) |
-| 12 | On the Maintenance and Co-evolution of Agent Plugins: An Emp... | Ahmed Hereiz, Yingzhe Lyu, Hao Li, Bram ... | [2608.28497v1](https://arxiv.org/abs/2608.28497v1) |
-| 13 | AcrossVAM1.0: Particle World Modeling for Text-Assisted Robo... | Yafei Zhang, Nan Wu | [2608.28491v1](https://arxiv.org/abs/2608.28491v1) |
-| 14 | LLM-Based Agents for Software and Systems Security: Approach... | Jingjing Nie, Jiawei Guo, Krishna Meda, ... | [2608.28490v1](https://arxiv.org/abs/2608.28490v1) |
-| 15 | How Proper Scoring Rules Shape LLM Forecasting | Benjamin Turtel, Paul Wilczewski, Kris S... | [2608.28482v1](https://arxiv.org/abs/2608.28482v1) |
+| 1 | RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Ho... | Zhenxuan Fan, Bo Zhang, Yutong Lin, Yuqi... | [2609.05324v1](https://arxiv.org/abs/2609.05324v1) |
+| 2 | Large Language Models for HVAC Operations in Building Energy... | Alexander Neubauer, Tianzhen Hong, Han L... | [2609.05314v1](https://arxiv.org/abs/2609.05314v1) |
+| 3 | How Does mHC Use Its Residual Streams? Selective Routing and... | Pengxiang Zhao, Xing Li, Xianzhi Yu, Wei... | [2609.05309v1](https://arxiv.org/abs/2609.05309v1) |
+| 4 | RISE: Recursive Improvement via Self-Extrapolating Policy Di... | Yang Li, Semih Yavuz, Shafiq Joty | [2609.05295v1](https://arxiv.org/abs/2609.05295v1) |
+| 5 | Beyond Aggregate Scores: Behavioral Correctness Assumptions ... | Maria Mahbub, Ashley Rice, Michael R. Mu... | [2609.05289v1](https://arxiv.org/abs/2609.05289v1) |
+| 6 | GUT: Quantifying and Optimizing the Reasoning Uncertainty of... | Shuang Liang, Xin-Yu Hu, Xiang-Jun Ou, S... | [2609.05284v1](https://arxiv.org/abs/2609.05284v1) |
+| 7 | Testing Interchangeability in LLM Agent Teams | Jianxin Gao, Tianyi Yu, Linna Deng, Runz... | [2609.05279v1](https://arxiv.org/abs/2609.05279v1) |
+| 8 | Don't Drop Dropout: Optimizing Layer Sparsity for Efficient ... | Mostafa Elhoushi, Alex Pretko, Nolan Dey... | [2609.05275v1](https://arxiv.org/abs/2609.05275v1) |
+| 9 | AI for Computational Design Science: A Responsible Human-AI ... | Wenli Zhang, Jiaheng Xie, Zhihe Pan, Yid... | [2609.05270v1](https://arxiv.org/abs/2609.05270v1) |
+| 10 | CONTINUITY: Security-Context Contracts for Composable LLM Ag... | Chris Zheng, Geng Yang | [2609.05269v1](https://arxiv.org/abs/2609.05269v1) |
+| 11 | Trace2Tower: Transition-Aware EigenTrace Induction of Multi-... | Jiazheng Sun, Boyu Yang, Binhao Yuan, Mi... | [2609.05261v1](https://arxiv.org/abs/2609.05261v1) |
+| 12 | Ask Before You Optimize: Dynamic Pre-Formulation Clarificati... | Sihan Ge, Yichen Lin, Chenyu Zhou, Jiang... | [2609.05258v1](https://arxiv.org/abs/2609.05258v1) |
+| 13 | Commonsense Reasoning in Computer Vision: Foundations, Recen... | Bahar Uddin Mahmud, Sumit Barua, Guan Yu... | [2609.05257v1](https://arxiv.org/abs/2609.05257v1) |
+| 14 | A Unified Physics-Aware Quantum Machine Learning Framework a... | Rushat Rai, Yun-Yuan Wang, Autsada Kakae... | [2609.05251v1](https://arxiv.org/abs/2609.05251v1) |
+| 15 | Do LLMs Exhibit Coherent Knowledge Structures in Mathematica... | Peng Cui, Heejin Do, Mrinmaya Sachan | [2609.05245v1](https://arxiv.org/abs/2609.05245v1) |
 
 ---
 
