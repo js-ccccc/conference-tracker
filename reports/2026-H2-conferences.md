@@ -1,6 +1,6 @@
 # 2026年下半年计算机顶会信息报告
 
-> 自动生成时间：2026-09-07 03:19:18
+> 自动生成时间：2026-09-14 03:42:42
 > 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
@@ -71,21 +71,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for De... | Nan Wang, Mohit Yadav, Jonathan Wulff, A... | [2608.28578v1](https://arxiv.org/abs/2608.28578v1) |
-| 2 | Learning a Size-Weight Frontier for Synthetic-Augmented Infe... | Chengpiao Huang, Kaizheng Wang | [2608.28576v1](https://arxiv.org/abs/2608.28576v1) |
-| 3 | Blog: Survey of Optimizers | Ruoran Xu | [2608.28557v1](https://arxiv.org/abs/2608.28557v1) |
-| 4 | Logos: An Agent Harness on a Cross-Process Bus | Hanzhang Jia, Liheng Zeng, Hao Cheng, Yi... | [2608.28553v1](https://arxiv.org/abs/2608.28553v1) |
-| 5 | Video Generative Models as Geometry Learner | Haosen Yang, Jifei Song, Zhensong Zhang,... | [2608.28549v1](https://arxiv.org/abs/2608.28549v1) |
-| 6 | An Enclosed Mode Is a Gauge Choice: Topology Relative to Rea... | Javier Aguilar Martín | [2608.28541v1](https://arxiv.org/abs/2608.28541v1) |
-| 7 | InstructMesh: Selective Refinement of Generative 3D Models f... | Faraz Faruqi, Ahmed Katary, Demircan Tas... | [2608.28534v1](https://arxiv.org/abs/2608.28534v1) |
-| 8 | Texture Image Classification Using DWT AlexNet Feature Fusio... | Arun D. Kulkarni | [2608.28524v1](https://arxiv.org/abs/2608.28524v1) |
-| 9 | When Robots Mishear Us: Mapping the Safety Risks of Voice-Co... | Sihan Jia, Oliver Lemon | [2608.28518v1](https://arxiv.org/abs/2608.28518v1) |
-| 10 | Conformal Uncertainty Quantification Guarantees for Neural O... | Tom Stent, Nicolas Boullé | [2608.28515v1](https://arxiv.org/abs/2608.28515v1) |
-| 11 | Training Communication-Efficient Mixture-of-Experts Language... | Simeng Sun, Roger Waleffe | [2608.28511v1](https://arxiv.org/abs/2608.28511v1) |
-| 12 | On the Maintenance and Co-evolution of Agent Plugins: An Emp... | Ahmed Hereiz, Yingzhe Lyu, Hao Li, Bram ... | [2608.28497v1](https://arxiv.org/abs/2608.28497v1) |
-| 13 | AcrossVAM1.0: Particle World Modeling for Text-Assisted Robo... | Yafei Zhang, Nan Wu | [2608.28491v1](https://arxiv.org/abs/2608.28491v1) |
-| 14 | LLM-Based Agents for Software and Systems Security: Approach... | Jingjing Nie, Jiawei Guo, Krishna Meda, ... | [2608.28490v1](https://arxiv.org/abs/2608.28490v1) |
-| 15 | How Proper Scoring Rules Shape LLM Forecasting | Benjamin Turtel, Paul Wilczewski, Kris S... | [2608.28482v1](https://arxiv.org/abs/2608.28482v1) |
+| 1 | Rethinking Heterogeneous System Disaggregation for Subquadra... | Arya Tschand, Yaosheng Fu, Vikram Sharma... | [2609.13134v1](https://arxiv.org/abs/2609.13134v1) |
+| 2 | A Hybrid LSTM-XGBoost Framework for Multi-Horizon Stock Retu... | Seif ElDein Mostafa, Yahia Ahmed, Farah ... | [2609.13125v1](https://arxiv.org/abs/2609.13125v1) |
+| 3 | CMA-OT: Hierarchical Expert Supervision for Dance-to-Music G... | Jinting Wang, Chenxing Li, Dong Yu, Li L... | [2609.13118v1](https://arxiv.org/abs/2609.13118v1) |
+| 4 | ASTRIL-MPC: Autonomous Traversal Framework of Articulated Tr... | Zhenfeng Gan, Yanbo Chen, Lirong Che, Ju... | [2609.13083v1](https://arxiv.org/abs/2609.13083v1) |
+| 5 | Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embo... | Baoyang Jiang, Fengchun Zhang, Leyuan Wa... | [2609.13082v1](https://arxiv.org/abs/2609.13082v1) |
+| 6 | MP-Bench: Evaluating Voice Agents as a Multiparty Conversati... | Yi-Jen Shih, Shih-Yun Shan Kuan, Guan-Ti... | [2609.13076v1](https://arxiv.org/abs/2609.13076v1) |
+| 7 | Autonomous Research for Open-Ended Problems: A Case Study on... | Junghyun Min, Huseyin Uzunalioglu, Moham... | [2609.13073v1](https://arxiv.org/abs/2609.13073v1) |
+| 8 | MAxBench: A Multinomial Concept Recovery Benchmark | Divya Appapogu, Freya Behrens, Yonatan B... | [2609.13072v1](https://arxiv.org/abs/2609.13072v1) |
+| 9 | Involving before Evolving: A Vision for Trustworthy Enterpri... | Kérian Fiter, Adil Lagrou, Franck Dervau... | [2609.13071v1](https://arxiv.org/abs/2609.13071v1) |
+| 10 | Anchoring Clinical Events in Time: UID-Preserving Multimodal... | Sayantan Kumar, Nicolas Grimaldi, Jack C... | [2609.13062v1](https://arxiv.org/abs/2609.13062v1) |
+| 11 | Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-... | Hoeun Lee, Jaeik Kim, Jusang Oh, Jinhyeo... | [2609.13053v1](https://arxiv.org/abs/2609.13053v1) |
+| 12 | Diffusion Models and Concept Formation | Zekun Wang, Karthik Singaravadivelan, Ch... | [2609.13047v1](https://arxiv.org/abs/2609.13047v1) |
+| 13 | Unified CT and MRI Pancreas Segmentation for Label-Efficient... | Ziliang Hong, Hongyi Pan, Halil Ertugrul... | [2609.13043v1](https://arxiv.org/abs/2609.13043v1) |
+| 14 | DynSHAP: Towards Explainable Dynamic Survival Analysis | Nastasya Anokhina, Jonas Jürß, Pietro Li... | [2609.13042v1](https://arxiv.org/abs/2609.13042v1) |
+| 15 | Groupoid-Based Internal State Representations for Reinforcem... | Ben Opperman, Eduardo Alonso, Esther Mon... | [2609.13035v1](https://arxiv.org/abs/2609.13035v1) |
 
 ---
 
