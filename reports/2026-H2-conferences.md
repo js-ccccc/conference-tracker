@@ -1,6 +1,6 @@
 # 2026年下半年计算机顶会信息报告
 
-> 自动生成时间：2026-09-14 03:42:42
+> 自动生成时间：2026-09-21 03:39:35
 > 数据来源：arXiv（预印本检索）、OpenAlex（机构补全）
 
 ---
@@ -107,21 +107,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | SignRR: Retrieve and Refine Real Motion for Sign Language Pr... | Fidel Omar Tito Cruz, Angie Sanchez Marq... | [2608.28568v1](https://arxiv.org/abs/2608.28568v1) |
-| 2 | GeBDA: Building Damage Assessment as Text-Based Sequence Pre... | Olivier Dietrich, Krishna Sapkota, Konra... | [2608.28567v1](https://arxiv.org/abs/2608.28567v1) |
-| 3 | Video Generative Models as Geometry Learner | Haosen Yang, Jifei Song, Zhensong Zhang,... | [2608.28549v1](https://arxiv.org/abs/2608.28549v1) |
-| 4 | Texture Image Classification Using DWT AlexNet Feature Fusio... | Arun D. Kulkarni | [2608.28524v1](https://arxiv.org/abs/2608.28524v1) |
-| 5 | Learning the Target Priors Before Image Translation: A Decou... | Keyan Hu, Mingtao Wang, Ziyu Zhou, Tiand... | [2608.28517v1](https://arxiv.org/abs/2608.28517v1) |
-| 6 | Anatomy-Aware Promptable Segmentation with Online Interactiv... | Pablo Lozano-Jimenez, Sergio Romero-Tapi... | [2608.28461v1](https://arxiv.org/abs/2608.28461v1) |
-| 7 | LayerRecall: A State-Conditioned Memory Router for Long-Hori... | Yixuan Ding, Jiahao Kong, Wei Huang, Rui... | [2608.28460v1](https://arxiv.org/abs/2608.28460v1) |
-| 8 | ARC-CT: Anatomy-Routed Contrastive Vision-Language Learning ... | Huseyin Umut Isik, Mehmet Alp Ozaydin, S... | [2608.28455v1](https://arxiv.org/abs/2608.28455v1) |
-| 9 | Prompt-Guided Interactive Segmentation of Interstitial Lung ... | Vasilis Dedousis, Lubnaa Abdur Rahman, L... | [2608.28453v1](https://arxiv.org/abs/2608.28453v1) |
-| 10 | Lossy Event Compression: From Event Stream Distortion to Tas... | Zahra Rezaee, Catarina Brites, João Asce... | [2608.28429v1](https://arxiv.org/abs/2608.28429v1) |
-| 11 | Post-Training VLMs for Video Mistake Detection | Federico Spurio, Olga Zatsarynna, Lars D... | [2608.28406v1](https://arxiv.org/abs/2608.28406v1) |
-| 12 | How Far Can 5,500 Hours of Driving Take You? A Scaling Law A... | Victor Besnier, Anh-Quan Cao, Elias Ramz... | [2608.28404v1](https://arxiv.org/abs/2608.28404v1) |
-| 13 | GraspHOI: Full-Body 3D Human-Object Reconstruction with Fing... | Semin Kim, Haechan Shin, Jongyoo Kim | [2608.28386v1](https://arxiv.org/abs/2608.28386v1) |
-| 14 | Semantic Head Specialization Guides Hybrid ViT Attention for... | Chenhong He, Lei Li, Shicheng Li, Hanglo... | [2608.28383v1](https://arxiv.org/abs/2608.28383v1) |
-| 15 | Real-Time Musculoskeletal Surrogates for Pediatric Cerebral ... | Mohammad Arif Ul Alam | [2608.28371v1](https://arxiv.org/abs/2608.28371v1) |
+| 1 | Designer-RSI: Evolving Procedural Memory from User Traffic f... | Hongyang Du, Lan Yan, Christian Flores, ... | [2609.22086v1](https://arxiv.org/abs/2609.22086v1) |
+| 2 | MintAct: A Unified Visual Agent for Digital Environments | Mingfei Gao, Rui Tian, Haiming Gang, Boh... | [2609.22083v1](https://arxiv.org/abs/2609.22083v1) |
+| 3 | OmniVBench: A Benchmark and Large-Scale Dataset for Omni Ref... | Wenxue Li, Peiyan Guan, Haoyang Jiang, J... | [2609.22069v1](https://arxiv.org/abs/2609.22069v1) |
+| 4 | Traffic Sign Recognition for Autonomous Driving Using Branch... | Arefeh Rezaei | [2609.22060v1](https://arxiv.org/abs/2609.22060v1) |
+| 5 | PRIME: Perception Feedback with Situational Memory Embedding... | Erik Deinzer, Naya Baslan, Luca Paparuss... | [2609.22040v1](https://arxiv.org/abs/2609.22040v1) |
+| 6 | GALA: Geometry-Aware Latent Action Modeling for Vision-Langu... | Yichen Liu, Puzhen Yuan, Xiang Zhu, Yanj... | [2609.21948v1](https://arxiv.org/abs/2609.21948v1) |
+| 7 | Info3R: Information-Adaptive Test-Time Training for 3D Recon... | Sunghyun Baek, Hanna Bae, Minchan Kwon, ... | [2609.21938v1](https://arxiv.org/abs/2609.21938v1) |
+| 8 | The Role of Radiometric Features in Cross-Site Leaf-Wood Seg... | Roman Kaharlytskyi, Derek T. Robinson, R... | [2609.21903v1](https://arxiv.org/abs/2609.21903v1) |
+| 9 | Catena: A Comprehensive Software Suite for Large-Scale Conne... | Samia Mohinta, Pedro Gómez-Gálvez, Shi Y... | [2609.21887v1](https://arxiv.org/abs/2609.21887v1) |
+| 10 | Benchmarking the Explanatory Quality of Open-Weight Vision-L... | Laurent Colbois, Sébastien Marcel | [2609.21879v1](https://arxiv.org/abs/2609.21879v1) |
+| 11 | Chronosphere: Space-Time Tessellation of Local Climate Exper... | Daniel Cher, Eric Xing, Kexing Li, Brian... | [2609.21872v1](https://arxiv.org/abs/2609.21872v1) |
+| 12 | Morphology-Aware Ambiguity Learning for Wafer Defect Decisio... | Seungjun Chu, Seokhyun Chung | [2609.21866v1](https://arxiv.org/abs/2609.21866v1) |
+| 13 | The Weight Is Over - Interactive Diffusion on Consumer GPUs | Frieder Ganz, Maximilian Müller | [2609.21849v1](https://arxiv.org/abs/2609.21849v1) |
+| 14 | Object Detection Benchmarks are Incomplete: The Role of Labe... | Sarina Penquitt, Jonathan Klees, Antonia... | [2609.21822v1](https://arxiv.org/abs/2609.21822v1) |
+| 15 | How Many Posterior Samples? Calibrated Stopping for Adaptive... | Vincent Corlay, Andriy Enttsel | [2609.21813v1](https://arxiv.org/abs/2609.21813v1) |
 
 ---
 
@@ -251,21 +251,21 @@
 
 | # | 标题 | 作者 | arXiv |
 |---|------|------|-------|
-| 1 | RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Ho... | Zhenxuan Fan, Bo Zhang, Yutong Lin, Yuqi... | [2609.05324v1](https://arxiv.org/abs/2609.05324v1) |
-| 2 | Large Language Models for HVAC Operations in Building Energy... | Alexander Neubauer, Tianzhen Hong, Han L... | [2609.05314v1](https://arxiv.org/abs/2609.05314v1) |
-| 3 | How Does mHC Use Its Residual Streams? Selective Routing and... | Pengxiang Zhao, Xing Li, Xianzhi Yu, Wei... | [2609.05309v1](https://arxiv.org/abs/2609.05309v1) |
-| 4 | RISE: Recursive Improvement via Self-Extrapolating Policy Di... | Yang Li, Semih Yavuz, Shafiq Joty | [2609.05295v1](https://arxiv.org/abs/2609.05295v1) |
-| 5 | Beyond Aggregate Scores: Behavioral Correctness Assumptions ... | Maria Mahbub, Ashley Rice, Michael R. Mu... | [2609.05289v1](https://arxiv.org/abs/2609.05289v1) |
-| 6 | GUT: Quantifying and Optimizing the Reasoning Uncertainty of... | Shuang Liang, Xin-Yu Hu, Xiang-Jun Ou, S... | [2609.05284v1](https://arxiv.org/abs/2609.05284v1) |
-| 7 | Testing Interchangeability in LLM Agent Teams | Jianxin Gao, Tianyi Yu, Linna Deng, Runz... | [2609.05279v1](https://arxiv.org/abs/2609.05279v1) |
-| 8 | Don't Drop Dropout: Optimizing Layer Sparsity for Efficient ... | Mostafa Elhoushi, Alex Pretko, Nolan Dey... | [2609.05275v1](https://arxiv.org/abs/2609.05275v1) |
-| 9 | AI for Computational Design Science: A Responsible Human-AI ... | Wenli Zhang, Jiaheng Xie, Zhihe Pan, Yid... | [2609.05270v1](https://arxiv.org/abs/2609.05270v1) |
-| 10 | CONTINUITY: Security-Context Contracts for Composable LLM Ag... | Chris Zheng, Geng Yang | [2609.05269v1](https://arxiv.org/abs/2609.05269v1) |
-| 11 | Trace2Tower: Transition-Aware EigenTrace Induction of Multi-... | Jiazheng Sun, Boyu Yang, Binhao Yuan, Mi... | [2609.05261v1](https://arxiv.org/abs/2609.05261v1) |
-| 12 | Ask Before You Optimize: Dynamic Pre-Formulation Clarificati... | Sihan Ge, Yichen Lin, Chenyu Zhou, Jiang... | [2609.05258v1](https://arxiv.org/abs/2609.05258v1) |
-| 13 | Commonsense Reasoning in Computer Vision: Foundations, Recen... | Bahar Uddin Mahmud, Sumit Barua, Guan Yu... | [2609.05257v1](https://arxiv.org/abs/2609.05257v1) |
-| 14 | A Unified Physics-Aware Quantum Machine Learning Framework a... | Rushat Rai, Yun-Yuan Wang, Autsada Kakae... | [2609.05251v1](https://arxiv.org/abs/2609.05251v1) |
-| 15 | Do LLMs Exhibit Coherent Knowledge Structures in Mathematica... | Peng Cui, Heejin Do, Mrinmaya Sachan | [2609.05245v1](https://arxiv.org/abs/2609.05245v1) |
+| 1 | Designer-RSI: Evolving Procedural Memory from User Traffic f... | Hongyang Du, Lan Yan, Christian Flores, ... | [2609.22086v1](https://arxiv.org/abs/2609.22086v1) |
+| 2 | CodeMidas: Scaling Agentic Coding RL Environments from Code ... | Bowen Ye, Lei Li, Shicheng Li, Zihao Yue... | [2609.22068v1](https://arxiv.org/abs/2609.22068v1) |
+| 3 | Value-Sensitive Delegation in Everyday AI Agent Use: Evidenc... | Renkai Ma, Ruyuan Wan, Xuan Lu, Fan Yang... | [2609.22067v1](https://arxiv.org/abs/2609.22067v1) |
+| 4 | Gricea: An Open Science Platform for Conversational AI Resea... | Nikhil Sharma, Yunlin Gong, Xinyang Chen... | [2609.22039v1](https://arxiv.org/abs/2609.22039v1) |
+| 5 | DiaVLo: Diagnosing Behaviours of Vision-Language Models | Lorenzo Corti, Jie Yang | [2609.22008v1](https://arxiv.org/abs/2609.22008v1) |
+| 6 | Bayesian Belief Layer for Controllable Opinion Dynamics in L... | Hafsa Akbar, Daniel Platnick, Marjan Ali... | [2609.21997v1](https://arxiv.org/abs/2609.21997v1) |
+| 7 | A Lie Detector Test for Language Models: Reading Knowledge a... | Hiskias Dingeto | [2609.21996v1](https://arxiv.org/abs/2609.21996v1) |
+| 8 | NemotronLabs VoiceChat: An Open Full-duplex Speech-to-Speech... | Jagadeesh Balam, Travis Bartley, Edresso... | [2609.21967v1](https://arxiv.org/abs/2609.21967v1) |
+| 9 | Learning Cardiac Features: ECG Biometrics Across Time and~Ex... | Luca Thiebaud, Paul Chauchat, Mustapha O... | [2609.21962v1](https://arxiv.org/abs/2609.21962v1) |
+| 10 | When Should a Failing Robot Ask? Initiating Corrective Human... | Eshika Pathak, Leela Krishna | [2609.21942v1](https://arxiv.org/abs/2609.21942v1) |
+| 11 | AutoViewMem: Self-Configuring Orthogonal Views for Conversat... | Zijie Cao, Xijun Qu, Zhicheng Gu, Xiaosh... | [2609.21940v1](https://arxiv.org/abs/2609.21940v1) |
+| 12 | What Should We Ask Next? Retrieval-Aware Question Learning u... | Lyucheng Qian, John Yuehan Zhang, Pingyu... | [2609.21924v1](https://arxiv.org/abs/2609.21924v1) |
+| 13 | Detecting Pretraining Data in Large Language Models from a F... | Chenye Ke, Zirui Liu, Qi Liu, Yan Zhuang... | [2609.21888v1](https://arxiv.org/abs/2609.21888v1) |
+| 14 | Benchmarking the Explanatory Quality of Open-Weight Vision-L... | Laurent Colbois, Sébastien Marcel | [2609.21879v1](https://arxiv.org/abs/2609.21879v1) |
+| 15 | Neural Cellular Automata Learn General Features in their Hid... | Etienne Guichard, Stefano Nichele | [2609.21870v1](https://arxiv.org/abs/2609.21870v1) |
 
 ---
 
