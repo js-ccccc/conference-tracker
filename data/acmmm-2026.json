@@ -13,6 +13,1991 @@
   "notification_date": null,
   "papers": [
     {
+      "title": "DIA: A Deep Reinforcement Learning-Based Interest-Aware ABR Scheme for Cloud Gaming",
+      "authors": [
+        {
+          "name": "Zhe Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haiwei Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Marc St-Hilaire",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Abdulmotaleb El Saddik",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "The continuous evolution of cloud gaming has enabled users to play high-quality cloud games on thin clients, such as smartphones and tablets. However, how to effectively transmit the gameplay frames with high resolution and low latency, especially over wireless networks, remains a significant challenge. To address this challenge, we propose a Deep Reinforcement Learning (DRL)-based Interest-Aware Adaptive Bitrate (ABR) scheme, called DIA, that guarantees the quality of perceptually key objects in each frame, while dynamically allocating lower resolutions for non-key objects to conserve bandwidth under constrained network conditions. By leveraging an off-the-shelf semantic segmentation model, the proposed DIA scheme can adjust the bitrate at the object-level. We also design a transformer-based feature extractor and an interest-aware reward function to enable the proposed DIA scheme to identify key objects and dynamically adjust their bitrates. This adaptation is guided by users' in-game movement speed, object features, and prevailing network conditions and operates without requiring additional hardware, such as gaze trackers. Extensive experiments show that the proposed DIA scheme outperforms existing ABR schemes in dynamic wireless network environments. Notably, DIA achieves at least a 20% higher normalized average Quality of Experience (QoE) than the State-Of-The-Art (SOTA) ABR algorithms in 5G scenarios.\n\n[提交时间: 2026-10-09; 分类: cs.MM]",
+      "url": "https://arxiv.org/abs/2610.13698v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.13698v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "EmoGavel: Grounding-Aware Reinforcement Learning with Verifiable Rewards for Multimodal Emotion Preference Learning",
+      "authors": [
+        {
+          "name": "Zilong Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kong Aik Lee",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zezhong Jin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Man-Wai Mak",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tatsuya Kawahara",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Multimodal emotion preference learning uses pairwise comparisons to identify which open-ended emotion descriptions align more closely with human judgments. However, existing methods primarily focus on the final preference decision and provide little explicit supervision for localizing and correcting erroneous content. To address this limitation, we propose EmoGavel, a Grounding-Aware reinforcement learning framework with Verifiable rewards for multimodal Emotion preference Learning. We first introduce grounded supervised fine-tuning (Grounded SFT), which exploits controlled-error construction information to jointly learn preference prediction, error localization, repair, and missing-evidence recovery. We then optimize these verifiable outcomes with grounding-aware group relative policy optimization (GA-GRPO), combining preference-gated grounding rewards with dynamic zero-variance rescue to prioritize preference correctness and recover learning signals from all-wrong groups. Experiments on EmoPrefer and controlled-error evaluation sets show that EmoGavel improves both natural preference prediction and controlled-error discrimination while maintaining strong error-grounding performance. Our code and model checkpoints will be released once the paper is accepted.\n\n[提交时间: 2026-10-09; 分类: cs.MM, cs.LG, eess.AS]",
+      "url": "https://arxiv.org/abs/2610.13353v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.13353v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "CV-OPD: Contrastive Vision On-policy Distillation",
+      "authors": [
+        {
+          "name": "Haowei Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hao Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qi Zhu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiayi Ji",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Deyi Ji",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Liujuan Cao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Rongrong Ji",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "On-policy distillation (OPD) reveals versatility and convenience during VLM post-training, providing dense supervision for student from teacher. However, we observed an anomaly that the distilled VLM could still answer the questions accurately even when the related visual regions were masked or replaced with noise. Building on this observation, our quantitative and qualitative experiments demonstrate that OPD, which uses the answer as a hint, has failed to teach students to genuinely seek out and rely on visual evidence. Our theoretical analysis suggests that this failure arises from a shortcut enabled by the lack of visual constraints during distillation. To address the issue, we introduce Contrastive Vision On-policy Distillation (CV-OPD), which compares teacher distributions induced by positive and negative crops while conditioning on the same student prefix and augments optimization with a margin-based contrastive constraint, which is modulated with discrepancy gating across token and sample level. Specifically, CV-OPD first introduces a negative teacher unrelated to the answer and designs a Contrastive Divergence Loss (CDL) that constrains the feature distribution of student by contrasting the positive and negative teachers, correcting how the student exploits visual regions. The CV-OPD introduces a Discrepancy Aware Gate (DAG) that uses token-level and sample-level discrepancies to select visually relevant tokens for optimization, directing the student's attention toward visual content. Extensive experiments across a broad range of fine-grained visual benchmarks demonstrate that CV-OPD substantially alleviates shortcut and consistently improves the visual reasoning capabilities of existing VLMs.\n\n[提交时间: 2026-10-09; 分类: cs.CV, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.13264v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.13264v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "MotionCoach: Constructing Multimodal Guidance for Video Professional Motion Editing",
+      "authors": [
+        {
+          "name": "Siyi Qian",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hanqing Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Weihuang Lin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zihao Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yichen Lu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yuanhong Zheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sheng Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Video editing models achieve strong performance in modifying appearance, backgrounds, styles, and motions, empowered by large-scale training data. Beyond general scenarios, professional motions are significant in performance, sports, and martial arts. This paper focuses on professional motion editing, which involves fine-grained motion technique and temporal structure. Given professional motion names but lacking detailed descriptions, existing models often fail to generate professional motions, such as incorrectly lifting the front wheel under a Stoppie instruction. To address this challenge, we introduce MotionCoach, a trained multimodal agent that uses multi-turn tools and performs self-verification, producing a grounded prompt and a reference clip as reliable and sufficient multimodal guidance to inject external professional motion knowledge into video editing models. To supply training data, we build a data pipeline to construct trajectories. We cold-start the agent on MotionCoach-SFT-10k and apply Group Relative Policy Optimization (GRPO) on MotionCoach-RL-2k with rewards on the motion guidance prompt, the motion outcome video, and the format. For evaluation, we introduce VPMEBench, comprising 314 professional motion editing tasks with fine-grained references and annotations. Extensive experiments show that MotionCoach improves the overall score from 55.1 to 65.6 on Seedance 2.0 and from 51.2 to 64.5 on MiniMax-H3. Learning to construct multimodal guidance enables precise professional motion editing without retraining video editing models.\n\n[提交时间: 2026-10-09; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.12963v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.12963v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "LVS: Local View Synthesis from Relative Camera Pose by Reusing Previous Views",
+      "authors": [
+        {
+          "name": "Qizhou Huo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuan Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yongfei Guo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhipeng Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yuanhao Gong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Interactive scene exploration requires frequent view updates, although small camera motions preserve much of the visible content. Conventional 3D Gaussian Splatting nevertheless renders each target view, leaving this image overlap unexploited. Reusing rendered images offers an alternative. Geometric warping alone cannot recover newly exposed content and remains sensitive to depth errors. We propose a per-scene framework that replaces repeated scene rendering for nearby views with relative-pose-guided RGB-D image reuse. Geometric warping uses depth and relative pose to transport source content, while a lightweight multiscale network predicts RGB residuals to correct artifacts and infer missing appearance. Cached source features further reduce repeated computation. On GS-render, residual refinement improves PSNR by 0.72~dB over pure warping; evaluations on captured and rendered scenes demonstrate low query latency. This separation of scene rendering from local view updates supports responsive scene exploration, with potential applications in augmented and virtual reality.\n\n[提交时间: 2026-10-08; 分类: cs.CV, cs.AI, cs.GR, cs.MM, eess.IV]",
+      "url": "https://arxiv.org/abs/2610.12127v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.12127v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "VINCIE-NExT: Unlocking Video Editing from Images via In-Context Modeling",
+      "authors": [
+        {
+          "name": "Leigang Qu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Feng Cheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ziyan Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bangbang Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhaoyang Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wei Chow",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yicong Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wenjie Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tat-Seng Chua",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yan Zeng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Building a capable video editor remains significantly harder than a video generator: editing requires (source, instruction, edited) triplets that are prohibitively expensive to annotate and difficult to synthesize at scale, whereas image editing has already reached maturity with millions of such pairs readily available. In this work, we introduce VINCIE-NExT, a unified framework that transfers editing capability from images to videos through in-context visual demonstrations, alleviating the need for large-scale paired video editing data. VINCIE-NExT decomposes video editing into a structured chain of composable sub-tasks (Video -> Image -> Image -> Video), routing editing intent through the image domain and enabling scalable joint training from heterogeneous image and video corpora under a unified diffusion objective. An image editing pair, synthesized by the model or supplied by the user, is prepended as an in-context visual demonstration that serves as a spatial appearance blueprint for every output frame. To ground appearance edits across the interleaved context, we introduce a novel position encoding that links image demonstrations and video frames in a shared spatial coordinate system, enabling pixel-faithful propagation of appearance changes to every output frame. Chain-of-Editing further provides principled test-time scaling: by executing the sub-task chain as progressive diffusion stages, editing quality can be improved by investing additional compute without retraining. Comprehensive experiments on OpenVE-Bench demonstrate the state-of-the-art performance across diverse editing categories, with ablations confirming the effectiveness of each component.\n\n[提交时间: 2026-10-08; 分类: cs.CV, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.12104v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.12104v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "From Surface to Depth: Towards Cognitive Appraisal Reasoning in Multimodal Emotion Understanding",
+      "authors": [
+        {
+          "name": "Jia Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yichao He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yangchen Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qiankun Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xinyi Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Baiyi Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhenzhen Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Richang Hong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Erik Cambria",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Recent multimodal large language models (MLLMs) increasingly incorporate explainable reasoning for emotion understanding. However, reasoning based mainly on observable affective cues can reduce emotion understanding to superficial cue-label associations, giving rise to the Clever Hans effect. Such shortcuts become unreliable when affective cues are implicit, conflicting across modalities, linguistically misleading, or obscured by redundant details. In contrast, human emotions are shaped by how individuals interpret and evaluate surrounding events beyond observable cues. Inspired by appraisal theories of emotion, we formulate multimodal emotion understanding as a progression from perception to cognitive appraisal, and introduce a dataset, a model, and a benchmark to support this novel paradigm. CogEmo-40K is a large-scale instruction-tuning dataset constructed through a perception-to-appraisal pipeline to elicit evidence-grounded reasoning across six cognitive appraisal dimensions underlying emotion. CogEmo-MoE is a compact sparse MLLM that introduces interleaved MoE blocks for appraisal-specific adaptation, enabling effective appraisal reasoning at a substantially smaller scale than typical emotion MLLMs. CogEmo-Bench introduces an Appraisal Evidence Quality Score (AEQS) to assess cognitive-affective understanding across six complementary appraisal dimensions, addressing the limitation of conventional emotion metrics that evaluate what emotion is predicted but not why it arises. Extensive experiments show that our paradigm not only leads CogEmo-Bench, but also exhibits strong cross-domain generalization. Our findings suggest that perception-to-appraisal reasoning can move beyond surface-level cue-label associations toward more reliable multimodal emotion understanding and closer cognitive alignment between MLLMs and humans.\n\n[提交时间: 2026-10-08; 分类: cs.MM, cs.AI, cs.HC]",
+      "url": "https://arxiv.org/abs/2610.11918v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11918v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Structural and Representational Agency in LLM-Driven Timbre Generation and Interpolation",
+      "authors": [
+        {
+          "name": "Joseph Cameron",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alan Blackwell",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Generative creative interfaces routinely report the user's position within a space of possibilities. Such displays imply that the quantities shown were measured from the artefact; in a growing class of systems they are instead predicted by a language model describing its own output, and the two are indistinguishable on screen. Most creative domains lack an agreed measurement against which such a self-report can be checked; audio admits one. In a measurement study of a working LLM-driven timbre interface, what a user can cause proves separable from what the interface reports. The first is exactly characterisable: the reachable set is a zonotope whose dimension increases by one per sound placed, so the space the model may act within is demonstrably the user's own. The second is inaccurate. The displayed position differs from measurement by approximately three times the width of that region, and the error has two independent sources: model-predicted coordinates, whose accuracy varies twofold between the two models evaluated, and the interpolation step, which arises from combining synthesiser parameters and is unaffected by model quality. End to end, 26 of 36 refinement instructions produced no perceptible change, and under the weaker model the facility performed no action while reporting convergence. Effective agency (what a user can cause) and epistemic agency (whether they can know it) are therefore separable and independently engineered: structurally enforced constraints survive model failure, whereas guarantees resting on the model's own report do not. The failure mode that remains is silence presented as success. We close with a short protocol for building and auditing such displays.\n\n[提交时间: 2026-10-08; 分类: cs.SD, cs.HC, cs.LG, cs.MM, eess.AS]",
+      "url": "https://arxiv.org/abs/2610.12532v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.12532v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Open-Vocabulary Audio-Visual Event Localization via Complex-Valued Fusion",
+      "authors": [
+        {
+          "name": "Anirudh Praveen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Koteswar Rao Jerripothula",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Pratik Joshi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Aveen Dayal",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Neela Sawant",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Open-Vocabulary Audio-Visual Event Localization (OV-AVEL) labels each video segment with an event class, including classes that were never seen during training. The dominant pipeline uses a frozen multimodal foundation model (e.g. ImageBind) to embed the visual frame, the audio mel-spectrogram, and each candidate class name into a shared space, then computes two cosine similarities for each segment against each class: visual-text and audio-text. Existing methods then collapse this pair into a single scalar score with a fixed rule (geometric mean, weighted average) before taking the argmax. Instead, we compute complex-valued similarities and learn their fusion using a complex-valued neural network (CVNN). Each modality's standard representation becomes the real part of our pipeline, and a paired companion stream supplies the imaginary part. We use imaginary part of iHSV for visual modality and CycleGAN-translated phase spectrogram for audio modality as these companion streams. This results in two complex similarities, which are then fused. While the vision and audio encoders remain frozen, only the temporal-attention blocks and the fusion CVNN are trained. The four-stream complex architecture sets a new state of the art on both OV-AVEL benchmarks. On the open (unseen-class) split of OV-AVEBench we reach 66.5/59.1/54.1% Acc/Seg-F1/Event-F1 (+1.6/+4.1/+6.6 over the previously reported fine-tuned baseline), with consistent gains for seen classes as well. We also modify AVE dataset for this task and observe that our architecture reaches 60.7/51.9/50.4% Acc/Seg-F1/Event-F1, achieving state-of-the-art OV-AVEL results on it as well. We also propose a two-stream alternative, which also sees great improvements over the baseline.\n\n[提交时间: 2026-10-08; 分类: cs.CV, cs.LG, cs.MM, cs.SD, eess.IV]",
+      "url": "https://arxiv.org/abs/2610.11846v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11846v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "AuraLuxMuse: Adaptive Fusion Modeling for Aesthetic Stage Lighting Design with Music and Expert Guidance",
+      "authors": [
+        {
+          "name": "Junyu Deng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiale Cao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mengtian Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhongxia Ji",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruhua Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yiyi He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Guangnan Ye",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zuo Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We present AuraLuxMuse, a novel system for automated aesthetic stage lighting design that integrates expert knowledge, representation learning, and preference-adaptive modeling. Lighting design in live performance settings requires the seamless translation of musical features into dynamic lighting behaviors. However, traditional workflows remain time-consuming, labor-intensive, and difficult to transfer. AuraLuxMuse encodes music and professional cue sequences into a shared retrieval space, estimates cue-event density, and retargets selected fixture commands to the destination stage. It assists pre-production authoring by returning editable cues rather than replacing the designer with an unconstrained generator. At the heart of AuraLuxMuse are two key modules: Lighting-Aligned Music Pretraining (LAMP), which performs contrastive learning between audio and lighting cues for alignment, and Preference-Adaptive Mixture of Experts (PAMoE), which conditions preference-aware cue retrieval and adaptation on designers' intent through a gated ensemble of style-specific expert networks. To support training and evaluation, we introduce Musilux, the first dataset of paired musical audio and professional lighting cue sequences under diverse performance scenarios. We evaluate AuraLuxMuse across both virtual simulation environments and professional-grade laboratories. Experimental results, including objective and subjective evaluation, demonstrate that AuraLuxMuse retrieves and adapts stage-lighting cues that are visually cohesive, semantically meaningful, and artistically expressive, showing its potential for AI-assisted aesthetic stage design.\n\n[提交时间: 2026-10-08; 分类: cs.MM, cs.AI]",
+      "url": "https://arxiv.org/abs/2610.11792v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11792v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SignRAG: Unified Retrieval-Augmented Gloss-Free Sign Language Translation",
+      "authors": [
+        {
+          "name": "Zhi Rao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yucheng Zhou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qianran Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yiqing Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Longcan Yuan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jiayi Hou",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chengwen Yao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lin Cheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Donghui Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaoxin Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jun Wan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Contemporary decoder-only large language models (LLMs) have demonstrated strong capabilities across a wide range of domains. However, existing pretraining paradigms for gloss-free sign language translation (SLT) are largely designed around conventional encoder-decoder pretrained language models, which limits their direct applicability to decoder-only LLMs. To address this limitation, we propose SignRAG, a unified framework combining hierarchical pretraining, target-domain retrieval augmentation, and retrieval-aware reinforcement fine-tuning. Hierarchical pretraining first learns linguistically grounded sign representations and then jointly aligns the sign encoder with an LLM, mitigating cross-modal optimization imbalance. For downstream adaptation, SignRAG complements parameter-based fine-tuning with a target-domain retrieval gallery that provides instance-specific translation cues. To ensure that retrieved contexts are used appropriately, we further introduce Retrieval Utility-Guided Reinforcement Fine-Tuning (RUG-RFT), which combines translation-quality and retrieval-utility rewards to encourage beneficial retrieval use while suppressing harmful reliance. Experiments on multiple SLT benchmarks establish new state-of-the-art performance. In particular, to the best of our knowledge, SignRAG is the first gloss-free approach to outperform gloss-supervised methods across all reported metrics on CSL-Daily. Our code has been released at \\href{https://github.com/shahelaojieraozhi/SignRAG}{GitHub}, together with models of different sizes to support future academic research.\n\n[提交时间: 2026-10-08; 分类: cs.CL, cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.11371v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11371v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "MiniVer-V: Identifying Minimal Sufficient Evidence for Short Video Verification",
+      "authors": [
+        {
+          "name": "Leran Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lingnan Kong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zile Cai",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "A core challenge in short-video fact-checking is identifying which evidence is sufficient to support a verification conclusion. Existing approaches either give the verifier all available evidence, introducing noise, or select evidence by topical relevance, which conflates relatedness with sufficiency. We identify evidential sufficiency as the selection criterion: whether a subset of evidence is adequate to support a confident verdict without redundancy. We introduce MiniVer-V, a benchmark of 195 short videos with three-way verdict annotations (supported, refuted, insufficient) and 5,510 multimodal evidence units spanning visual keyframes, speech transcripts, and web-retrieved external sources. We propose a two-layer verification framework that separates claim-video consistency, assessed from internal evidence, from factual verdict determination, which additionally requires external corroboration. On top of it, a sufficiency-driven greedy search assembles evidence until a sufficiency threshold is met and outputs insufficient when the candidate pool is exhausted, rather than forcing a verdict. With Claude Sonnet 4, the method reaches a Macro-F1 of 0.510 using 4.5 evidence units on average (16% of the full evidence set), statistically indistinguishable from the full-evidence baseline (0.518 with 27.7 units), while significantly improving recognition of insufficient cases over the same search without abstention. The efficiency result replicates with GPT-5.5 and holds only partially with an open-weight Qwen2.5-72B verifier. Ablations show that external evidence is indispensable for factual determination, while internal video evidence grounds the verdict in claim-video consistency. These findings suggest that evidence-efficient verification is achievable, and that explicit abstention is needed when evidence is genuinely inadequate.\n\n[提交时间: 2026-10-08; 分类: cs.CV, cs.CL, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.11233v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11233v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "LadderEdit: Edit-Level Residual Compression for Memory-Efficient Lifelong Editing of LLMs",
+      "authors": [
+        {
+          "name": "Xiaobing Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Peijie Qiu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jin Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuanzhao Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Weiwei Ma",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhaoqi An",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaoqi Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaofeng Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Lifelong editing of LLMs requires storing thousands of edits after acquisition. A widely used family of approaches attaches one LoRA adapter per edit, which preserves behavior but grows linearly in storage. To address this challenge, we propose LadderEdit, a method that compresses each LoRA adapter after it is acquired. Each edit is first stored at low rank as a cheap sketch. We then check whether this sketch still satisfies the rewrite, generalization, and locality contract on probe prompts. Edits that pass keep the sketch; those that fail are promoted to a higher rank along a ladder until the contract is met. Because every edit retains some representation, coverage is maintained, and only hard edits consume more rank. Across ZsRE, CounterFact, and WikiBigEdit benchmarks on LLaMA-3-8B, Mistral-7B, and Qwen2.5-7B, LadderEdit tracks exact LoRA storage at 5.2x less memory and remains effective at 50,000 sequential edits.\n\n[提交时间: 2026-10-08; 分类: cs.CL, cs.CV, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.11160v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11160v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "ActiveMedAgent: Cost-Aware Trajectory Learning for Multimodal Medical Diagnosis",
+      "authors": [
+        {
+          "name": "Weiwei Ma",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaobing Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Peijie Qiu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jin Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhaoqi An",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xuanzhao Dong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaoqi Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaofeng Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Clinical diagnosis is inherently sequential: clinicians escalate from cheap to costly tests only when additional evidence is expected to resolve diagnostic uncertainty. We present ActiveMedAgent, a framework that brings this cost-aware sequential logic to multimodal medical AI. Given a frozen, API-accessed vision-language model, ActiveMedAgent tracks probability distributions over candidate diagnoses and scores each acquisition by its per-step diagnostic utility minus cost. A lightweight MLP controller is then trained offline on these scored trajectories, learning when to request additional evidence and when to commit. Across three commonly used benchmarks, trajectory-based policy learning consistently outperforms both unguided acquisition and full-modality baselines. Notably, we identify an information overload effect. In 175 cases, the agent produces a correct diagnosis with fewer channels while the full-modality baseline fails, showing that learning what to omit can be as important as learning what to acquire.\n\n[提交时间: 2026-10-08; 分类: cs.LG, cs.AI, cs.CL, cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.11140v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.11140v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Conversational Voice Aesthetic Model with Reinforcement Learning from Human Listeners",
+      "authors": [
+        {
+          "name": "Xilin Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shun Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tejas Jayashankar",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yinghao Aaron Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Osama Hanna",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We introduce Conversational Voice Aesthetic Model, a speech large language model for describing the voice aesthetics of real or synthetic speech responses in natural conversational contexts. Given a context and a response speech, CVAM describes salient moments that characterize the voice and predicts nine categorical attributes spanning gender, pitch, pacing, emotion, and delivery. The key challenge lies in perceptual fields such as emotion and delivery, which are inherently subjective and lack definitive ground truth. Therefore, we collect ~10 human annotations for each of 3k real and synthetic responses derived from the CANDOR corpus. CVAM is supervised finetuned on synthesized aesthetic descriptions and labels, then optimized with Group Relative Policy Optimization on human judgments. Experiments show that CVAM better agrees with human listeners than Gemini 3.1 Pro and open-source speech LLMs, and outperforms single-human-vs.-rest agreement. Together, we demonstrate the importance of grounding voice aesthetics in human perception and propose a principled framework for human alignment.\n\n[提交时间: 2026-10-07; 分类: eess.AS, cs.CL, cs.LG, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2610.10868v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.10868v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Controlled Acquisition and Abstention in Three-Channel Score Conflicts",
+      "authors": [
+        {
+          "name": "Mengzhe Geng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "When audio, video, and text disagree, accuracy alone does not show whether to acquire another source or abstain. We study these choices in a controlled three-score benchmark: a policy observes two signed scores, may request the third at a cost, and can abstain. The primary reward is mechanism-specific: abstention is correct only for one designated ambiguity mechanism and is penalized under mixed corruption. Matched controls show that a threshold policy matches always-request decisions with fewer requests; its advantage over always-answer fusion depends on the reward assigned to that ambiguity. On a partially held-out synthetic split, the threshold policy reaches 0.789 +/- 0.006 targeted decision accuracy and 0.481 +/- 0.014 utility across 83 seeds. A three-score majority reference reaches 0.626 +/- 0.008 and 0.252 +/- 0.016, but uses more information. In a matched-budget test, a train-only value selector improves utility over no-query and matched-random policies at 10% and 25% budgets, while pair uncertainty has higher utility at every budget. At 50% and 63.7% budgets, the selector lowers utility despite slightly higher non-ambiguous accuracy. If all abstentions are scored incorrect, majority outranks the threshold policy in utility. At a central temporal setting, full-trace controls match the neural models while position perturbations separate them. On held-out-actor emotion clips, eight-frame fusion has opposite-signed accuracy differences for two encoder pairs, with both actor intervals containing zero; matched-request routing gains are small and uncertain. These results separate full-modality accuracy from pre-request selection value and show that selection value depends on budget and the observed-pair ranking.\n\n[提交时间: 2026-10-07; 分类: cs.LG, cs.MM, eess.AS]",
+      "url": "https://arxiv.org/abs/2610.10808v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.10808v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "MemoCare: An Interactive Multimodal Mobile System for Automated Cognitive Screening",
+      "authors": [
+        {
+          "name": "Duy-Cat Can",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mau Minh Phuc Le",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tuan-Khoa Hoang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hai-Dang Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Trung-Hieu Do",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dang Minh Ly",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Minh-Duc Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nghia TT Hoang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Linh-Trung Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Huy-Hieu Pham",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Huong Ha",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Binh T. Nguyen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Oliver Y. Chén",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "MemoCare is an interactive mobile system for automated multimodal cognitive screening. A React Native application combines spoken responses, temporal and spatial orientation, touchscreen actions, and visuoconstruction in complete English and Vietnamese workflows. Speech is transcribed by Google Speech-to-Text and scored locally with deterministic task-specific natural language processing rules; GPS coordinates are resolved by the MemoCare spatial module before answer matching; touch tasks are scored from interaction events; and the drawing task uses a three-model convolutional neural network consensus with separate visual interpretation. Software tests pass 151/151 predefined cases across speech/language, spatial-answer, and touch-interaction scoring, while spatial regression passes 48/48 four-country coordinate-resolution cases. For the drawing module, validation-selected ShuffleNetV2 x1.5 achieved 91.33% mean balanced accuracy and 78.87% exact three-criterion accuracy on a locked 71-image test set. Four clinician co-authors additionally inspected the end-to-end workflow, yielding a pooled median rating of 4/5 across eight criteria, with item-level medians ranging from 3 to 4.5. At MMM, attendees can directly try a shortened multimodal screening workflow and inspect automatic item-level and total scoring.\n\n[提交时间: 2026-10-07; 分类: cs.MM, cs.CV, cs.HC]",
+      "url": "https://arxiv.org/abs/2610.10448v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.10448v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "A Camera-Native Stereo VR180 Dataset",
+      "authors": [
+        {
+          "name": "Linxuan Lu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Immersive VR180 video is increasingly produced with professional stereo fisheye cameras, yet public VR180 research resources are mostly collected from online platforms such as YouTube: already stitched, projected and compressed by unknown pipelines, and without lens calibration. We present a firsthand-captured stereo VR180 dataset recorded with two Blackmagic URSA Cine Immersive cameras. It contains 1,211 samples -- 636 stereo video clips (2,220.8 s, mostly 90 fps) and 575 stereo stills -- each released as camera-native Blackmagic RAW, separate-eye native fisheye HEVC (8160x7200 per eye) and half-equirectangular HEVC (7200x7200 per eye), together with the factory lens calibration, portable fisheye/half-equirectangular conversion tools and AI-generated scene and visual-challenge annotations. Re-encoding the released fisheye and half-equirectangular renders with x265 over 24 clips, both eyes, four rate points and nine viewing directions, native-fisheye coding needed more bitrate than half-equirectangular coding at equal viewport quality for all 24 clips (median +38%), in every part of the field of view. Data: https://huggingface.co/datasets/lulinxuan/VR180 ; code: https://github.com/lulinxuan/vr180-dataset-tools\n\n[提交时间: 2026-10-07; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.10607v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.10607v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "VM-ARRAYDPS: Virtual Microphone Augmented Diffusion Posterior Sampling for Unsupervised Blind Speech Separation",
+      "authors": [
+        {
+          "name": "Jingqi Sun",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Haozhan Tang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Shulin He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhong-Qiu Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Blind Source Separation(BSS) is a fundamental problem in signal processing, aiming to separate multiple source signals from their mixtures without prior knowledge of the sources or the mixing process. Traditional approaches, such as Independent Vector Analysis (IVA) exploits statistical independence of sources. Recently, diffusion-based approaches have emerged as a promising alternative by leveraging powerful generative priors. Among them, ArrayDPS formulates BSS problem as a posterior sampling problem, and utilizes a pretrained speech diffusion model to guide the recovery of clean source signals. A key factor behind its separation capability is the multi-channel consistency (MC) objective, which enforces the estimated source signals to reconstruct the observed microphone mixtures through the estimated acoustic transfer functions. However, the number of microphones in the array is often limited, which constrains the performance of ArrayDPS. To address this issue, we propose VM-ArrayDPS, a novel method that augments the microphone array with virtual microphones with higher-SNR, these microphones can offer extra MC constraints to enhance the separation performance. Experimental results demonstrate that VM-ArrayDPS significantly outperforms ArrayDPS on both 2-speaker and 3-speaker datasets, showcasing the effectiveness of virtual microphone augmentation in improving BSS performance. We also did ablation studies to show the influence of the number of virtual microphones and weight of the MC objective brought by virtual microphones.\n\n[提交时间: 2026-10-07; 分类: eess.AS, cs.LG, cs.MM, cs.SD, eess.SP]",
+      "url": "https://arxiv.org/abs/2610.09334v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.09334v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models",
+      "authors": [
+        {
+          "name": "Xingang Guo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jing Gu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Brian Jang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Renxiong Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Utkarsh Tyagi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Daniel Quigley",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Steven Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "David Yan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Daniel Yue Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Darvin Yi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Forrest Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "HiJae Kim",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tianyi Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jared Lichtarge",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jihua Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Le Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Manan Tomar",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qiuyi Richard Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruofei Yu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Seth Neel",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yaning Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Marcella Valentine",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xinzhe Jiang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Daniel Evans",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chenguang Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dustin Tran",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tong Zhao",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yinfei Yang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yunzhong He",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Humans perceive far more in a scene than what is explicitly depicted: a single glance captures past causes and future trajectories; a quick peek determines if a vehicle can fit between two parked cars; a few seconds of video reveals who holds authority in a room; and a fleeting clip highlights subtle abstract patterns like unwritten rules or hidden labels. This capacity reflects a form of humanity's sixth sense: an intuitive reasoning mechanism that recovers implicit information beyond raw sensory perception. Crucially, this rapid, zero-shot visual intuition underpins everyday navigation and social interaction, making it a vital capability for Multimodal Large Language Models (MLLMs) deployed alongside people. Existing visual benchmarks, however, target either deliberate expert-level analysis in academic and mathematical domains or low-level perception, leaving the intuitive reasoning that people perform largely untested. To bridge this gap, we introduce Humanity's Sixth Sense (HSS), a benchmark for intuitive visual reasoning. HSS spans diverse image and video inputs, organizes items under a structured taxonomy, and pairs each with human-written prompts probing the implicit temporal, spatial, social, and abstract structure that people infer at a glance. Frontier MLLMs fall short of human performance: participants reach 93.1% accuracy, while the strongest model, GPT-6-astra, reaches only 53.6% even at maximum reasoning effort. Despite excelling in many complex tasks that require advanced perception and knowledge, current models still struggle significantly on these visual tasks that are intuitive for humans. We further explore agentic setup that apply dynamic visual manipulation to HSS, which narrows but does not close the gap. HSS establishes intuitive visual reasoning as a measurable axis and directs attention to a capability that scaling on current benchmarks has so far left behind.\n\n[提交时间: 2026-10-06; 分类: cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.08966v2",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.08966v2",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "SENSE: State-aware Emotion Navigation Storytelling Engine",
+      "authors": [
+        {
+          "name": "Yi Xia",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Pablo Carrasco Velo",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mudit Paliwal",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ibrahim Khan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yifan Geng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mustafa Can Gursesli",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Juho Hamari",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruck Thawonmas",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "This paper presents SENSE, a state-aware framework for generating playable branching visual novels with multi-track emotional navigation. Integrating a state-based narrative architecture called MIND, a structure analyzer, and a path-aware context management module, SENSE produces narratives that are both structurally coherent and emotionally rich. From minimal high-level inputs, it generates multiple intersecting routes while preserving character consistency and narrative causality. Evaluations using LLM judges, affective metrics, and visual assessments indicate SENSE outperforms baselines in narrative diversity and robust asset integration, while preliminary human trials show directional improvements in emotional fidelity alongside comparable enjoyment.\n\n[提交时间: 2026-10-06; 分类: cs.HC, cs.AI, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.07666v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.07666v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "UltraDub: Towards Authentic Dubbing by Unifying Visually-Steered Flow Learning and Trajectory Guidance",
+      "authors": [
+        {
+          "name": "Gaoxiang Cong",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Liang Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Jianwei Wen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zhedong Zhang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Zheng-Jun Zha",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qingming Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Visual voice cloning requires intelligible, speaker-consistent speech synchronized with visible articulation. However, sequential multimodal conditioning can disrupt previously established temporal and speaker cues, while imbalanced inference guidance can improve linguistic accuracy at the expense of lip synchronization. In this paper, we propose UltraDub, a Unifying Visually-Steered Flow learning and trajectory Guidance Dubbing framework that leverages vision in two ways: as continuous motion for multimodal context aggregation, and as structural rhythm for trajectory rectification. Specifically, we introduce the Motion-guided Dual-context Retrieving (MDR) module, which continually recalibrates linguistic and speaker-style retrieval through shared lip-motion query residuals, utilizing independent time-conditioned gates to regulate their contributions. Furthermore, we propose Rhythm-anchored Trajectory Guidance (RTG), a training-free mechanism that evaluates hierarchical multimodal corrections at a visual-only predictive midpoint, safely strengthening semantic conditioning while better preserving temporal alignment. Finally, we construct DiverseDub, a multi-scenario benchmark to evaluate video dubbing in the wild. Extensive experiments demonstrate that UltraDub achieves state-of-the-art performance across four datasets.\n\n[提交时间: 2026-10-05; 分类: cs.CV, cs.AI, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2610.05932v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.05932v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "A Spatiotemporal Semantic Importance-Guided Unified Compression and Editing Framework for AI-Generated Videos",
+      "authors": [
+        {
+          "name": "Xihua Sheng",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dong Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chang Wen Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "AI-generated videos are rapidly increasing in volume, duration, and resolution, creating growing demands for efficient storage and transmission. Unlike natural videos captured from the physical world, AI-generated videos are samples from a learned generative distribution, where semantic structures are critical to content consistency, while many local textures and stochastic details can be plausibly regenerated. This distinction suggests that compression should preserve semantically important spatiotemporal information rather than reconstruct every pixel of a particular generative sample. Beyond reconstruction, AI-generated videos also create a practical need for prompt-based editing, where users expect to modify generated content while preserving its original spatiotemporal semantics. Motivated by these observations, we propose a unified compression and editing framework for AI-generated videos that incorporates a frozen video generator as a reusable generative prior. Within this framework, we design three spatiotemporal semantic importance-guided techniques that respectively address what to transmit, how much to transmit, and how to use the transmitted side information. First, an innovation selection method projects the latent discrepancy using spatiotemporal semantic importance, so that the selected innovations prioritize semantic invariants over replaceable generative variations. Second, a frame-adaptive bit allocation method estimates the nonuniform semantic demands of latent frames and allocates more innovations to frames requiring stronger semantic preservation. Third, a unified reconstruction and editing method continuously adjusts the influence of the transmitted side information, enabling the same compressed representation to provide strong guidance for faithful reconstruction or serve as a flexible semantic anchor for structure-preserving prompt-driven editing.\n\n[提交时间: 2026-10-05; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.05779v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.05779v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Revisiting Frame-Wise Saliency for Audio Moment Retrieval",
+      "authors": [
+        {
+          "name": "Tatsuya Komatsu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hokuto Munakata",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "This paper revisits frame-wise saliency for audio moment retrieval (AMR). We show that the frame-wise saliency sequence, conventionally used only as an auxiliary output in DETR-based AMR models, can itself serve as an effective source of moment predictions. We convert the saliency sequence into ranked moments using a simple SED-inspired segmentation rule with no learned parameters, enabling moment retrieval directly from frame-wise temporal information. On the CASTELLA dataset, saliency-based prediction consistently outperforms decoder-based prediction from the same model across all 18 runs of QD-DETR and CG-DETR. For QD-DETR, simply replacing the inference output improves R1@0.7 from 21.0 to 36.1. The advantage remains 7-15 points when the two outputs are evaluated at their independently selected best epochs. The same tendency extends to TaskWeave and UVCOM, whereas TR-DETR shows the opposite behavior, suggesting that how saliency construction may matter. The performance gap is especially pronounced for short moments: for queries whose annotated moments average at most 2 s, R1@0.7 improves from 6.3 to 27.8 with QD-DETR. Decoder supervision nevertheless benefits saliency-based prediction, indicating that its role during training differs from the utility of its inference output.\n\n[提交时间: 2026-10-05; 分类: eess.AS, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2610.05737v2",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.05737v2",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "GIVE-KWS: Gated Injection of Visual Evidence for Noise-Robust Query-by-Example Keyword Spotting",
+      "authors": [
+        {
+          "name": "Ming-Hsiang Hu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kuan-Tang Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hung-Shin Lee",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Berlin Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Visual speech promises noise-robust keyword spotting, yet a visual stream is not necessarily used. On a tri-modal query-by-example keyword spotting (QbyE-KWS) benchmark, we find that a system with a task-trained visual encoder comes within 2 percentage points of a text-and-audio system in equal error rate (EER) at -10 dB, and link this gap to the encoder's lack of phonemic information. We present GIVE-KWS, whose fusion stage, GIVE (Gated Injection of Visual Evidence), conditions query audio on lip motion through gated cross-attention. We show that visual robustness depends on two interacting conditions: a phoneme-bearing visual representation, and fusion that injects visual evidence rather than rescaling audio features. Under a phoneme-bearing encoder, injection yields an effective SNR gain of 4.0-9.3 dB over masking at -10 dB, whereas under a phoneme-poor one it nearly vanishes. Relative to the benchmark system, GIVE-KWS reduces unseen-keyword EER by 72.9% at -10 dB and 62.8% on average.\n\n[提交时间: 2026-10-05; 分类: eess.AS, cs.CL, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2610.07046v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.07046v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "Kandinsky 6.0 Video: Foundation Models for Synchronized Video and Audio Generation",
+      "authors": [
+        {
+          "name": "Team Kandinsky",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Julia Agafonova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bulat Akhmatov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mikhail Aksyutin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Grigorii Alekseenko",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anastasia Aliaskina",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Olga Androsova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladimir Arkhipkin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anna Averchenkova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexander Belykh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Serafima Bocharova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sofiya Bogakovskaya",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anton Bukashkin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mark Bulygin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kirill Buzygin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Irina Cheremnykh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kirill Chernyshev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mikhail Chernyshov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladimir Chernyy",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "David Chikovani",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Georgy Daniltsev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Denis Dimitrov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anna Dmitrienko",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladimir Dokholyan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sergey Emelyanov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dmitry Ermilov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Georgii Fedorov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Polina Gavrilova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikolai Gerasimenko",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Aleksandr Gordeev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Andrey Inozemtsev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Andrei Ivaniuta",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexander Ivanov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mikhail Karaev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anastasiia Kargapoltseva",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ivan Kirillov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikita Kiselev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Valeria Kobenko",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yury Kolabushin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Denis Koposov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anatoly Korobov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladimir Korviakov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kirill Kozlov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Denis Krzhivokolskiy",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Konstantin Kuklev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexander Kunitsyn",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sergey Kuzin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladislav Lakhtionov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexey Letunovskiy",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Maxim Litvinov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexander Lyulkov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Georgy Makarov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kirill Malakhov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Egor Malykh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Mikhail Mamaev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Dmitrii Mikhailov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Polina Mikhailova",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ivan Mikheev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Elizaveta Muromtseva",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikolai Nazarkin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tatiana Nikulina",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lev Novitskiy",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Stanislav Onuchin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikita Osterov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Denis Parkhomenko",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Anatoliy Parpara",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Vladimir Polovnikov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Konstantin Reznikov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Azat Saginbaev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikita Samsonov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Alexander Sentsov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nikita Shaimov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Artem Sherstyuk",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Andrey Shutkin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Egor Silvestrov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Bulat Suleimanov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Matvey Suprunov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sergey Taranov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Irina Tolstykh",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Tatiana Trofimuk",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ilya Trushkin",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Aleksandra Tsybina",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Olga Varlashina",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Viacheslav Vasilev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ilya Vasiliev",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Eugeny Vilisov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Sergey Yakubson",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Konstantin Zakharov",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "We present Kandinsky 6.0 Video, a family of foundation diffusion models for synchronized text-to-audio-video generation, comprising Kandinsky 6.0 Video Lite (3B parameters) and Kandinsky 6.0 Video Pro (29B parameters). Both models generate 5-second video clips with synchronized 44 kHz audio, including lip-sync, in text-to-audio-video (T2AV) and image-to-audio-video (I2AV) modes; a built-in super-resolution model raises the output resolution to Full-HD (1920$\\times$1080). Building on the video generation capabilities of Kandinsky 5.0, Kandinsky 6.0 Video employs a dual-stream CrossDiT architecture that connects a pretrained video stream and a newly trained audio stream through bidirectional cross-attention for temporal and semantic alignment. Our continuous pretraining strategy first trains the audio stream from scratch on large-scale audio corpora and then trains both streams jointly on paired audio-video data while preserving unimodal fidelity; pretraining is followed by supervised fine-tuning, reinforcement-learning-based post-training, and distillation. In side-by-side human evaluation, Kandinsky 6.0 Video Pro clearly outperforms its predecessor, Kandinsky 5.0 Video Pro, and remains competitive with leading audio-video generation models, particularly in speech quality. To accelerate open research and deployment in multimedia generation, we release the code, model checkpoints, and diffusers integration under the MIT license.\n\n[提交时间: 2026-10-04; 分类: cs.CV, cs.AI, cs.LG, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.05608v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.05608v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "A Multidimensional Model for Quantifying Tonal Strength: A Continuous Framework of Analyzing Tonal Evolution Beyond Tonal-Atonal Binary Classification",
+      "authors": [
+        {
+          "name": "Yuliang Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Nan Nan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Meilian Gu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xiaohong Guan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Tonality is a fundamental organizing principle of Western music. However, the gradual transition from common-practice tonality to atonality around the turn of the twentieth century cannot be captured by binary labels. To characterize intermediate tonal states and trace this evolution, we propose a multidimensional framework for quantifying tonal strength, grounded in tonal theory and mechanisms underlying tonal dissolution. This framework operationalizes the global statistical regularity, temporal coherence, and local perceptual alignment of tonal organization through three complementary features: pitch-class distribution uniformity, temporal stability of tonal centers, and local tonal clarity, respectively. To validate the model, we introduce two new datasets: a binary dataset comprising 196 tonal and atonal pieces, and a historical MIDI corpus of 1,561 compositions by 21 composers spanning the Baroque era to the early twentieth century. The proposed model achieves high discriminative performance on the binary classification task (F_1=0.985), and quantitatively reveals a continuous historical trajectory from established tonality through progressive weakening to eventual dissolution. Computational analysis of representative composers further confirms significant declines in tonal strength throughout the careers of late-Romantic and modernist figures. Additionally, analysis of EMOPIA dataset reveals a weak but statistically significant positive correlation between higher tonal strength values and positive emotional valence. This work establishes a unified quantitative model for analyzing tonal evolution and provides a continuous measure for future behavioral and neurophysiological investigations of the relationships among tonal organization, musical emotion, and cognition.\n\n[提交时间: 2026-10-04; 分类: cs.SD, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.04871v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.04871v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "EMODE: Dynamic Para-Semantic Experts for Emotion-Aware Speech Language Modeling",
+      "authors": [
+        {
+          "name": "Jianan Pan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yiwen Gu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Xinze Li",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Rui Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Kejie Huang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Large speech language models have demonstrated strong capabilities in unified cross-modal understanding and generation, yet paralinguistic cues, especially emotion, remain difficult to preserve. Existing systems typically rely on entangled acoustic representations, which allow the underlying language model to depend excessively on recovered lexical content instead of grounding its behavior in acoustic-prosodic evidence. We address this limitation with EMODE, an emotion-aware speech language model built around \\textbf{Dynamic Para-Semantic Experts (DPSE)}. DPSE decomposes continuous speech features into semantic and paralinguistic pathways, routes them dynamically, and fuses them before integration into the language model. To turn this structural decomposition into functional specialization, EMODE is trained with a three-stage curriculum consisting of semantic warm-up, paralinguistic activation, and joint refinement, guided by Orthogonal Expert Guidance (OEG), Semantic-to-Acoustic Alignment (SAA), and Gating Diversity Regularization (GDR). Experiments on SER test, empathetic response evaluation, and the newly constructed bilingual MEPA benchmark show that EMODE improves the balance between lexical fidelity and emotional sensitivity, strengthens affect-grounded response generation, and exposes the value of explicit para-semantic factorization for robust cross-corpus emotion understanding.\n\n[提交时间: 2026-10-03; 分类: cs.CL, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2610.06956v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.06956v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
+      "title": "DABACO: A Multi-Camera Dataset and Benchmark for Screen Localization and Pointing Estimation",
+      "authors": [
+        {
+          "name": "Óscar Gómez-Cárdenes",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "José Gil Marichal-Hernández",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Juan Manuel Martín-Doñas",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        }
+      ],
+      "abstract": "Screen localization and pointing estimation are key to low-cost interactive devices. Yet developing and evaluating these algorithms requires realistic data: synthetic captures cannot fully reproduce the optical distortion, rolling shutter, motion blur, and display processing of a physical acquisition, and most existing datasets provide static images rather than the video needed to assess continuous pointing. In this paper, we introduce the DABACO Dataset. Developed within the DABACO (Dispositivo Apuntador de BAjo COste, or Low-Cost Pointing Device) project, this dataset supports the development and evaluation of screen detection and camera-based pointing algorithms for embedded systems. It comprises video sequences captured with multiple low-cost camera sensors, including monochrome global-shutter and color rolling-shutter modules, on embedded platforms such as the Raspberry Pi 4B and ESP32-S3.\n  We present a systematic annotation pipeline combining temporary visual watermarking, optical-flow tracking, manual verification, and marker removal. Both the original marked captures and the marker-free images, together with explicit corner annotations and modification masks, are released to support auditing and the study of potential reconstruction bias.\n  In addition, we release an open-source evaluation toolkit with two reference baselines: a classical screen-detection pipeline based on edge and contour geometry, and a closed-vocabulary, off-the-shelf YOLOv8 segmentation model evaluated without dataset-specific training. Both are evaluated on a general-purpose computer using Intersection over Union, corner error, and pointing error, establishing initial reference results for future embedded implementations. Overall, DABACO addresses a gap in existing resources and is intended to support the development and evaluation of new low-cost screen-localization and pointing systems.\n\n[提交时间: 2026-10-02; 分类: cs.CV, cs.MM]",
+      "url": "https://arxiv.org/abs/2610.03928v1",
+      "award": null,
+      "source": "arxiv",
+      "paper_id": "2610.03928v1",
+      "is_domestic": false,
+      "has_tsinghua": false,
+      "has_peking": false
+    },
+    {
       "title": "Low-Cost Video--Time Priors as a Strong Baseline for EEG--fNIRS Emotion Regression on Familiar Videos",
       "authors": [
         {
@@ -897,1571 +2882,114 @@
       "has_peking": false
     },
     {
-      "title": "MG-Thinker: Bi-Axial Self-Reflection for Multi-Image Reasoning Grounding",
+      "title": "HelixWorld: A Real-time Interactive Audio-Visual World Model",
       "authors": [
         {
-          "name": "Heyu Huang",
+          "name": "Lei Ke",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         },
         {
-          "name": "Chi Chen",
+          "name": "Jiahao Pan",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         },
         {
-          "name": "Zonghao Guo",
+          "name": "Zeyue Tian",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         },
         {
-          "name": "Yuhua Li",
+          "name": "Jiaming Wang",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         },
         {
-          "name": "Maosong Sun",
+          "name": "Haoyuan Huang",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         },
         {
-          "name": "Ruixuan Li",
+          "name": "Kam Man Wu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Pengjun Fang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Hongyu Liu",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Chenyang Qi",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Lin Wang",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Ruibin Yuan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Weijia Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Fangneng Zhan",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Qifeng Chen",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Wei Xue",
+          "affiliations": [],
+          "tags": [],
+          "chinese_name": null
+        },
+        {
+          "name": "Yike Guo",
           "affiliations": [],
           "tags": [],
           "chinese_name": null
         }
       ],
-      "abstract": "Reinforcement learning (RL) has recently delivered substantial gains in multimodal reasoning, opening a promising route for fine-grained visual perception. Yet for multi-image reasoning grounding (MRG), reasoning over real-world multi-image contexts toward pixel-precise localization, existing RL-based approaches overlook two characteristics intrinsic to this paradigm: a coarse-to-fine hierarchical reasoning pattern, and heterogeneously distributed task--sample difficulties. In this work, we present MG-Thinker, a post-training RL framework that advances a new MRG paradigm featuring such hierarchical reasoning, supported by a curated 25K MRG dataset with task-adaptive Chain-of-Thought (CoT) annotations that elicit multi-perspective evidence before conclusion. To remedy the heterogeneous task--sample difficulties, we further propose Bi-Axial DAPO (BiA-DAPO), which decomposes rollout advantages along an intra-group signal axis and an inter-group competence axis through two complementary mechanisms, both grounded on our defined candidate pool for stable group-level statistics. Extensive experiments show that MG-Thinker achieves state-of-the-art performance on multi-image reasoning grounding while consistently improving generalization across multi-image understanding and diverse multimodal benchmarks.\n\n[提交时间: 2026-09-29; 分类: cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.37374v1",
+      "abstract": "World simulation is inherently multisensory, demanding synchronized visual and acoustic dynamics in real time. Yet prevailing interactive world models remain strictly silent, focusing exclusively on visual rendering and control while overlooking the acoustic dimension. We present HelixWorld, a real-time interactive audio-visual world model where visual scenes and camera-grounded spatial stereo sound co-evolve natively under user interaction. We curate a high-fidelity spatial audio-visual dataset with true stereo acoustics and metric camera poses, upon which we pre-train a bidirectional teacher conditioned on 6-DoF camera trajectories and user actions. To enable low-latency causal interaction, we distill the teacher into a few-step streaming student via an online trajectory distillation loss, sustaining drift-free joint audio-visual rollouts at 24 FPS on a single GPU. Furthermore, we formalize spatial-acoustic consistency and introduce HelixBench to evaluate whether synthesized sound fields faithfully track dynamic viewpoint motion. Extensive experiments demonstrate that HelixWorld matches state-of-the-art silent world models in visual fidelity and responsiveness, while significantly surpassing existing baselines in camera-aligned spatial-acoustic immersion.\n\n[提交时间: 2026-09-29; 分类: cs.CV, cs.MM, cs.SD]",
+      "url": "https://arxiv.org/abs/2609.38123v1",
       "award": null,
       "source": "arxiv",
-      "paper_id": "2609.37374v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "What Comes Next? Omni-StoryBench for Evaluating Story-Grounded Omnimodal Generation",
-      "authors": [
-        {
-          "name": "Sieun Hyeon",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yejoon Lee",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Mintaek Lim",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Woojin Kim",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jaeik Kim",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jaeyoung Do",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Omnimodal evaluation should go beyond independent text, image, and speech production: individually plausible outputs may not express a coherent shared event. We introduce Omni-StoryBench, a story-grounded omnimodal benchmark evaluating whether models can coherently continue stories across image, narration, and speech. Each instance provides a current storybook page and structured next-page conditions, requiring models to generate the next illustration, narration, and spoken character utterance. Omni-StoryBench contains 900 rigorously validated story transitions from openly licensed children's books, with ground-truth next-page references and speech metadata. We evaluate systems with modality-specific metrics and consistency-centered LLM-as-a-judge rubrics for context preservation, condition following, reference consistency, and cross-modal coherence. Across 32 baseline configurations spanning orchestration, semi-orchestration, and native any-to-any paradigms, we find orchestration with strong VLM planning most reliable, while current native omnimodal models often struggle with output completeness and controllability. Our analysis shows text-side performance is associated with image and speech quality, but image generation and visual continuity form the clearest observed bottleneck among the evaluated configurations. These results position Omni-StoryBench as a system-level benchmark measuring coherent omnimodal generation beyond isolated modality quality.\n\n[提交时间: 2026-09-29; 分类: cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.37317v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.37317v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Prediction-Layer Branch Calibration for Multimodal Sentiment Analysis",
-      "authors": [
-        {
-          "name": "Yulin Sun",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Kele Xu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yong Dou",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Multimodal sentiment analysis integrates textual, acoustic and visual cues, yet current language-model-based fusion methods typically leave prediction-layer branch allocation implicit. We introduce Branch-Calibrated Multimodal Language Fusion (BC-MLF), which explicitly models prediction-layer branch allocation through a Branch-Calibrated Task Head (BCHead), complemented by Fusion Token Contrastive Learning (FTCL) for sentiment-aware fusion-token regularization. FTCL organizes mean-pooled fusion-token representations according to continuous sentiment affinity, while BCHead combines fusion, text and audiovisual predictions through a lightweight sample-adaptive constrained mixture. Without modifying the fusion backbone, BC-MLF consistently improves the reproduced DeepMLF baseline and achieves the strongest results among the compared methods on CMU-MOSEI and CH-SIMS across classification and regression metrics. The controlled ablations show that sample-adaptive prediction-layer branch allocation consistently outperforms static branch aggregation. Code is available at https://github.com/sunyulin0421/BC-MLF.\n\n[提交时间: 2026-09-29; 分类: cs.SD, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.37100v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.37100v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "RAEGNet: Relation-Aware Evidence Graph Network for Harm-Aware Multimodal Fake News Detection",
-      "authors": [
-        {
-          "name": "Wenbin Shen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Guoxuan Qin",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Guangxu Yao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Baodong Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yuanbo Rui",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhongjie Ba",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhichao Lian",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Existing multimodal fake news detection methods often introduce external information to assist detection. However, most of them rely on entity-level retrieval and are therefore prone to introducing event-irrelevant noise. Meanwhile, existing methods mainly focus on improving overall performance and do not account for differences in the degree of harm posed by different instances of fake news. To address these limitations, we design an Event-Level Evidence Retrieval Framework (ELERF) and propose a Relation-Aware Evidence Graph Network (RAEGNet). ELERF retrieves external evidence based on the complete event semantics of a news item. RAEGNet constructs a directed graph that incorporates news-evidence stance relations and evidence-evidence interaction relations, and introduces a conditional-harm branch to jointly model authenticity and potential harm. Experimental results demonstrate that RAEGNet outperforms multiple baseline methods across all evaluated metrics on Weibo-21, Fakeddit, and our self-constructed SSS dataset.\n\n[提交时间: 2026-09-29; 分类: cs.CL, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.36902v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.36902v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Rethinking Multimodal Fake News Detection in the Generative AI Era",
-      "authors": [
-        {
-          "name": "Wenbin Shen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Guoxuan Qin",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Guangxu Yao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Baodong Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yuanbo Rui",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhichao Lian",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Generative content is increasingly entering the production and dissemination of news, transforming fake news from manually fabricated or simply manipulated material into complex forms in which native and generated content jointly participate. Existing multimodal fake news detection research primarily focuses on veracity assessment and rarely characterizes how generativity differences affect the reliability of evidence. In contrast, AIGC detection primarily determines whether content is generated or modified by generative models, but it does not by itself establish whether the underlying news event is true. To bridge the separation between these tasks in data and evaluation, we construct Weibo26, a multimodal fake news detection dataset for generative-content scenarios. On this basis, we propose the Generativity-Aware Hierarchical Reasoning (GAHR) framework, which combines global judgment with local correction so that generativity information participates in news-veracity reasoning. Experiments on multiple existing fake news detection benchmarks and Weibo26 show that GAHR achieves competitive veracity-detection performance while effectively identifying generative content.\n\n[提交时间: 2026-09-29; 分类: cs.CL, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.36850v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.36850v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Toward Generative Video Communication: A Dual-Stream Digital Transmission Framework",
-      "authors": [
-        {
-          "name": "Bingyan Xie",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Longyu Zhou",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Tianhao Liang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yongpeng Wu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zehui Xiong",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Wenjun Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Tony Q. S. Quek",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Generative video communication has shown promise for bandwidth-constrained wireless transmission and has the potential to support personalized content delivery. In this article, we propose a dual-stream digital generative video communication (DGVC) framework that integrates a traditional digital link with a generative link. The traditional link provides source-grounded visual references, while the generative link conveys compact semantic and perceptual information for receiver-side generation. We further discuss three bandwidth-dependent operating regimes and key technologies for dual-stream coordination, synchronization, reliability, and latency control. A practical case study demonstrates the perceptual and temporal-quality benefits of DGVC under wireless fading channels. Finally, we discuss open challenges and future research directions for generative video communication.\n\n[提交时间: 2026-09-29; 分类: cs.MM]",
-      "url": "https://arxiv.org/abs/2609.36565v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.36565v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Enabling Immersive Audio-Visual Experience from Any Video",
-      "authors": [
-        {
-          "name": "Zitong Lan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Mutian Tong",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiatao Gu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Mingmin Zhao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Most videos capture only a narrow field of view and provide no spatial audio, limiting the sense of immersion they can provide. Recent video generation models can expand perspective videos into panoramic ones, but do not provide the corresponding spatial soundscape. Without spatially consistent audio, these expanded visual worlds remain incomplete. This paper presents OmniDream, a training-free framework that transforms a silent monocular video into an immersive audiovisual experience, where viewers can freely look around while sounds remain spatially aligned with the visual scene. At the core of OmniDream is an object-centric audio representation that disentangles each sound source's intrinsic audio content from its scene-dependent acoustic effects, enabling independent audio generation, physics-based simulation of propagation effects, and flexible spatial audio rendering. Experiments show improved audio-visual alignment, spatial correctness, and perceptual immersiveness over baselines. Examples are available on https://huggingface.co/spaces/CuriousAlien000/spatial-audio-360-demo\n\n[提交时间: 2026-09-28; 分类: cs.SD, cs.MM, eess.AS]",
-      "url": "https://arxiv.org/abs/2609.36295v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.36295v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "AerialDojo-200K: A Large-Scale Benchmark Suite for Open-World Aerial Object-Goal Search",
-      "authors": [
-        {
-          "name": "Tongtong Feng",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xin Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Haoran Hou",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Ren Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Weiran Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Shaokai Zhu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Ziqi Jia",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Hao Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yu-Wei Zhan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zongyuan Wu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jinghao Cui",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Wenwu Zhu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Open-world aerial object-goal search is a foundational yet challenging task, requiring aerial agents to autonomously explore large-scale, unstructured three-dimensional environments and reach target objects specified by semantic descriptions or reference images, rather than following route-specific instructions. However, research in this task remains at a nascent stage and relies on small, environment-specific benchmarks with heterogeneous action spaces and data formats. These limitations hinder large-scale training and cross-benchmark evaluation, constraining the scalability and generalizability of aerial agents. To address this problem, we propose AerialDojo-200K, a large-scale benchmark suite for open-world aerial object-goal search, with 3 times as many scenes and 18.7 times as many task instances as the largest existing benchmark for this task. Specifically, we construct 42 simulation scenes spanning four scene families and 21 scene types, including 18 urban, 12 natural, six infrastructure, and six disaster scenes. To ensure data quality, 12 annotators spent two months manually annotating 109 landmarks, 2099 target objects, and 2099 object anchors across these scenes. We further construct 205,732 task instances, comprising over 100K semantic-goal and over 100K image-goal instances across Base, Standard, and Long-Horizon settings. Each task instance includes a collision-free reference trajectory and corresponding multi-view video recordings. We also develop a unified evaluation framework with a scene partition comprising 21 in-distribution scenes and 21 out-of-distribution scenes. Finally, our evaluation of five open-source and four closed-source multimodal large language models reveals that there is still a long way to go toward achieving general-purpose aerial agents. All can be found at https://fengtt42.github.io/AerialDojo/.\n\n[提交时间: 2026-09-28; 分类: cs.CV, cs.AI, cs.ET, cs.MM, cs.RO]",
-      "url": "https://arxiv.org/abs/2609.36066v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.36066v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Multimodal Target Speaker Extraction: Towards Unified Speaker Cues Across Modalities",
-      "authors": [
-        {
-          "name": "Xinyuan Qian",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yanghao Zhou",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Ziyang Jiang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yu Chen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xinjia Zhu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xueyan Chen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Qiquan Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zexu Pan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiaying Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xianghu Yue",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiadong Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Björn Schuller",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Haizhou Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Target Speaker Extraction (TSE) is pivotal in speech communication and human-computer interaction, enabling the isolation of a specific speaker's voice from complex acoustic environments, i.e., the cocktail party scenario. Although traditional TSE systems conditioned on enrollment speech have progressed substantially, enrollment speech as a cue has inherent limitations. Its reliability degrades when the target and interfering speakers have similar voice characteristics, when intra-speaker variability (e.g. changes in emotion or speaking style) creates a mismatch between the enrollment and target speech, or when the enrollment itself is contaminated by noise or competing speakers. This review surveys deep-learning-based TSE from the perspective of auxiliary target cues drawn from multiple modalities. We organize existing methods according to five types of information used to isolate the target speaker: audio enrollment, visual, spatial, textual/semantic, and neural cues. We also trace the evolution from discriminative estimators to variational, diffusion, flow, codec, and foundation-model-based systems and summarize representative datasets and evaluation metrics. We review the benefits and limitations of different cues and discuss challenges involving synchronization, missing or unreliable observations, data scarcity, privacy, computational cost, and real-time operation. Finally, we summarize future directions concerning adaptive cue fusion, instruction-driven extraction, realistic evaluation, and trustworthy deployment. By jointly reviewing cue design, model architecture, training objectives, datasets, and evaluation metrics, this article provides an overview of the current landscape and open problems in multimodal TSE.\n\n[提交时间: 2026-09-28; 分类: cs.SD, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.35613v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.35613v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "SignFLIP: A Unified Model for Sign Language Translation and Generation via Stage-wise Alignment at Scale",
-      "authors": [
-        {
-          "name": "Zhaoyi An",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sihan Tan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Youngbae Hwang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Kazuhiro Nakadai",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Rei Kawakami",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Sign language translation and generation share the goal of bidirectional alignment between text and sign representations. However, existing approaches either treat them as isolated tasks or are only verified on limited datasets, limiting effective modeling between modalities. In this paper, we propose SignFLIP, a unified LLM-centered framework for translation and generation. To enable bidirectional mapping between text and sign, SignFLIP adopts a symmetric architecture together with a stage-wise training strategy built on large-scale data. The shared sign--text representation is progressively refined: pre-alignment facilitates subsequent SLT, while the SLT-adapted representation further benefits SLG. Extensive experiments on multiple benchmarks show that SignFLIP shows competitive performance compared with task-specific models on both translation and generation tasks, as well as strong transferability to sign language recognition.\n\n[提交时间: 2026-09-28; 分类: cs.CL, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.35225v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.35225v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Toward a Culturally Adapted Chinese Language Agent: A Wizard-of-Oz Study of Nonverbal Behavior in Chinese-German Intercultural Interaction",
-      "authors": [
-        {
-          "name": "Siddhant Jain",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Anna Lea Reinwarth",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Dimitra Tsovaltzi",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Rafael Math",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Julia Renner",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Successful intercultural communication requires more than grammatical competence. It demands sensitivity to culturally embedded social norms whose violation triggers subtle but meaningful nonverbal responses. For German learners of Mandarin Chinese, acquiring this sensitivity is critical yet poorly supported by existing language-learning agents. We present a Wizard-of-Oz (WoZ) study design and supporting real-time system for collecting multimodal behavioral data from native Chinese speakers reacting to social norm violations by German learners. The system features a photorealistic MetaHuman avatar driven by Live Link face capture and MediaPipe upper-body tracking, a wizard console for real-time behavior selection, and synchronized multimodal logging across agent and learner streams. A layered annotation framework, based on psychological theory and covering non-observable socioemotional reactions, norm interpretation, verbal, and observable behavior thereof, and future supervision targets enables the corpus to support training of future automated cultural interpretation and behavior generation models. Four ecologically valid interaction scenarios, developed with cultural and pedagogical experts, provide the methodological and technical foundation for a culturally adapted conversational agent for Chinese language learning.\n\n[提交时间: 2026-09-28; 分类: cs.HC, cs.CL, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.35150v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.35150v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Timeline-Bench: Evaluating Agents on Realistic Video-Editing Tasks, from Raw Footage to Final Cut",
-      "authors": [
-        {
-          "name": "Gunin Gupta",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Nirmit Arora",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Pavan Kalyan Tankala",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "AI agents increasingly carry out long-horizon professional work, but their evaluations rarely require a finished creative deliverable. To this end, we introduce Timeline-Bench, a benchmark of 56 real video-editing tasks, each asking an agent to turn raw production material into a finished video. Tasks range from selecting dialog takes and shaping interview footage into a story to cutting commercials from product shots, voiceovers and graphics. Every task provides a brief, source assets, a container and a set of tests. A task is resolved when the output passes every test. The tests check the delivery format, the content and the brief's explicit requirements, and include a quality test calibrated on 2,582 blind judgments by 43 video editors. We evaluate 16 agents that pair frontier models with coding-agent harnesses such as Codex, Claude Code and OpenCode. The best, GPT-6 Astra in Codex with curated editorial guidance, resolves only 15 of the 56 tasks (26.8%), and the average agent resolves 14.0%. Human editors prefer the reference edit in 83.5% of judgments. Most unresolved runs (562 of 771) fail only the quality test: agents perceive footage through stills and transcripts and check their renders for defects, not craft. We release the tasks, verifier and per-run results at https://timelinebench.tensortest.com.\n\n[提交时间: 2026-09-28; 分类: cs.CV, cs.AI, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.35143v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.35143v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "JazzSAMBA: A Synchronous and Asynchronous Multi-take Band Audio Dataset of Jazz Standards for Live Music Models",
-      "authors": [
-        {
-          "name": "Phillip Long",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jacob Nguyen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jace Hosto",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Gage Hosto",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jett Takazawa",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Fares Nofal",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sebastian Stade",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Nithya Shikarpur",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Julian McAuley",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Cheng-Zhi Anna Huang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Stephen Brade",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Aleksandra Teng Ma",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Machine learning has made strong progress on music tasks, both as assistive tools and as creative partners. However, most systems train on multitrack corpora that emphasize pop and rock. Jazz, with improvisation at the core of its practice, still lacks a well-annotated corpus of clean per-stem combo recordings on standards. We introduce JazzSAMBA (Jazz Synchronous and Asynchronous Multi-take Band Audio) to fill this gap: the first originally recorded jazz-combo multitrack dataset of standards with asynchronous (overdubbed) and synchronous (live ensemble) protocols, preferred and alternate takes chosen by the musicians, and timed annotations for bars, chords, sections, and soloists. JazzSAMBA covers 76 standards by eight musicians on drums, bass, piano, trumpet, and saxophone, with per-stem audio, mixtures, and MIDI. It can support chart-conditioned accompaniment, combo source separation, and form-aware music information retrieval. We demonstrate the dataset on two tasks: a jazz combo source-separation baseline and a chart-conditioned accompaniment ablation. The dataset, code, and samples are linked from the project demo page.\n\n[提交时间: 2026-09-28; 分类: cs.SD, cs.AI, cs.LG, cs.MM, eess.AS]",
-      "url": "https://arxiv.org/abs/2609.34931v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.34931v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Joint and Cross-Modal Video-Audio Generation and Editing: A Unified Formulation and Design Taxonomy",
-      "authors": [
-        {
-          "name": "Abhinav Sharma",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sai Karthik Navuluru",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Wang Wei",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Daksh Dangi",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiangbo Gao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Li Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Bo Ni",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Vardhan Dongre",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Junda Wu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiyang Hu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiuxiang Gu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Seunghyun Yoon",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Tong Yu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Chien Van Nguyen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Mohamed Elmoghany",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Nedim Lipka",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Hoda Eldardiry",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Hongjie Chen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Tyler Derr",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Thien Huu Nguyen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhengzhong Tu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Nesreen K. Ahmed",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Franck Dernoncourt",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Ryan A. Rossi",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Video and audio are perceived together, yet most generative models treat them in isolation. We examine methods that model the two modalities jointly, generate one from the other, or edit them in a coupled manner, organized around a single question: how is the output kept coherent across modalities in time and semantics? A unified formulation casts joint generation, cross-modal generation, and joint editing as three problems defined on a single distribution over audio-visual pairs, and a taxonomy compares methods along five design axes. To our knowledge, this is the first overview to systematically taxonomize joint audio-visual editing, which we map as nine edit categories spanning 28 edit types. We describe methods, datasets, and metrics for each setting and close with the open problems we view as most consequential.\n\n[提交时间: 2026-09-28; 分类: cs.CV, cs.MM, cs.SD, eess.AS]",
-      "url": "https://arxiv.org/abs/2609.34381v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.34381v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "SyncRA: Learning Temporal Correspondence in Omni-Modal Models",
-      "authors": [
-        {
-          "name": "Zelong Xu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yan Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Wenhe Hu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiyang Hu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Recent omni-modal models demonstrate strong perception of audio and visual inputs, yet often struggle to connect what they hear with what they see at the same moment. This weakness in temporal correspondence can cause models to associate spoken cues with the wrong visual scenes, producing plausible answers grounded in incorrect audio-visual pairings. We diagnose this problem through controlled temporal swaps, revealing that model answers do not reliably follow changes in these pairings. To address it, we propose Synchrony-Guided Representation Alignment (SyncRA), a lightweight method for strengthening temporal correspondence between audio and vision. Specifically, SyncRA contrasts intermediate audio-visual representations within each video, aligning matching moments while separating mismatched ones to capture local temporal correspondence within a shared global context. The objective derives supervision directly from existing input timing, requiring no additional annotations and leaving inference unchanged. We evaluate SyncRA across four open omni-modal models spanning different sizes and architectures on five public video benchmarks. SyncRA consistently outperforms answer-only fine-tuning across all model-benchmark combinations, while substantially improving the ability to track changing audio-visual pairings in controlled evaluations. These results demonstrate that lightweight, targeted supervision can effectively strengthen temporal correspondence and translate into broad improvements in audio-visual question answering.\n\n[提交时间: 2026-09-28; 分类: cs.CV, cs.AI, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.34363v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.34363v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Structured Interaction, Visual Localization, and Robust Execution for Complex Web Tasks: A Technical Report on the WebRetriever Challenge",
-      "authors": [
-        {
-          "name": "Ziqi Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Shaohui Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Bing Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "This report presents the web agent system developed for the WebRetriever Challenge. The system follows a structuredinteraction- first strategy, using semantic webpage information for routine browser operations and invoking visual perception only when structured representations are insufficient. Three key designs are introduced: grid-assisted visual localization for difficult-to-access controls, hierarchical context management for reducing redundant page and interaction history, and fault-aware execution mechanisms for stable multi-browser task processing. The system achieved a pass rate of up to 79% in local evaluation on Protocol 1. In the official Protocol 3 competition, it achieved a 59% pass rate with eight concurrent browser workers and ranked first overall, winning the WebRetriever Challenge.\n\n[提交时间: 2026-09-28; 分类: cs.IR, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.35904v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.35904v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Re:Cognize -- Open-Set Comic Character Re-Identification",
-      "authors": [
-        {
-          "name": "Aaditya Baranwal",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Madhav Kataria",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yogesh S Rawat",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Shruti Vyas",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "A manga reader meets a character on one page and knows them on sight a hundred pages later, without ever being handed a cast list. Re-identifying comic characters demands the same, open-set and sequential: pages arrive as a stream in reading order, new faces appear before anyone names them, and the cast is assembled as the story is read. $\\textbf{Re:Cognize}$ evaluates recognition as the story is read, not against a cast handed over in advance: four protocols on one query stream, from closed-set retrieval to a cast the model must build and grow itself. The surprise is where models fail. Recognising is close to solved: one reference image per character already ranks as well as a gallery built in advance. Knowing what to believe is not: a model that adds its own matches makes its cast worse, while the same growth with correct labels would gain over twenty points of top-1 accuracy. The bottleneck is acceptance, not vision, and one comparison decides it: an addition pays exactly when it is right more often than the cast already was on the queries it takes over. The comparison has nothing to fit, and measured on half of a new corpus it calls the other half correctly. $\\textbf{ReCast}$ puts it to work with nothing fitted on data: a cast sheet of one running average per character, grown only where the page itself vouches for a crop. It recovers a third to two thirds of what perfect labels would, depending on whether the cast starts from random examples or from first appearances. Re:Cognize measures whether a model can read along; ReCast is a cast that does. Our claims are on identity maintenance, recognising characters already met; the emergence of new ones is measured as a diagnostic under a fixed reference rule, and we propose no method for it.\n\n[提交时间: 2026-09-27; 分类: cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.34032v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.34032v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "ReVR: Dual-Path Concept Reasoning for Multimodal Fake News Detection",
-      "authors": [
-        {
-          "name": "Zhikai Tan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yuzhou Yang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Qichao Ying",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Pinjie Xu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sheng Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhenxing Qian",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xinpeng Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Vision-language models (VLMs) support multimodal fake news detection (FND) by producing explicit analyses. Recent methods further improve interpretability by organizing verification knowledge into explicit concepts. However, two questions remain: how to improve the reliability and applicability of verification concepts, and how to effectively apply reusable concepts to verify unseen news. We propose \\textbf{ReVR}, a dual-path reasoning framework that constructs and applies reusable verification concepts for multimodal fake news detection. An agentic workflow grounds and consolidates candidate concepts, while statistical profiles characterize their historical behavior. During inference, a coverage-oriented path aggregates evidence from the complete concept library using a trainable encoder, while a query-focused path prompts a frozen VLM to reason over selected concepts and their observations. A learned conflict resolver selects between the two predictions when they disagree. Experiments on fake news benchmarks demonstrate the effectiveness of the method regarding detection performance and generalizability.\n\n[提交时间: 2026-09-27; 分类: cs.MM]",
-      "url": "https://arxiv.org/abs/2609.33195v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.33195v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Overview and Analysis of the RecSys Challenge 2026: Conversational Music Recommendation",
-      "authors": [
-        {
-          "name": "Seungheon Doh",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sergio Oramas",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Bruno Sguerra",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Abhinav Bohra",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Claudio Pomo",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Francesco Barile",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "The RecSys Challenge 2026 studies conversational music recommendation as a joint item recommendation and response generation problem: given a multi-turn dialogue, systems must retrieve relevant tracks from a large catalog and produce a grounded natural-language response. This paper presents the challenge task, dataset, evaluation protocol, and official results. Beyond the leaderboard, we analyze the 16 accepted systems through a common retrieve--rerank--generate framework and examine how recommendation performance varies across users, requests, and dialogue contexts. Strong systems commonly combine heterogeneous candidate sources and preserve source-specific evidence for learned reranking. Across the system papers and our organizer-side analysis, robust design also means 1) grounding cold-start retrieval in multi-turn conversation and item signals, 2) using intent detectors, and 3) modeling the full multi-turn context rather than the current query alone. We further identify limitations of the benchmark and evaluation protocol, including single-ground-truth relevance and teacher-forced evaluation of synthetic dialogues. Together, these findings provide practical guidance for future conversational recommender systems and shared evaluation efforts.\n\n[提交时间: 2026-09-27; 分类: cs.IR, cs.MM, cs.SD]",
-      "url": "https://arxiv.org/abs/2609.33045v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.33045v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Getting Motif-ated: Controllable AI Compositions from Injected Motif Prompts",
-      "authors": [
-        {
-          "name": "Chao Peter Yang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Cynthia Rudin",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yue Jiang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Simon Mak",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Stephen Ni-Hahn",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Deep learning has transformed symbolic music generation by borrowing the training paradigms of large language models, with systems such as NotaGen now producing complete, stylistically convincing classical scores from a short prompt. These systems could become powerful creative partners, helping musicians generate endless possibilities. However, current systems expose almost no control handles on the music itself. In principle, control handles could be built into a foundation model trained from scratch, but this is rarely practical without massive amounts of quality annotated data and compute resources. We therefore present MotiGen, a recipe for retrofitting pretrained symbolic music models to use new instruction prompts. MotiGen injects a musical motif as a structured prompt line, reinforces it with a scalar attention bias toward the motif tokens, and learns the association with a two-phase curriculum. First, it learns from focused excerpts cropped around motif occurrences in the training data, then full scores including the motifs. Our experiments show that our model composes with the prompted motif in over 92.3\\% of generated pieces. Generated pieces using a variety of motifs are included in our sample site: https://motigen-site.github.io/.\n\n[提交时间: 2026-09-26; 分类: cs.LG, cs.AI, cs.MM, cs.SD, eess.AS]",
-      "url": "https://arxiv.org/abs/2609.32788v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.32788v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "In-Flight KV Cache with Clean Anchors for Faster Autoregressive Video Diffusion",
-      "authors": [
-        {
-          "name": "Yikai Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiao Han",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Mengmeng Xu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Juan Camilo Perez",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yiannis Douratsos",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Sen He",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zijian Zhou",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Fei Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhaochong An",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Juan-Manuel Perez-Rua",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Chen Change Loy",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Tao Xiang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Few-step autoregressive video diffusion generates a long video by splitting the video into temporal chunks and generating chunk-by-chunk, each through a short sequence of denoising stages. To memorize chunks that are already generated, previous methods reconstruct a clean or less-noisy key--value (KV) cache by additional forwards to build the cache without advancing an output latent. However, every denoising forward itself already computes the in-flight KV of the current chunk. We introduce FlashForward, which directly reuses this cache to avoid the heavy cache-update-only model forwards. After the current chunk completes one denoising stage, its stage-specific cache is already available for the next chunk. Assigning one GPU to each stage therefore lets different chunks occupy different stages concurrently. This early availability has a quality cost: the resulting stage-matched history is noisy, causing appearance and motion drift among chunks. To complement it, FlashForward produces sparse auxiliary clean anchor latents before the corresponding region is generated so the generation trajectories can be stabilized by this two-sided conditioning. The two memories operate at different temporal scales: sparse clean anchor KV supplies coarse, long-range two-sided structural guidance, while dense stage-matched history preserves fine, recent evolution. With up to four GPUs, FlashForward runs $1.16$--$1.69\\times$ faster than HiAR and $1.42$--$2.92\\times$ faster than Self-Forcing for 16 FPS videos of 20 seconds or longer across 1.3B and 14B backbone scales at 480p and 720p. On VBench, for the 1.3B model at 480p, it achieves higher scores and remains stable at longer durations, demonstrating that FlashForward generates high-quality and temporally consistent videos across durations of 20s, 35s and 65s at a much faster generation speed.\n\n[提交时间: 2026-09-26; 分类: cs.CV, cs.AI, cs.LG, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.32540v2",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.32540v2",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Do Audio LLMs Listen Before They Act? Diagnosing Acoustic-Context Gating in Voice Agents",
-      "authors": [
-        {
-          "name": "Yanjie Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Nanchen Hu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yushi Sun",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Audio language models can recognize spoken commands and invoke tools, but an agent must first decide whether the acoustic and conversational context warrants action. We introduce VGBench, a 1,018-item diagnostic benchmark for action-level addressedness across side-talk, self-talk, and speaker-switch scenarios. Each item uses a shared action space comprising silence, a tool call, and a natural-language answer. Speaker-switch pairs hold the specified words fixed while source, distance rendering, and a temporal boundary define a controlled wearer-to-bystander shift. Six raw Audio LLMs and three training-free adaptations often identify the target tool yet rarely withhold action under this shift; the highest raw switch mute rate is 14%. We then use VoxGate as a post-training case study. Supervised training mutes 91.3% of switched commands while choosing the correct tool for all nearby wearer commands and text-only controls. An exploratory GRPO stage has similar switch performance; side-talk accuracy rises from 68.4% to 70.9%, and self-talk muting from 52.0% to 60.0%. Factorized controls identify an independent source-change effect, while sensitivity to the far-field manipulation varies across acoustic renderings. The benchmark therefore measures multi-cue acoustic-context gating rather than isolated speaker identity.\n\n[提交时间: 2026-09-26; 分类: cs.SD, cs.AI, cs.CL, cs.MM, eess.AS]",
-      "url": "https://arxiv.org/abs/2609.32536v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.32536v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "ASSEMBLE: Atomic Skills for Evidence-Grounded Video Reasoning",
-      "authors": [
-        {
-          "name": "Xiyang Wu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zongxia Li",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Shengxin Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhichao Liu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Dinesh Manocha",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Complex video reasoning often depends on evidence scattered across distant moments, entities, and events, yet a correct answer alone does not reveal whether a model relied on the right parts of the video. We introduce ASSEMBLE, a framework that makes supporting evidence explicit throughout long-video reasoning. ASSEMBLE organizes local observations and cross-clip narratives into timestamped evidence catalogs traceable to the source video. A grounding-aware reader then composes question-specific atomic skills whose structured outputs contain explicit evidence references and support assessments. We use correctness-gated citation alignment as a direct grounding signal: after teacher-supervised fine-tuning, Group Relative Policy Optimization (GRPO) jointly optimizes answer correctness and citation alignment. This produces inspectable intermediate traces while keeping final predictions linked to explicit supporting evidence. Using a 9B reader supervised by a 235B teacher and shared precomputed evidence catalogs, ASSEMBLE achieves 59.2% macro-averaged answer accuracy across three long-video reasoning benchmarks, compared with 58.3% for Gemini-2.5-Pro, while improving macro-averaged overlap-based Grounded accuracy by 6.7%, with gains on all three benchmarks. Ablations further show that, with the same post-trained reader and inference budget, structured skill inference improves Grounded accuracy over free-form reasoning. Together, these results show that explicit evidence grounding can be integrated directly into long-video reasoning without sacrificing answer accuracy.\n\n[提交时间: 2026-09-26; 分类: cs.MM]",
-      "url": "https://arxiv.org/abs/2609.32466v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.32466v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Learning Through Game: Skewed Transfer of Tabular Knowledge to Strengthen Image Model",
-      "authors": [
-        {
-          "name": "Longfei Huang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Shangdong Yang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yang Yang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Multimodal tabular-image learning is gaining growing attention, yet it faces challenges due to tabular data unavailable at test time. A practical solution involves transferring tabular knowledge to images during training to enhance the performance of image models at inference. However, the overlooked yet important challenges lie in the modality imbalance between images and tables, as well as their asymmetric modality relationship in cross-modal transfer, which limits the auxiliary role of tabular data. To address these issues, we propose Skewed Knowledge Transfer (SKT), which asymmetrically transfers tabular knowledge to improve the image model by adaptive integration of modality gradients in a shared parameter space. Specifically, we first introduce a multimodal shared head, which allows the model to benefit from cross-modal structure without adding additional parameters. We then design a two-step Nash Bargaining strategy to effectively leverage tabular gradients. In the first step, SKT seeks a point of modality balance and uses preference awareness in the second step to steer combined gradients toward image-beneficial directions. Furthermore, we theoretically analyze the Pareto improvement and convergence of SKT. To this end, tabular knowledge is explicitly transferred to enhance image models. Empirical experiments on widely used tabular-image datasets reveal that SKT consistently improves image unimodal performance by using tabular data as auxiliary information.\n\n[提交时间: 2026-09-26; 分类: cs.LG, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.32272v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.32272v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "TemplateCraft: Agentic Visual Template Generation",
-      "authors": [
-        {
-          "name": "Hongjie Yu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhiyuan Fan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yuzhe Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiangcun Du",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zhicheng Gao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Yuhong Zhang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiaokai Zhan",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Zongshi Xie",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "The growing popularity of short videos has driven demand for one-click content creation. Visual templates turn uploaded images into personalized content with preset effects, but reusable template generation still requires substantial manual effort in asset preparation and tool orchestration. We propose TemplateCraft, a multi-agent system that converts natural-language instructions into client-executable templates through planning, material generation, effect-workflow generation, and protocol compilation. Its Planner-Evaluator loop uses execution feedback for targeted rollback, while stage-level and long-term memory support revision without parameter updates. We evaluate TemplateCraft on TemplateBench, derived from 60 real-world templates. With the same Qwen3-VL backbone, TemplateCraft raises image/video generation success rates from 56.7%/30.0% to 66.7%/50.0% over Planner-only (best-of-three) and improves template adherence and style consistency. With additional evaluation and revision, it matches or exceeds a GPT-4o Planner-only baseline on selected metrics. Persistent assets further improve cross-input style consistency.\n\n[提交时间: 2026-09-25; 分类: cs.MM, cs.CV]",
-      "url": "https://arxiv.org/abs/2609.31451v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.31451v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Geometric Inconsistency Localization in Multi-View Image Sets",
-      "authors": [
-        {
-          "name": "Xander Staelens",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Albéric Loos",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Bert Ramlot",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Hannes Mareen",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Peter Lambert",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Glenn Van Wallendael",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Novel view synthesis (NVS) models can produce realistic new views of the same scene from different viewpoints. However, these generated views are not always geometrically consistent with one another. Multi-view (MV) consistency has shown promise as a tool for evaluating these NVS models. Its potential for multimedia forensics, however, remains largely unexplored, particularly for localizing geometric inconsistencies across wide-baseline image pairs. To enable research in this direction, we introduce DeformView, a wide-baseline MV dataset with pixel-level annotations of geometric inconsistencies. Using DeformView, we evaluate state-of-the-art MV consistency-scoring methods and show that approaches developed for NVS evaluation transfer poorly to the forensic task of geometric inconsistency localization. To address this limitation, we propose DEFECt3R, a lightweight learning-based classifier that uses cross-view feature relationships to localize geometric inconsistencies at the pixel level. By learning from explicit supervision, including hard negatives from geometrically consistent yet deformed views, DEFECt3R improves localization performance and substantially reduces false positives compared to existing consistency-scoring methods. Ablation experiments further show that both feature representations and correspondence quality contribute to localization performance. Overall, our findings demonstrate that MV geometric consistency is a promising yet underexplored signal for multimedia forensics and establish a benchmark and baseline for geometric inconsistency localization in wide-baseline MV image pairs. Code and dataset are available at https://github.com/IDLabMedia/DeformView-DEFECt3R\n\n[提交时间: 2026-09-25; 分类: cs.CV, cs.AI, cs.CR, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.31247v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.31247v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Video-to-Music Generation for Gameplay Videos",
-      "authors": [
-        {
-          "name": "Felipe Marra",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Lucas N. Ferreira",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Video-to-music models have advanced considerably in the last few years, particularly in film and music video applications. In this paper, we investigate this problem in the video game domain, which introduces new challenges for these models: video frames are rendered graphics, music is mostly synthetic audio, and soundtracks loop across entire levels rather than following on-screen events. We introduce a new dataset of 217.6 hours of Super Nintendo (SNES) gameplay video paired with 485 hours of clean soundtracks, free of sound effects and voice-overs, matched to gameplay audio via audio fingerprinting. With this dataset, we train a simple encoder-decoder transformer that passes video features directly to a MusicGen decoder, comparing different encoding strategies: textual descriptions (T5), independent frames (ViT), or spatiotemporal patches (ViViT). Each encoder is tested both frozen and fine-tuned, while the decoder is always fine-tuned. Frozen encoders match or outperform their fine-tuned counterparts on every metric, and the frozen ViViT achieves the best overall results. We compare this model with state-of-the-art baselines using both objective metrics and a listening study (N = 96). Despite having up to 18% fewer parameters, our model outperforms all baselines on objective metrics, surpasses GVMGen in the listening study, and performs comparably to OSSL.\n\n[提交时间: 2026-09-25; 分类: cs.SD, cs.AI, cs.CV, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.31810v2",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.31810v2",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "Pocket-STVG: lightweight architecture for Spatio-Temporal Video Grounding",
-      "authors": [
-        {
-          "name": "Alberto Presta",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Michal Byra",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Grzegorz Stefański",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Karol Szurkowski",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Eryk Kołodziejczyk",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Krzysztof Arendt",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Spatio-Temporal Video Grounding (STVG) aims to localize the spatio-temporal tube in a video corresponding to a natural language query. While recent methods achieve strong performance in fully supervised, weakly supervised, and zero-shot settings, they typically rely on computationally expensive architectures, complex training pipelines, or multimodal large language models. We present Pocket-STVG (P-STVG), a lightweight cascade architecture that addresses STVG by combining efficient pre-trained components instead of large end-to-end models. P-STVG integrates a temporal-aware video encoder based on MobileViCLIP, a spatial encoder-decoder derived from MDETR, and a shared aligned text encoder. Temporal localization is performed through either a lightweight 1D U-Net or a simple thresholding strategy, enabling the same framework to operate in both weakly supervised and zero-shot settings. Furthermore, video representations are precomputed independently of the query, yielding an indexing-friendly pipeline for efficient inference and large-scale video collections. Despite requiring fewer than 90M parameters, P-STVG performs on par with weakly supervised methods and improves on earlier zero-shot approaches at a fraction of their memory and computational cost, establishing a favorable performance-efficiency trade-off for STVG.\n\n[提交时间: 2026-09-25; 分类: cs.CV, cs.AI, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.31135v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.31135v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "TempQ-Jail: Query-Constrained Candidate Ranking for Text-to-Video Jailbreak Attacks",
-      "authors": [
-        {
-          "name": "Tianmeng Fang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiancheng Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Chen Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Liming Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Wei Wang",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Jiayang Liu",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Xiaochun Cao",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Existing text-to-video (T2V) jailbreak methods mainly seek more effective or stealthier attack candidates. In guarded T2V systems, however, video generation and security evaluation are costly, so an attacker often cannot test a large candidate pool. We therefore formulate T2V jailbreak as a query-constrained candidate allocation and ranking problem and propose TempQ-Jail. The method combines heterogeneous attack mechanisms to expand candidate coverage, estimates each candidate's end-to-end attack value from security-gate passage, dangerous visual generation, preservation of the original intent, and temporal validity, and ranks candidates so that high-value attacks appear early in a limited query trajectory. We evaluate TempQ-Jail on CogVideoX-5B using 70 common viable intents derived from T2VSafetyBench and compare it with six representative T2V jailbreak methods under a unified protocol. TempQ-Jail achieves TP-ASR@5 and TP-ASR@10 of 48.9% and 65.4%, improving over the strongest baselines by 4.6 and 4.0 percentage points, respectively. It also obtains the highest AUC-TP (0.469) and the lowest AvgQ (6.3). Analyses of query trajectories, candidate allocation, failure attribution, and ablations show that TempQ-Jail more effectively identifies and prioritises candidates with complete attack potential under limited query budgets.\n\n[提交时间: 2026-09-25; 分类: cs.MM, cs.CR, cs.CV]",
-      "url": "https://arxiv.org/abs/2609.31032v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.31032v1",
-      "is_domestic": false,
-      "has_tsinghua": false,
-      "has_peking": false
-    },
-    {
-      "title": "What Improves Multimodal Misinformation Detection? Answers from a Large-Scale Empirical Study",
-      "authors": [
-        {
-          "name": "Akshit Sharma",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        },
-        {
-          "name": "Prashant W. Patil",
-          "affiliations": [],
-          "tags": [],
-          "chinese_name": null
-        }
-      ],
-      "abstract": "Multimodal misinformation is increasingly crafted to look convincing by pairing a textual claim with an image that appears to \"prove\" it. Yet in practice, building effective detectors often hinges on a small set of design choices that are rarely examined in a controlled way. In this paper, we conduct a large-scale study of multimodal design choices for misinformation detection with over 3,375 experiments- spanning three benchmark datasets and a broad range of pre-trained vision and language backbones. Through systematic comparisons and targeted robustness analyses, we distill practical guidance on which design choices help, when do they fail silently, and what aspects of the pipeline most strongly shape model behavior, answering 4 key Research Questions (RQs). We aim to provide a reliable foundation for designing stronger and more dependable multimodal misinformation detection systems, thus contributing to the broader research community.\n\n[提交时间: 2026-09-24; 分类: cs.CV, cs.AI, cs.CL, cs.LG, cs.MM]",
-      "url": "https://arxiv.org/abs/2609.30402v1",
-      "award": null,
-      "source": "arxiv",
-      "paper_id": "2609.30402v1",
+      "paper_id": "2609.38123v1",
       "is_domestic": false,
       "has_tsinghua": false,
       "has_peking": false
     }
   ],
-  "_cached_at": "2026-10-05T04:21:56.235059"
+  "_cached_at": "2026-10-12T04:36:58.709467"
 }
